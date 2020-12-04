@@ -1,0 +1,6 @@
+Požadavky na spuštění:
+    MySQL 5.7
+
+Spuštění:
+    make drop   (Nutné zavolat před každým spuštěním)
+    make run

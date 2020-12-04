@@ -10,21 +10,23 @@ def connect_mongo():
 def connect_mySQL():
 	mydb = cnt.connect(
 	host="localhost",
-	user="root",
-	passwd="rfDOBAD",
-	database="xstoja07",
-	)
+	user="connector",
+	passwd="123456",
+	database="UPA_SQL_Db")
 	return mydb
 
 def calculate_median(row):
 	...
 
 
-def main():
-	mongo_db = connect_mongo()
-	sql_db = connect_mySQL()
 
-	stations = mongo_db["station"].find()
+def main():
+
+	sql_db = connect_mySQL()
+	sql_db_cursor = sql_db.cursor()
+	mongo_db = connect_mongo()
+
+	stations = mongo_db["station"]
 	temp_night = []
 	temp_day = []
 	temp = []
@@ -33,7 +35,16 @@ def main():
 	sql_station = {}
 	sql_selected_weather_report = {}
 
-	for station in stations:
+	#SQL INSERT TEST
+	sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
+	 VALUES (4, "Spain", 6876.32, -6876.32, 999.0, 100.0, 500.0, 0.0, 0.0);""")
+	sql_db.commit()
+
+	#SQL SELECT TEST
+	sql_db_cursor.execute("SELECT * FROM Station;")
+	print(sql_db_cursor.fetchall())
+
+	for station in stations.find():
 		
 		elements = station["observations"][0]
 
@@ -58,7 +69,8 @@ def main():
 		sql_selected_weather_report["Pressure"] = elements["pres"]["value"]
 		sql_selected_weather_report["Humidity"] = elements["rel-humidity"]["value"]
 
-
+		sql_db.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
+             VALUES (4, "Spain", -0.1312, 12156.378, 34.5, 27.1, 33.9, 15.6, 0.2);""")
 
 
 if __name__ == "__main__":

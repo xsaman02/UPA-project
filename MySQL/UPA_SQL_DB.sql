@@ -7,6 +7,10 @@ ALTER DATABASE UPA_SQL_Db
     DEFAULT CHARACTER SET utf8mb4
 	COLLATE utf8mb4_unicode_520_ci;
 
+
+CREATE USER IF NOT EXISTS 'connector'@'localhost' IDENTIFIED BY '123456';
+GRANT ALL PRIVILEGES ON UPA_SQL_Db . * TO 'connector'@'localhost';
+
 -- ----------------- DROP TABLES ---------------------
 
 DROP TABLE IF EXISTS SelectedWeatherReport;

@@ -1,6 +1,7 @@
 from pymongo import MongoClient
 import xml.etree.ElementTree as ET
 import os
+import argparse
 
 
 def create_station(elem, stationsDb):
@@ -51,22 +52,39 @@ def station(elem, stationsDb):
 
     stationsDb.update_one({"wmo-id": elem.get("wmo-id")}, {"$push": {"observations": observation}})
 
+parser = argparse.ArgumentParser(description='UPA project - weather')
+
+parser.add_argument('-d',  action='store_true')
+parser.add_argument('-f', action="store", default='')
+
+args = parser.parse_args()
 
 client = MongoClient(port=27017)
-client.drop_database("weather")  # TODO
+if args.d:
+    client.drop_database("weather")
+DIR = "src/"
+if args.f and os.path.isdir(args.f):
+    DIR = args.f
+
 print(client.list_database_names())
 
 weatherDb = client["weather"]
 
 stationsDb = weatherDb["stations"]
 
-files = [os.path.join(dp, f) for dp, dn, filenames in os.walk("src/") for f in filenames if os.path.splitext(f)[1] == '.xml']
+if args.f and not os.path.isdir(args.f):
+    files = [args.f]
+else:
+    files = [os.path.join(dp, f) for dp, dn, filenames in os.walk(DIR) for f in filenames if os.path.splitext(f)[1] == '.xml']
 
 for file in files:
-   tree = ET.parse(file)
-   root = tree.getroot()
+   try:
+      tree = ET.parse(file)
+      root = tree.getroot()
 
-   observations = root.find('observations')
+      observations = root.find('observations')
+   except Exception as e:
+       print(type(e).__name__, e)
 
    for elem in observations:
       station(elem, stationsDb)

@@ -1,6 +1,7 @@
 from pymongo import MongoClient
 import mysql.connector as cnt
 import datetime
+import os
 
 def connect_mongo():
 	client = MongoClient(port=27017)
@@ -42,27 +43,37 @@ def calculate_median(weather_reports):
 	humidity = sorted(humidity)
 	rainfall = sorted(rainfall)
 
-	if len(temp) % 2 == 0:
-		temp = (temp[len(temp)//2] + temp[len(temp)//2 - 1]) / 2
+	if(len(temp) == 0):
+		temp=None
 	else:
-		temp = temp[len(temp)//2 - 1]
+		if len(temp) % 2 == 0:
+			temp = (temp[len(temp)//2] + temp[len(temp)//2 - 1]) / 2
+		else:
+			temp = temp[len(temp)//2 - 1]
 		
-
-	if len(humidity) % 2 == 0:
-		humidity = (humidity[len(humidity)//2] + humidity[len(humidity)//2 - 1]) / 2
+	if(len(humidity) == 0):
+		humidity=None
 	else:
-		humidity = humidity[len(humidity)//2 - 1]
+		if len(humidity) % 2 == 0:
+			humidity = (humidity[len(humidity)//2] + humidity[len(humidity)//2 - 1]) / 2
+		else:
+			humidity = humidity[len(humidity)//2 - 1]
 
-
-	if len(rainfall) % 2 == 0:
-		rainfall = (rainfall[len(rainfall)//2] + rainfall[len(rainfall)//2 - 1]) / 2
+	if(len(rainfall) == 0):
+		rainfall=None
 	else:
-		rainfall = rainfall[len(rainfall)//2 - 1]
+		if len(rainfall) % 2 == 0:
+			rainfall = (rainfall[len(rainfall)//2] + rainfall[len(rainfall)//2 - 1]) / 2
+		else:
+			rainfall = rainfall[len(rainfall)//2 - 1]
 
 	return {"temp_median" : temp, "humidity_median" : humidity, "rainfall_median" : rainfall}
 
 
 def main():
+
+	os.system("cd MySQL/ && make drop << pwd")
+	os.system("cd MySQL/ && make run << pwd")
 
 	sql_db, sql_db_cursor  = connect_mySQL()
 	mongo_db = connect_mongo()
@@ -70,8 +81,8 @@ def main():
 	stations_mongo = mongo_db["stations"]
 
 	#SQL INSERT TEST
-	# sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
-	#  VALUES (4, "Spain", 6876.32, -6876.32, 999.0, 100.0, 500.0, 0.0, 0.0);""")
+	sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
+	 VALUES (4, "Spain", 6876.32, -6876.32, 999.0, 100.0, 500.0, 0.0, 0.0);""")
 	sql_db.commit()
 
 	#SQL SELECT TEST

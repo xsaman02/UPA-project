@@ -135,7 +135,8 @@ def main():
 				   "lat" : latitude, 
 				   "lon" : longitude}
 				  },
-		...
+		 ...
+		}
 	]
 
 	Structure of weather_reports is array of dictionaries. Via example:
@@ -148,7 +149,8 @@ def main():
 				   "Maximum_temp" : value, 
 				   "Minimum_temp" : value}
 				   },
-		...	
+		 ...	
+		}
 	]
 	""" 
 

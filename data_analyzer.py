@@ -3,6 +3,11 @@ import mysql.connector as cnt
 import datetime
 import os
 
+
+#GLOBAL COMPATIBILITY VARIABLE:
+NULL = "NULL"
+
+
 def connect_mongo():
 	client = MongoClient(port=27017)
 	mongo_db = client["weather"]
@@ -44,7 +49,7 @@ def calculate_median(weather_reports):
 	rainfall = sorted(rainfall)
 
 	if(len(temp) == 0):
-		temp=None
+		temp=NULL
 	else:
 		if len(temp) % 2 == 0:
 			temp = (temp[len(temp)//2] + temp[len(temp)//2 - 1]) / 2
@@ -52,7 +57,7 @@ def calculate_median(weather_reports):
 			temp = temp[len(temp)//2 - 1]
 		
 	if(len(humidity) == 0):
-		humidity=None
+		humidity=NULL
 	else:
 		if len(humidity) % 2 == 0:
 			humidity = (humidity[len(humidity)//2] + humidity[len(humidity)//2 - 1]) / 2
@@ -60,7 +65,7 @@ def calculate_median(weather_reports):
 			humidity = humidity[len(humidity)//2 - 1]
 
 	if(len(rainfall) == 0):
-		rainfall=None
+		rainfall=NULL
 	else:
 		if len(rainfall) % 2 == 0:
 			rainfall = (rainfall[len(rainfall)//2] + rainfall[len(rainfall)//2 - 1]) / 2
@@ -78,16 +83,17 @@ def main():
 	sql_db, sql_db_cursor  = connect_mySQL()
 	mongo_db = connect_mongo()
 
+	# Select colletion: stations
 	stations_mongo = mongo_db["stations"]
 
 	#SQL INSERT TEST
-	sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
-	 VALUES (4, "Spain", 6876.32, -6876.32, 999.0, 100.0, 500.0, 0.0, 0.0);""")
-	sql_db.commit()
+	# sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
+	#  VALUES (4, "Spain", 6876.32, -6876.32, NULL, 100.0, NULL, 0.0, 0.0);""")
+	# sql_db.commit()
 
 	#SQL SELECT TEST
-	sql_db_cursor.execute("SELECT * FROM Station;")
-	print(sql_db_cursor.fetchall())
+	# sql_db_cursor.execute("SELECT * FROM Station;")
+	# print(sql_db_cursor.fetchall())
 
 
 	stations = {}
@@ -98,7 +104,7 @@ def main():
 		# store id of new station to the dictionary along with it's:
 		# timezone, latitude, longitude
 		if station["wmo-id"] not in stations:
-			stations[station["wmo-id"]] = {"tz" : station["tz"], "lat" : station["lat"], "lon" : station["lon"]}
+			stations[station["wmo-id"]] = {"tz" : station["tz"], "lat" : float(station["lat"]), "lon" : float(station["lon"])}
 		
 		for elements in station["observations"]:
 
@@ -171,9 +177,16 @@ def main():
 	""" 
 
 
+	""" Insert selected station data from MongoDb to MySQL database """
+	for ID in stations:
+		sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
+			VALUES ('%d', '%s', '%f', '%f', %s, %s, %s, %s, %s);"""
+			% (int(ID), stations[ID]['tz'], stations[ID]['lat'], stations[ID]['lon'], stations[ID]['temp_median'], stations[ID]['humidity_median'], stations[ID]['rainfall_median'], NULL, NULL))
+		sql_db.commit()
 
-		# sql_db.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
-        #      VALUES (4, "Spain", -0.1312, 12156.378, 34.5, 27.1, 33.9, 15.6, 0.2);""")
+	sql_db_cursor.execute("SELECT * FROM Station;")	
+	for row in sql_db_cursor.fetchall():
+		print(row)
 
 
 if __name__ == "__main__":

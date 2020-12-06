@@ -42,7 +42,7 @@ CREATE TABLE SelectedWeatherReport (AUTO_ID INTEGER AUTO_INCREMENT PRIMARY KEY N
 -- ----------------- TESTING DATA SETS ---------------------
 
 -- INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
---              VALUES (0, "Australia", 100.12, -56.378, 28.7, 22.5, 27.9, 37.6, 2);
+--            VALUES (0, "Australia", 100.12, -56.378, 28.7, 22.5, 27.9, 37.6, 2);
 -- INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
 --              VALUES (1, "Finland", 56098.1789, -523326.371318, 30.0, 23.8, 29.4, 25.6, 0.0);
 -- INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)

@@ -49,7 +49,7 @@ def calculate_median(weather_reports):
 		
 
 	if len(temp) % 2 == 0:
-		humidity = (humidity[len(humidity)//2] + humidity[len(humidity)//2 - 1]) / 2
+		humidity = (float(humidity[len(humidity)//2]) + float(humidity[len(humidity)//2 - 1])) / 2
 	else:
 		humidity = humidity[len(humidity)//2 - 1]
 
@@ -67,7 +67,7 @@ def main():
 	sql_db, sql_db_cursor  = connect_mySQL()
 	mongo_db = connect_mongo()
 
-	stations_mongo = mongo_db["station"]
+	stations_mongo = mongo_db["stations"]
 
 	#SQL INSERT TEST
 	sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
@@ -87,7 +87,7 @@ def main():
 		# store id of new station to the dictionary along with it's:
 		# timezone, latitude, longitude
 		if station["wmo-id"] not in stations:
-			stations["wmo-id"] = {"tz" : station["tz"], "lat" : station["lat"], "lon" : station["lon"]}
+			stations[station["wmo-id"]] = {"tz" : station["tz"], "lat" : station["lat"], "lon" : station["lon"]}
 		
 		for elements in station["observations"]:
 
@@ -97,7 +97,7 @@ def main():
 				weather_reports[station["wmo-id"]] = []
 
 			# Takes current data of given station
-			station_data = weather_reports[station[station["wmo-id"]]]
+			station_data = weather_reports[station["wmo-id"]]
 			data = {}
 
 			# load addition data

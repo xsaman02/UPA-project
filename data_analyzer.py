@@ -89,30 +89,32 @@ def main():
 		if station["wmo-id"] not in stations:
 			stations["wmo-id"] = {"tz" : station["tz"], "lat" : station["lat"], "lon" : station["lon"]}
 		
-		# if current station do not have any stored weather reports
-		# store id of new station to dict with empty array (element in array is one report of given station)
-		if station["wmo-id"] not in weather_reports:
-			weather_reports[station["wmo-id"]] = []
+		for elements in station["observations"]:
 
-		# Takes current data of given station
-		station_data = weather_reports[station["wmo-id"]]
-		data = {}
+			# if current station do not have any stored weather reports
+			# store id of new station to dict with empty array (element in array is one report of given station)
+			if station["wmo-id"] not in weather_reports:
+				weather_reports[station[station["wmo-id"]]] = []
 
-		# load addition data
-		elements = station["observations"][0]
-		data["FK"] = station["wmo-id"]
-		if "rainfall_24hr" in elements:
-			data["Rainfall"] = elements["rainfall_24hr"]["value"]
-		if "pres" in elements:
-			data["Pressure"] = elements["pres"]["value"]
-		if "rel-humidity" in elements:
-			data["Humidity"] = elements["rel-humidity"]["value"]
-		if "maximum_air_temperature" in elements:
-			data["Maximum_temp"] = elements["maximum_air_temperature"]["value"]
-		if "minimum_air_temperature" in elements:
-			data["Minimum_temp"] = elements["minimum_air_temperature"]["value"]
-		# store data 
-		station_data.append(data)
+			# Takes current data of given station
+			station_data = weather_reports[station[station["wmo-id"]]]
+			data = {}
+
+			# load addition data
+			elements = station["observations"][0]
+			data["FK"] = station["wmo-id"]
+			if "rainfall_24hr" in elements:
+				data["Rainfall"] = elements["rainfall_24hr"]["value"]
+			if "pres" in elements:
+				data["Pressure"] = elements["pres"]["value"]
+			if "rel-humidity" in elements:
+				data["Humidity"] = elements["rel-humidity"]["value"]
+			if "maximum_air_temperature" in elements:
+				data["Maximum_temp"] = elements["maximum_air_temperature"]["value"]
+			if "minimum_air_temperature" in elements:
+				data["Minimum_temp"] = elements["minimum_air_temperature"]["value"]
+			# store data 
+			station_data.append(data)
 
 
 

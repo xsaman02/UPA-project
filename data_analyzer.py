@@ -59,7 +59,7 @@ def calculate_median(weather_reports):
 	else:
 		rainfall = rainfall[len(rainfall)//2 - 1]
 
-	return {"Temp_median" : temp, "Humidity_median" : humidity, "Rainfall" : rainfall}
+	return {"temp_median" : temp, "humidity_median" : humidity, "rainfall_median" : rainfall}
 
 
 def main():
@@ -133,7 +133,10 @@ def main():
 	stations = [
 		{wmo-id : {"tz" : timezone, 
 				   "lat" : latitude, 
-				   "lon" : longitude}
+				   "lon" : longitude
+				   "temp_median" : temperature median,
+				   "humidity_median" : humidity median,
+				   "rainfall_median" : rainfall median
 				  }
 		 ...
 		},
@@ -148,7 +151,7 @@ def main():
 				   "Humidity" : value, 
 				   "Maximum_temp" : value, 
 				   "Minimum_temp" : value}
-				   }
+				  }
 		 ...	
 		},
 	]

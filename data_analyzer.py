@@ -13,27 +13,61 @@ def connect_mySQL():
 	user="connector",
 	passwd="123456",
 	database="UPA_SQL_Db")
-	return mydb
+	return mydb, mydb.cursor()
 
-def calculate_median(row):
-	...
+def calculate_median(weather_reports):
+	""" Calculates median of all given weather reports
 
+	Args:
+	-----
+		weather_reports (dict): weather report of given station
+
+	Returns:
+	--------
+		[float, float, float]: median values of [temperature, humidity, rainfall]
+	"""
+	
+	temp = []
+	humidity = []
+	rainfall = []
+	for weather_report  in weather_reports:
+		if "Maximum_temp" in weather_report and "Minimum_temp" in weather_report:
+			temp.append(weather_report["Maximum_temp"] - weather_report["Minimum_temp"])
+		if "Humidity" in weather_report:
+			humidity.append(weather_report["Humidity"])
+		if "Rainfall" in weather_report:
+			rainfall.append(weather_report["Rainfall"])
+
+	temp = sorted(temp)
+	humidity = sorted(humidity)
+	rainfall = sorted(rainfall)
+
+	if len(temp) % 2 == 0:
+		temp = (temp[len(temp)//2] + temp[len(temp)//2 - 1]) / 2
+	else:
+		temp = temp[len(temp)//2 - 1]
+		
+
+	if len(temp) % 2 == 0:
+		humidity = (humidity[len(humidity)//2] + humidity[len(humidity)//2 - 1]) / 2
+	else:
+		humidity = humidity[len(humidity)//2 - 1]
+
+
+	if len(rainfall) % 2 == 0:
+		rainfall = (rainfall[len(rainfall)//2] + rainfall[len(rainfall)//2 - 1]) / 2
+	else:
+		rainfall = rainfall[len(rainfall)//2 - 1]
+
+	return {"Temp_median" : temp, "Humidity_median" : humidity, "Rainfall" : rainfall}
 
 
 def main():
 
-	sql_db = connect_mySQL()
-	sql_db_cursor = sql_db.cursor()
+	sql_db, sql_db_cursor  = connect_mySQL()
 	mongo_db = connect_mongo()
 
-	stations = mongo_db["station"]
-	temp_night = []
-	temp_day = []
-	temp = []
-	rainfall_24 = []
-
-	sql_station = {}
-	sql_selected_weather_report = {}
+	stations_mongo = mongo_db["station"]
 
 	#SQL INSERT TEST
 	sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
@@ -44,33 +78,84 @@ def main():
 	sql_db_cursor.execute("SELECT * FROM Station;")
 	print(sql_db_cursor.fetchall())
 
-	for station in stations.find():
+
+	stations = {}
+	weather_reports = {}
+	for station in stations_mongo.find():
 		
+		# if given station has not been seen before
+		# store id of new station to the dictionary along with it's:
+		# timezone, latitude, longitude
+		if station["wmo-id"] not in stations:
+			stations["wmo-id"] = {"tz" : station["tz"], "lat" : station["lat"], "lon" : station["lon"]}
+		
+		# if current station do not have any stored weather reports
+		# store id of new station to dict with empty array (element in array is one report of given station)
+		if station["wmo-id"] not in weather_reports:
+			weather_reports[station["wmo-id"]] = []
+
+		# Takes current data of given station
+		station_data = weather_reports[station["wmo-id"]]
+		data = {}
+
+		# load addition data
 		elements = station["observations"][0]
+		data["FK"] = station["wmo-id"]
+		if "rainfall_24hr" in elements:
+			data["Rainfall"] = elements["rainfall_24hr"]["value"]
+		if "pres" in elements:
+			data["Pressure"] = elements["pres"]["value"]
+		if "rel-humidity" in elements:
+			data["Humidity"] = elements["rel-humidity"]["value"]
+		if "maximum_air_temperature" in elements:
+			data["Maximum_temp"] = elements["maximum_air_temperature"]["value"]
+		if "minimum_air_temperature" in elements:
+			data["Minimum_temp"] = elements["minimum_air_temperature"]["value"]
+		# store data 
+		station_data.append(data)
 
-		# TODO výpočet mediánů
-		# temp_night.append(elements["air_temperature"]["value"])
-		# temp_day.append(elements["air_temperature"]["value"])
-		# temp.append(elements["air_temperature"]["value"])
-		# rainfall_24.append(elements["rainfall_24hr"]["value"])
-		
-		sql_station["Timezone"] = station["tz"]
-		sql_station["Latitude"] = station["lat"]
-		sql_station["Longitude"] = station["lon"]
-		sql_station["TemperatureDayMedian"] = None
-		sql_station["TemperatureNightMedian"] = None
-		sql_station["TemperatureMedian"] = None
-		sql_station["HumidityMedian"] = None
-		sql_station["RainfallMedian"] = None
-		
 
-		sql_selected_weather_report["FK"] = station["wmo-id"]
-		sql_selected_weather_report["Rainfall"] = elements["rainfall_24hr"]["value"]
-		sql_selected_weather_report["Pressure"] = elements["pres"]["value"]
-		sql_selected_weather_report["Humidity"] = elements["rel-humidity"]["value"]
 
-		sql_db.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
-             VALUES (4, "Spain", -0.1312, 12156.378, 34.5, 27.1, 33.9, 15.6, 0.2);""")
+	#calculate medians and store them to station dictionary
+	for station_key in stations.keys():
+		medians = calculate_median(weather_reports[station_key])
+		stations[station_key] = {**stations[station_key], **medians}
+
+
+	# TODO
+	# store every element in stations as Station in SQL
+	# store every weather report in weather_reports as Weather-report in SQL
+	# more info below
+	"""
+	Structure of station dictiory is array of dictionaries 
+	where value of every dictionary is dictionary with wanted data. Via example:
+
+	stations = [
+		{wmo-id : {"tz" : timezone, 
+				   "lat" : latitude, 
+				   "lon" : longitude}
+				  },
+		...
+	]
+
+	Structure of weather_reports is array of dictionaries. Via example:
+
+	weather_reports = 
+	[
+		{wmo-id : {"Rainfall" : value, 
+				   "Pressure" : value, 
+				   "Humidity" : value, 
+				   "Maximum_temp" : value, 
+				   "Minimum_temp" : value}
+				   },
+		...	
+	]
+	""" 
+
+
+
+		# sql_db.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
+        #      VALUES (4, "Spain", -0.1312, 12156.378, 34.5, 27.1, 33.9, 15.6, 0.2);""")
 
 
 if __name__ == "__main__":

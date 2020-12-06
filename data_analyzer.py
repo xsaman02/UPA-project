@@ -94,7 +94,7 @@ def main():
 			# if current station do not have any stored weather reports
 			# store id of new station to dict with empty array (element in array is one report of given station)
 			if station["wmo-id"] not in weather_reports:
-				weather_reports[station[station["wmo-id"]]] = []
+				weather_reports[station["wmo-id"]] = []
 
 			# Takes current data of given station
 			station_data = weather_reports[station[station["wmo-id"]]]

@@ -134,9 +134,9 @@ def main():
 		{wmo-id : {"tz" : timezone, 
 				   "lat" : latitude, 
 				   "lon" : longitude}
-				  },
+				  }
 		 ...
-		}
+		},
 	]
 
 	Structure of weather_reports is array of dictionaries. Via example:
@@ -148,9 +148,9 @@ def main():
 				   "Humidity" : value, 
 				   "Maximum_temp" : value, 
 				   "Minimum_temp" : value}
-				   },
+				   }
 		 ...	
-		}
+		},
 	]
 	""" 
 

@@ -48,8 +48,8 @@ def calculate_median(weather_reports):
 		temp = temp[len(temp)//2 - 1]
 		
 
-	if len(temp) % 2 == 0:
-		humidity = (float(humidity[len(humidity)//2]) + float(humidity[len(humidity)//2 - 1])) / 2
+	if len(humidity) % 2 == 0:
+		humidity = (humidity[len(humidity)//2] + humidity[len(humidity)//2 - 1]) / 2
 	else:
 		humidity = humidity[len(humidity)//2 - 1]
 
@@ -70,8 +70,8 @@ def main():
 	stations_mongo = mongo_db["stations"]
 
 	#SQL INSERT TEST
-	sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
-	 VALUES (4, "Spain", 6876.32, -6876.32, 999.0, 100.0, 500.0, 0.0, 0.0);""")
+	# sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
+	#  VALUES (4, "Spain", 6876.32, -6876.32, 999.0, 100.0, 500.0, 0.0, 0.0);""")
 	sql_db.commit()
 
 	#SQL SELECT TEST
@@ -104,15 +104,15 @@ def main():
 			elements = station["observations"][0]
 			data["FK"] = station["wmo-id"]
 			if "rainfall_24hr" in elements:
-				data["Rainfall"] = elements["rainfall_24hr"]["value"]
+				data["Rainfall"] = float(elements["rainfall_24hr"]["value"])
 			if "pres" in elements:
-				data["Pressure"] = elements["pres"]["value"]
+				data["Pressure"] = float(elements["pres"]["value"])
 			if "rel-humidity" in elements:
-				data["Humidity"] = elements["rel-humidity"]["value"]
+				data["Humidity"] = float(elements["rel-humidity"]["value"])
 			if "maximum_air_temperature" in elements:
-				data["Maximum_temp"] = elements["maximum_air_temperature"]["value"]
+				data["Maximum_temp"] = float(elements["maximum_air_temperature"]["value"])
 			if "minimum_air_temperature" in elements:
-				data["Minimum_temp"] = elements["minimum_air_temperature"]["value"]
+				data["Minimum_temp"] = float(elements["minimum_air_temperature"]["value"])
 			# store data 
 			station_data.append(data)
 

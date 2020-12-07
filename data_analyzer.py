@@ -118,10 +118,9 @@ def main():
 			data = {}
 
 			# load addition data
-			elements = station["observations"][0]
 			data["FK"] = station["wmo-id"]
-			if "rainfall_24hr" in elements:
-				data["Rainfall"] = float(elements["rainfall_24hr"]["value"])
+			if "rainfall" in elements:
+				data["Rainfall"] = float(elements["rainfall"]["value"])
 			else:
 				data["Rainfall"] = NULL
 			
@@ -135,20 +134,21 @@ def main():
 			else:
 				data["Humidity"] = NULL
 			
-			if "air_temperature" in elements:
+			if "air_temperature" in elements:					
 				data["Air_temperature"] = float(elements["air_temperature"]["value"])
 			else:
 				data["Air_temperature"] = NULL
 			# store data 
 			station_data.append(data)
 
-
+	print("Data fetched")
 
 	#calculate medians and store them to station dictionary
 	for station_key in stations.keys():
 		medians = calculate_median(weather_reports[station_key])
 		stations[station_key] = {**stations[station_key], **medians}
 
+	print("Medians done")
 
 	# TODO
 	# store every element in stations as Station in SQL
@@ -194,15 +194,19 @@ def main():
 		sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
 			VALUES ('%d', '%s', '%f', '%f', %s, %s, %s, %s, %s);"""
 			% (int(ID), stations[ID]['tz'], stations[ID]['lat'], stations[ID]['lon'], stations[ID]['temp_median'], NULL, NULL, stations[ID]['humidity_median'], stations[ID]['rainfall_median']))
-		sql_db.commit()
+	sql_db.commit()	
 
-	for ID in weather_reports:
+	print("Station insert done")
+
+	for i, ID in enumerate(weather_reports):
+		print(i+1)
 		for report in weather_reports[ID]:
-			print(report)
-			# sql_db_cursor.execute("""INSERT INTO SelectedWeatherReport(Station_ID, Pressure, Humidity, Rainfall)
-			# 	VALUES ('%d', %s, %s, %s);"""
-			# 	% (int(ID), report['Pressure'], report['Humidity'], report['Rainfall']))
-			# sql_db.commit()
+			sql_db_cursor.execute("""INSERT INTO SelectedWeatherReport(Station_ID, Pressure, Humidity, Rainfall)
+				VALUES ('%d', %s, %s, %s);"""
+				% (int(ID), report['Pressure'], report['Humidity'], report['Rainfall']))
+		sql_db.commit()	
+		
+	print("Weather insert done")
 
 	# sql_db_cursor.execute("SELECT * FROM Station;")	
 	# for row in sql_db_cursor.fetchall():

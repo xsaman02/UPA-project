@@ -49,8 +49,12 @@ def station(elem, stationsDb):
             observation[element.get("type")]["time-utc"] = element.get("time-utc")
         if element.get("time-local") is not None:
             observation[element.get("type")]["time-local"] = element.get("time-local")
-
+    
     stationsDb.update_one({"wmo-id": elem.get("wmo-id")}, {"$push": {"observations": observation}})
+
+
+
+""" MAIN: """
 
 parser = argparse.ArgumentParser(description='UPA project - weather')
 
@@ -62,7 +66,7 @@ args = parser.parse_args()
 client = MongoClient(port=27017)
 if args.d:
     client.drop_database("weather")
-DIR = "src/"
+DIR = "data/"
 if args.f and os.path.isdir(args.f):
     DIR = args.f
 
@@ -93,5 +97,5 @@ for file in files:
    print(stationsDb.count())
 
 
-   for elem in stationsDb.find():
-      print(elem)
+#    for elem in stationsDb.find():
+    #   print(elem)

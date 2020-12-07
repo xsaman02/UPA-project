@@ -1,0 +1,1 @@
+drop database if exists UPA_SQL_Db;

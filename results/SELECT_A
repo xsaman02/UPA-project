@@ -1,0 +1,1525 @@
++--------------------------------------------------------------------------------------+
+| --------------------------- SELECT A: Temperature START ---------------------------- |
++--------------------------------------------------------------------------------------+
+|                                                                                      |
++--------------------------------------------------------------------------------------+
++--------+--------------------------------------------+----------+-----------+-------------------+
+| WMO_ID | StationName                                | Latitude | Longitude | TemperatureMedian |
++--------+--------------------------------------------+----------+-----------+-------------------+
+|  94213 | WARMUN                                     | -17.0154 |   128.217 |                34 |
+|  94311 | PARDOO STATION                             | -20.1078 |   119.581 |              31.5 |
+|  94221 | BRADSHAW - ANGALLARI VALLEY (DEFENCE)      | -15.4397 |   130.573 |              31.3 |
+|  94217 | ARGYLE AERODROME                           |  -16.638 |   128.452 |             30.65 |
+|  94211 | MOUNT ELIZABETH                            | -16.4181 |   126.103 |              30.4 |
+|  94131 | TINDAL RAAF                                | -14.5229 |   132.383 |             30.25 |
+|  94350 | BARCALDINE POST OFFICE                     | -23.5544 |   145.288 |              30.1 |
+|  94202 | BIDYADANGA                                 | -18.6844 |    121.78 |                30 |
+|  94333 | BOULIA AIRPORT                             | -22.9117 |   139.904 |                30 |
+|  94356 | CHARTERS TOWERS AIRPORT                    | -20.0464 |   146.271 |                30 |
+|  94206 | FITZROY CROSSING AERO                      | -18.1814 |   125.562 |              29.9 |
+|  94229 | WAVE HILL                                  | -17.3869 |   131.117 |              29.7 |
+|  95214 | WYNDHAM AERO                               |   -15.51 |    128.15 |             29.65 |
+|  94130 | BRADSHAW                                   | -14.9408 |   130.809 |             29.45 |
+|  94232 | VICTORIA RIVER DOWNS                       |  -16.403 |   131.014 |              29.4 |
+|  94201 | CYGNET BAY                                 | -16.4513 |   123.009 |                29 |
+|  94236 | ELLIOTT                                    | -17.5552 |   133.544 |                29 |
+|  94225 | DELAMERE WEAPONS RANGE                     | -15.7441 |   131.918 |             28.65 |
+|  94234 | DALY WATERS AIRSTRIP                       | -16.2637 |   133.378 |             28.55 |
+|  94261 | CENTURY MINE                               | -18.7569 |   138.706 |             28.55 |
+|  95122 | DARWIN NTC AWS                             | -12.4719 |   130.846 |             28.55 |
+|  94121 | CHANNEL POINT                              | -13.1672 |   130.123 |              28.5 |
+|  94102 | TROUGHTON ISLAND                           | -13.7542 |   126.148 |              28.4 |
+|  94106 | NGUKURR AIRPORT                            | -14.7236 |   134.746 |              28.4 |
+|  99510 | CHARLES POINT                              | -12.3895 |   130.631 |             28.35 |
+|  94137 | JABIRU AIRPORT                             | -12.6592 |   132.894 |              28.3 |
+|  94222 | BRADSHAW - KOOLENDONG VALLEY (DEFENCE)     | -15.1853 |   130.117 |              28.3 |
+|  94212 | HALLS CREEK AIRPORT                        | -18.2337 |   127.667 |             28.25 |
+|  94116 | DUM IN MIRRIE AIRSTRIP                     |  -12.635 |   130.372 |              28.1 |
+|  94266 | NORMANTON AIRPORT                          | -17.6872 |   141.073 |              28.1 |
+|  94143 | BULMAN                                     | -13.6715 |   134.342 |                28 |
+|  94257 | SWEERS ISLAND                              | -17.1142 |   139.598 |                28 |
+|  94110 | OENPELLI AIRPORT                           | -12.3272 |   133.007 |             27.95 |
+|  94120 | DARWIN AIRPORT                             | -12.4239 |   130.893 |             27.95 |
+|  94112 | MOUNT BUNDEY SOUTH (DEFENCE)               | -13.0889 |   131.848 |              27.9 |
+|  95317 | MARBLE BAR                                 | -21.1756 |    119.75 |              27.9 |
+|  94127 | POINT STUART                               | -12.2403 |   131.878 |             27.75 |
+|  94239 | MCARTHUR RIVER MINE AIRPORT                | -16.4423 |   136.076 |             27.75 |
+|  94139 | WARRUWI AIRPORT                            |   -11.65 |    133.38 |              27.6 |
+|  95101 | TRUSCOTT                                   |   -14.09 |   126.387 |             27.55 |
+|  94135 | MCCLUER ISLAND                             | -11.0468 |   132.979 |              27.5 |
+|  94242 | BRUNETTE DOWNS                             |  -18.637 |   135.945 |              27.5 |
+|  94248 | CENTRE ISLAND                              | -15.7426 |   136.819 |              27.5 |
+|  94260 | BURKETOWN AIRPORT                          | -17.7483 |   139.536 |              27.5 |
+|  95111 | PORT KEATS AIRPORT                         | -14.2494 |   129.528 |              27.5 |
+|  95205 | DERBY AERO                                 | -17.3706 |   123.661 |             27.45 |
+|  99501 | GUNN POINT                                 |  -12.249 |   131.045 |             27.45 |
+|  94105 | NOONAMAH AIRSTRIP                          | -12.6099 |   131.047 |              27.4 |
+|  94108 | CROKER ISLAND AIRPORT                      | -11.1629 |   132.481 |              27.4 |
+|  94204 | CURTIN AERO                                | -17.5768 |    123.83 |              27.4 |
+|  94162 | MOUNT BUNDEY NORTH (DEFENCE)               | -12.9141 |   131.866 |             27.35 |
+|  94319 | TELFER AERO                                | -21.7125 |   122.228 |             27.35 |
+|  94140 | MILINGIMBI AIRPORT                         | -12.0932 |   134.892 |              27.3 |
+|  94152 | BORROLOOLA AIRPORT                         | -16.0755 |   136.304 |              27.3 |
+|  94231 | LAJAMANU AIRPORT                           | -18.3324 |   130.636 |              27.3 |
+|  94238 | TENNANT CREEK AIRPORT                      | -19.6423 |   134.183 |              27.3 |
+|  95146 | NGAYAWILI                                  | -11.9971 |   135.573 |              27.3 |
+|  94255 | CAMOOWEAL TOWNSHIP                         | -19.9225 |   138.121 |             27.25 |
+|  94122 | POINT FAWCETT                              | -11.7628 |    130.03 |              27.2 |
+|  94161 | KANGAROO FLATS (DEFENCE)                   | -12.7934 |   130.854 |              27.1 |
+|  95142 | MANINGRIDA AIRPORT                         | -12.0569 |   134.234 |              27.1 |
+|  95208 | YAMPI SOUND (DEFENCE)                      | -16.7671 |   123.981 |              27.1 |
+|  94216 | KUNUNURRA AERO                             | -15.7814 |    128.71 |             27.05 |
+|  94254 | MORNINGTON ISLAND AIRPORT                  |  -16.662 |   139.165 |             27.05 |
+|  94348 | LAKE JULIUS AWS                            | -20.1167 |   139.726 |                27 |
+|  94100 | KALUMBURU                                  | -14.2964 |   126.645 |             26.95 |
+|  94210 | ADELE ISLAND                               | -15.5114 |   123.156 |              26.9 |
+|  94128 | DOUGLAS RIVER RESEARCH FARM                | -13.8345 |   131.187 |             26.85 |
+|  94109 | MURGANELLA AIRSTRIP                        | -11.5485 |   132.927 |              26.8 |
+|  94203 | BROOME AIRPORT                             | -17.9475 |   122.235 |             26.75 |
+|  94147 | CAPE WESSEL                                | -11.0047 |   136.759 |              26.7 |
+|  94335 | CLONCURRY AIRPORT                          | -20.6664 |   140.505 |              26.7 |
+|  95121 | MIDDLE POINT                               |  -12.605 |   131.299 |              26.7 |
+|  95202 | BROOME NTC AWS                             | -18.0015 |   122.218 |              26.7 |
+|  96996 | COCOS ISLAND AIRPORT                       | -12.1892 |   96.8344 |              26.7 |
+|  94153 | GROOTE EYLANDT AIRPORT                     | -13.9746 |   136.463 |             26.65 |
+|  94268 | KOWANYAMA AIRPORT                          | -15.4818 |   141.748 |             26.65 |
+|  94274 | GEORGETOWN AIRPORT                         | -18.3039 |   143.531 |             26.65 |
+|  94330 | KARIJINI NORTH                             | -22.2999 |    118.45 |              26.6 |
+|  94141 | CENTRAL ARNHEM PLATEAU                     | -13.3275 |   133.086 |             26.55 |
+|  94150 | GOVE AIRPORT                               | -12.2741 |    136.82 |             26.55 |
+|  94337 | JULIA CREEK AIRPORT                        | -20.6672 |   141.721 |              26.5 |
+|  94170 | WEIPA AERO                                 | -12.6778 |   141.921 |             26.45 |
+|  94207 | ROWLEY SHOALS                              | -17.5217 |   118.953 |             26.45 |
+|  94349 | NEW MAY DOWNS                              |   -20.59 |   139.341 |             26.45 |
+|  94171 | SCHERGER RAAF                              | -12.6167 |   142.087 |              26.4 |
+|  94174 | HORN ISLAND                                | -10.5844 |    142.29 |              26.4 |
+|  94119 | PIRLANGIMPI AIRPORT                        | -11.4021 |   130.422 |             26.35 |
+|  94332 | MOUNT ISA AERO                             | -20.6778 |   139.488 |              26.3 |
+|  99206 | LOMBADINA AIRSTRIP                         | -16.5158 |   122.921 |              26.3 |
+|  94347 | CARTERS BORE                               | -20.9358 |   139.296 |             26.25 |
+|  95322 | RABBIT FLAT                                | -20.1823 |   130.015 |             26.15 |
+|  94125 | BATCHELOR AIRPORT                          | -13.0544 |   131.025 |              26.1 |
+|  94182 | COCONUT ISLAND                             | -10.0511 |   143.069 |              26.1 |
+|  94308 | ROEBOURNE AERO                             | -20.7594 |   117.158 |              26.1 |
+|  95323 | ARLTUNGA                                   | -23.4564 |   134.685 |              26.1 |
+|  94181 | TORRES STRAIT NTC AWS                      | -10.5865 |   142.222 |             26.05 |
+|  94341 | RICHMOND AIRPORT                           | -20.7017 |   143.117 |                26 |
+|  94186 | LOCKHART RIVER AIRPORT                     |  -12.785 |   143.305 |              25.7 |
+|  94292 | CARDWELL MARINE PDE                        | -18.2544 |   146.019 |              25.7 |
+|  94463 | CURTIN SPRINGS                             | -25.3139 |   131.757 |              25.5 |
+|  94343 | HUGHENDEN AIRPORT                          | -20.8192 |   144.233 |             25.45 |
+|  94344 | URANDANGI AERODROME                        | -21.5979 |   138.367 |             25.45 |
+|  94299 | WILLIS ISLAND                              | -16.2878 |   149.965 |              25.4 |
+|  94321 | WALUNGURRU AIRPORT                         | -23.2656 |   129.384 |             25.35 |
+|  94310 | BEDOUT ISLAND                              | -19.5894 |     119.1 |              25.3 |
+|  94276 | PALMERVILLE                                | -15.9999 |   144.075 |             25.25 |
+|  95307 | KARRATHA AERO                              | -20.7097 |   116.774 |             25.25 |
+|  94312 | PORT HEDLAND AIRPORT                       | -20.3725 |   118.632 |              25.2 |
+|  94783 | YARRAS (MOUNT SEAVIEW)                     | -31.3865 |   152.248 |              25.2 |
+|  94188 | CAPE FLATTERY                              | -14.9672 |   145.311 |             25.15 |
+|  94360 | COLLINSVILLE POST OFFICE                   | -20.5533 |   147.846 |              25.1 |
+|  95204 | WEST ROEBUCK                               | -17.8964 |   122.312 |              25.1 |
+|  94183 | COEN AIRPORT                               | -13.7606 |   143.118 |                25 |
+|  94342 | WINTON AIRPORT                             | -22.3617 |   143.084 |                25 |
+|  95283 | COOKTOWN AIRPORT                           | -15.4461 |   145.186 |                25 |
+|  95288 | BOUGAINVILLE REEF                          | -15.4877 |   147.118 |                25 |
+|  99736 | FORTESCUE DAVE FORREST                     |   -22.29 |   119.434 |                25 |
+|  99737 | CHRISTMAS CREEK                            | -22.3562 |    119.65 |              24.9 |
+|  94285 | LOW ISLES LIGHTHOUSE                       | -16.3842 |   145.559 |              24.8 |
+|  94289 | HOLMES REEF                                | -16.4683 |   147.873 |              24.8 |
+|  94200 | MANDORA                                    | -19.7419 |   120.843 |              24.7 |
+|  94307 | LEGENDRE ISLAND                            | -20.3583 |   116.843 |              24.6 |
+|  95303 | VARANUS ISLAND                             |  -20.655 |   115.577 |              24.6 |
+|  94338 | TREPELL AIRPORT                            |   -21.84 |   140.893 |             24.55 |
+|  94336 | THE MONUMENT AIRPORT                       | -21.8125 |   139.927 |              24.5 |
+|  94290 | FLINDERS REEF                              | -17.7195 |   148.448 |              24.4 |
+|  94293 | LIHOU REEF LIGHTHOUSE                      |  -17.133 |   152.145 |              24.4 |
+|  99218 | COWLEY BEACH (DEFENCE)                     | -17.6905 |   146.113 |             24.35 |
+|  94295 | LUCINDA POINT                              | -18.5203 |   146.386 |              24.3 |
+|  94346 | LONGREACH AERO                             | -23.4397 |   144.283 |              24.3 |
+|  94294 | TOWNSVILLE AERO                            | -19.2483 |   146.766 |             24.25 |
+|  94345 | ISISFORD POST OFFICE                       | -24.2591 |   144.441 |              24.2 |
+|  94451 | CARNEGIE                                   | -25.7964 |   122.975 |              24.2 |
+|  96995 | CHRISTMAS ISLAND AERO                      | -10.4528 |   105.688 |              24.2 |
+|  94287 | CAIRNS AERO                                | -16.8736 |   145.746 |              24.1 |
+|  94593 | POINT LOOKOUT                              | -27.4361 |   153.546 |              24.1 |
+|  95296 | ALVA BEACH                                 | -19.4569 |   147.483 |             24.05 |
+|  94334 | BEDOURIE                                   | -24.3597 |   139.471 |                24 |
+|  94297 | CAPE FERGUSON NTC AWS                      | -19.2774 |   147.059 |              23.9 |
+|  94298 | MARION REEF                                | -19.0964 |   152.389 |              23.9 |
+|  94489 | WINDORAH AIRPORT                           | -25.4117 |   142.665 |              23.9 |
+|  95304 | BARROW ISLAND AIRPORT                      |  -20.874 |   115.407 |              23.9 |
+|  94582 | MURWILLUMBAH (BRAY PARK)                   | -28.3395 |   153.381 |              23.8 |
+|  94306 | MARDIE                                     | -21.1906 |    115.98 |             23.75 |
+|  95305 | ONSLOW AIRPORT                             | -21.6689 |   115.109 |             23.75 |
+|  94390 | SANDY CAPE LIGHTHOUSE                      | -24.7297 |   153.208 |             23.65 |
+|  94371 | CREAL REEF                                 | -20.5303 |   150.377 |              23.6 |
+|  94383 | BOWEN AIRPORT AWS                          | -20.0153 |   148.214 |             23.55 |
+|  99217 | SOLOMON AIRPORT                            | -22.2547 |   117.847 |             23.55 |
+|  94288 | CAIRNS RACECOURSE                          | -16.9463 |   145.747 |              23.5 |
+|  94302 | LEARMONTH AIRPORT                          | -22.2406 |   114.097 |              23.5 |
+|  95581 | LOGAN CITY WATER TREATMENT PLANT           | -27.6839 |   153.195 |             23.45 |
+|  94384 | SEVENTEEN SEVENTY                          | -24.1568 |   151.889 |              23.4 |
+|  94303 | THEVENARD ISLAND                           | -21.4609 |   115.019 |             23.35 |
+|  94395 | CLERMONT AIRPORT                           | -22.7756 |   147.622 |             23.35 |
+|  94457 | WARBURTON AIRFIELD                         | -26.1317 |   126.584 |              23.3 |
+|  95291 | INGHAM COMPOSITE                           | -18.6494 |   146.177 |              23.3 |
+|  94461 | GILES METEOROLOGICAL OFFICE                | -25.0341 |   128.301 |              23.2 |
+|  99115 | PORTABLE QFRG                              | -19.1958 |   146.524 |              23.2 |
+|  94316 | PARABURDOO AERO                            | -23.1726 |   117.749 |              23.1 |
+|  94525 | TAROOM POST OFFICE                         | -25.6408 |   149.796 |              23.1 |
+|  95295 | AYR DPI RESEARCH STN                       | -19.6169 |   147.376 |              23.1 |
+|  94328 | TERRITORY GRAPE FARM                       | -22.4518 |   133.638 |             23.05 |
+|  99313 | BARIMUNYA                                  | -22.6719 |   119.163 |             23.05 |
+|  94368 | HAMILTON ISLAND AIRPORT                    | -20.3658 |   148.954 |                23 |
+|  94393 | FREDERICK REEF                             | -20.9375 |   154.402 |                23 |
+|  94564 | RAINBOW BEACH                              | -25.9007 |   153.089 |                23 |
+|  94363 | EMERALD AIRPORT                            | -23.5694 |   148.176 |              22.9 |
+|  94379 | GANNET CAY                                 | -21.9769 |   152.471 |              22.9 |
+|  94373 | YEPPOON THE ESPLANADE                      | -23.1364 |   150.751 |             22.85 |
+|  95292 | SOUTH JOHNSTONE EXP STN                    | -17.6053 |   145.997 |             22.75 |
+|  95492 | THARGOMINDAH AIRPORT                       | -27.9867 |   143.815 |              22.7 |
+|  95351 | BLACKALL AIRPORT                           | -24.4303 |   145.431 |             22.65 |
+|  94272 | MOUNT STUART (DEFENCE)                     | -19.4082 |   146.762 |              22.6 |
+|  94317 | NEWMAN AERO                                | -23.4213 |   119.802 |              22.6 |
+|  94367 | MACKAY M.O                                 | -21.1172 |   149.217 |              22.6 |
+|  94513 | BOLLON MARY ST                             | -28.0331 |    147.48 |              22.6 |
+|  95298 | ROSSLYN BAY NTC AWS                        |  -23.161 |    150.79 |              22.6 |
+|  94352 | OORALEA RACECOURSE (MACKAY TURF CLUB)      |   -21.17 |   149.152 |              22.5 |
+|  94355 | TAMBO POST OFFICE                          | -24.8819 |   146.256 |              22.5 |
+|  94377 | MONTO TOWNSHIP                             | -24.8642 |   151.125 |              22.5 |
+|  94381 | GLADSTONE AIRPORT                          | -23.8697 |   151.221 |              22.5 |
+|  94398 | BLACKWATER AIRPORT                         | -23.6015 |   148.807 |              22.5 |
+|  94500 | CUNNAMULLA POST OFFICE                     | -28.0689 |   145.682 |              22.5 |
+|  95367 | MACKAY AERO                                | -21.1706 |   149.179 |              22.5 |
+|  94327 | JERVOIS                                    | -22.9494 |   136.144 |             22.45 |
+|  95482 | BIRDSVILLE AIRPORT                         | -25.8975 |   139.347 |             22.45 |
+|  94378 | RUNDLE ISLAND                              | -23.5322 |   151.277 |              22.4 |
+|  94388 | LADY ELLIOT ISLAND                         | -24.1116 |   152.716 |              22.4 |
+|  95370 | WILLIAMSON                                 | -22.4703 |   150.179 |              22.4 |
+|  95369 | ST LAWRENCE                                | -22.3472 |   149.524 |              22.3 |
+|  94365 | PROSERPINE AIRPORT                         | -20.4925 |   148.555 |              22.2 |
+|  94394 | CATO ISLAND                                | -23.2503 |   155.542 |              22.2 |
+|  94510 | CHARLEVILLE AERO                           | -26.4139 |   146.256 |             22.15 |
+|  94374 | ROCKHAMPTON AERO                           | -23.3753 |   150.477 |              22.1 |
+|  94514 | MITCHELL POST OFFICE                       | -26.4888 |   147.978 |              22.1 |
+|  94280 | INNISFAIL AERODROME                        | -17.5581 |   146.012 |             22.05 |
+|  94273 | TOWNSVILLE- FANNING RIVER (DEFENCE)        |  -19.783 |     146.5 |                22 |
+|  94323 | WATARRKA                                   | -24.2918 |   131.549 |                22 |
+|  94396 | ROLLESTON AIRPORT                          | -24.4617 |   148.626 |                22 |
+|  94407 | BORRONA DOWNS AWS                          | -29.7614 |   143.113 |                22 |
+|  94511 | INJUNE POST OFFICE                         | -25.8428 |   148.567 |                22 |
+|  94399 | LOCHINGTON                                 | -23.9424 |   147.525 |             21.95 |
+|  94326 | ALICE SPRINGS AIRPORT                      | -23.7951 |   133.889 |              21.9 |
+|  94397 | MORANBAH AIRPORT                           | -22.0644 |   148.076 |              21.9 |
+|  94380 | GLADSTONE RADAR                            | -23.8553 |   151.263 |             21.85 |
+|  94521 | SURAT                                      | -27.1591 |    149.07 |              21.8 |
+|  99113 | PORTABLE QFRE                              | -25.5134 |   152.715 |              21.8 |
+|  95565 | HERVEY BAY AIRPORT                         |  -25.322 |   152.882 |             21.75 |
+|  99312 | COONDEWANNA                                |  -22.965 |   118.809 |             21.65 |
+|  99114 | PORTABLE QFRF                              | -23.8237 |   150.817 |              21.6 |
+|  95591 | REDCLIFFE                                  | -27.2169 |   153.092 |             21.55 |
+|  95543 | GAYNDAH AIRPORT                            | -25.6167 |   151.616 |              21.5 |
+|  94462 | YULARA AIRPORT                             | -25.1896 |   130.974 |             21.45 |
+|  94387 | BUNDABERG AERO                             | -24.9069 |   152.323 |              21.4 |
+|  95362 | SPRINGSURE COMET ST                        |  -24.123 |   148.086 |              21.4 |
+|  94370 | SAMUEL HILL AERO                           | -22.7433 |   150.658 |             21.35 |
+|  95286 | MAREEBA AIRPORT                            | -17.0704 |   145.429 |             21.35 |
+|  95487 | BALLERA GAS FIELD                          | -27.4008 |   141.811 |             21.35 |
+|  95541 | INVERELL (RAGLAN ST)                       | -29.7796 |   151.112 |             21.35 |
+|  94271 | TOWNSVILLE- AIR WEAPONS RANGE (DEFENCE)    | -19.3048 |   146.244 |              21.3 |
+|  94376 | THANGOOL AIRPORT                           | -24.4935 |   150.571 |              21.3 |
+|  94569 | SUNSHINE COAST AIRPORT                     |  -26.599 |   153.091 |              21.3 |
+|  94372 | MIDDLE PERCY ISLAND                        | -21.6628 |   150.271 |             21.25 |
+|  94578 | BRISBANE AERO                              | -27.3917 |   153.129 |              21.2 |
+|  95520 | COLLARENEBRI (ALBERT ST)                   | -29.5406 |   148.582 |              21.2 |
+|  94576 | BRISBANE                                   | -27.4808 |   153.039 |             21.15 |
+|  94584 | DOUBLE ISLAND POINT LIGHTHOUSE             | -25.9319 |   153.191 |              21.1 |
+|  99084 | PORTABLE QFRC                              | -28.0568 |   152.841 |              21.1 |
+|  94497 | WANAARING POST OFFICE                      | -29.7029 |   144.148 |             21.05 |
+|  94580 | GOLD COAST SEAWAY                          |  -27.939 |   153.428 |             21.05 |
+|  95779 | NELSON BAY (NELSON HEAD)                   | -32.7103 |   152.161 |                21 |
+|  94570 | TEWANTIN RSL PARK                          | -26.3911 |    153.04 |             20.95 |
+|  94498 | LIGHTNING RIDGE VISITOR INFORMATION CENTRE |  -29.431 |   147.972 |              20.8 |
+|  95533 | TEXAS POST OFFICE                          | -28.8544 |   151.168 |              20.8 |
+|  94550 | STANTHORPE LESLIE PARADE                   | -28.6617 |   151.934 |              20.6 |
+|  94592 | COOLANGATTA                                | -28.1681 |   153.505 |              20.6 |
+|  94594 | CAPE MORETON LIGHTHOUSE                    | -27.0314 |   153.466 |              20.6 |
+|  94476 | OODNADATTA AIRPORT                         | -27.5553 |   135.446 |             20.55 |
+|  94422 | MURCHISON                                  | -26.8956 |   115.957 |              20.5 |
+|  95512 | BREWARRINA HOSPITAL                        | -29.9614 |   146.865 |              20.5 |
+|  94517 | ST GEORGE AIRPORT                          | -28.0489 |   148.594 |             20.45 |
+|  95529 | MILES CONSTANCE STREET                     | -26.6569 |   150.182 |             20.45 |
+|  94402 | DENHAM                                     | -25.9265 |   113.533 |              20.4 |
+|  94515 | ROMA AIRPORT                               | -26.5477 |   148.771 |              20.4 |
+|  94561 | REDLAND (ALEXANDRA HILLS)                  | -27.5433 |   153.239 |              20.4 |
+|  94420 | TIN CAN BAY (DEFENCE)                      | -25.9351 |   152.965 |             20.35 |
+|  94567 | MARYBOROUGH                                | -25.5132 |   152.715 |             20.35 |
+|  94568 | AMBERLEY AMO                               | -27.6297 |   152.711 |              20.3 |
+|  94575 | ARCHERFIELD AIRPORT                        | -27.5716 |   153.007 |              20.3 |
+|  94562 | UNIVERSITY OF QUEENSLAND GATTON            | -27.5436 |   152.337 |             20.25 |
+|  94703 | BOURKE AIRPORT AWS                         | -30.0362 |   145.952 |             20.25 |
+|  94799 | PORT MACQUARIE AIRPORT AWS                 | -31.4343 |   152.866 |              20.2 |
+|  95572 | NAMBOUR DAFF - HILLSIDE                    | -26.6442 |   152.938 |              20.2 |
+|  95681 | DELTA AWS                                  | -30.1006 |   145.334 |             20.15 |
+|  99400 | DEGRUSSA AERODROME                         | -25.5571 |   119.287 |             20.15 |
+|  94444 | BULGA DOWNS                                | -28.4967 |   119.744 |              20.1 |
+|  94676 | ARKAROOLA                                  |  -30.311 |   139.336 |              20.1 |
+|  95699 | WHITE CLIFFS AWS                           | -30.8522 |   143.074 |                20 |
+|  94599 | CAPE BYRON AWS                             | -28.6399 |   153.636 |             19.95 |
+|  94300 | CARNARVON AIRPORT                          | -24.8878 |    113.67 |              19.9 |
+|  94520 | MUNGINDI POST OFFICE                       | -28.9786 |    148.99 |              19.9 |
+|  95481 | MOOMBA AIRPORT                             | -28.0997 |   140.196 |              19.9 |
+|  95485 | TIBOOBURRA AIRPORT                         | -29.4448 |   142.057 |              19.8 |
+|  95439 | WILUNA AERO                                | -26.6274 |   120.219 |             19.75 |
+|  95448 | LEINSTER AERO                              | -27.8386 |   120.703 |             19.75 |
+|  94589 | YAMBA PILOT STATION                        | -29.4325 |   153.363 |              19.7 |
+|  94596 | BALLINA AIRPORT AWS                        | -28.8353 |   153.559 |              19.6 |
+|  94798 | NOONA AWS                                  | -31.7267 |   144.931 |              19.6 |
+|  95566 | BEERBURRUM FOREST STATION                  | -26.9586 |   152.962 |              19.6 |
+|  99107 | PORTABLE RFSNSW04                          | -34.7975 |   150.178 |              19.6 |
+|  99110 | PORTABLE RFSNSW07                          | -30.8669 |   152.836 |              19.6 |
+|  94415 | CARNAMAH                                   | -29.6886 |   115.887 |              19.5 |
+|  94401 | KALBARRI                                   | -27.7119 |   114.165 |              19.4 |
+|  94566 | GYMPIE                                     | -26.1831 |   152.641 |              19.4 |
+|  94793 | BREWON AWS                                 | -30.2411 |   147.533 |              19.4 |
+|  95293 | WOOLSHED                                   | -19.4168 |   146.536 |              19.4 |
+|  95480 | MARREE AERO                                | -29.6587 |   138.068 |              19.4 |
+|  94419 | GREENBANK (DEFENCE)                        | -27.6932 |   152.993 |             19.35 |
+|  94474 | PUKATJA                                    | -26.2635 |   132.177 |             19.35 |
+|  95729 | COFFS HARBOUR AIRPORT                      | -30.3189 |   153.116 |             19.35 |
+|  99122 | INGLEWOOD (QFRI)                           | -28.4169 |   151.097 |             19.35 |
+|  94430 | MEEKATHARRA AIRPORT                        | -26.6136 |   118.537 |              19.3 |
+|  99435 | WELLCAMP AIRPORT                           | -27.5517 |   151.785 |              19.3 |
+|  94542 | DALBY AIRPORT                              | -27.1605 |   151.263 |             19.25 |
+|  95575 | BEAUDESERT DRUMLEY STREET                  | -27.9707 |    152.99 |             19.25 |
+|  94450 | LEONORA AERO                               | -28.8789 |   121.319 |              19.2 |
+|  94711 | COBAR MO                                   |  -31.484 |   145.829 |              19.2 |
+|  94544 | PINDARI DAM                                | -29.3899 |   151.245 |              19.1 |
+|  99125 | MOUNT FOX (QFRL)                           | -18.8322 |   145.801 |             19.05 |
+|  94710 | COBAR AIRPORT AWS                          | -31.5388 |   145.796 |                19 |
+|  94790 | SMOKY CAPE LIGHTHOUSE                      | -30.9225 |   153.087 |                19 |
+|  94995 | LORD HOWE ISLAND AERO                      | -31.5421 |   159.079 |             18.95 |
+|  94405 | NORTH ISLAND                               | -28.3009 |   113.594 |             18.85 |
+|  94429 | MOUNT MAGNET AERO                          | -28.1156 |   117.842 |             18.85 |
+|  94598 | EVANS HEAD RAAF BOMBING RANGE AWS          |  -29.183 |   153.396 |             18.85 |
+|  95527 | MOREE AERO                                 | -29.4898 |   149.847 |             18.85 |
+|  94764 | PARRAMATTA NORTH (MASONS DRIVE)            | -33.7917 |   151.018 |              18.8 |
+|  94794 | GIRILAMBONE (OKEH) AWS                     | -31.0824 |    146.93 |              18.8 |
+|  94844 | KERANG                                     | -35.7236 |    143.92 |              18.8 |
+|  99755 | PORTABLE RFSNSW13                          | -36.5441 |   148.552 |              18.8 |
+|  94552 | OAKEY AERO                                 | -27.4034 |   151.741 |             18.75 |
+|  95458 | COOBER PEDY AIRPORT                        | -29.0347 |   134.722 |              18.7 |
+|  95660 | ANDAMOOKA                                  |  -30.449 |   137.169 |              18.7 |
+|  99434 | MOUNT KEITH                                | -27.2856 |   120.555 |              18.7 |
+|  95402 | SHARK BAY AIRPORT                          | -25.8925 |   113.577 |             18.65 |
+|  94796 | SMITHVILLE AWS                             | -30.0692 |   141.007 |              18.6 |
+|  94781 | NEWCASTLE UNIVERSITY                       | -32.8906 |   151.707 |              18.5 |
+|  95715 | WALGETT AIRPORT AWS                        | -30.0372 |   148.122 |              18.5 |
+|  94549 | KINGAROY AIRPORT                           | -26.5737 |    151.84 |              18.4 |
+|  95606 | LANCELIN                                   |  -31.016 |   115.332 |              18.4 |
+|  95734 | NARRABRI AIRPORT AWS                       | -30.3154 |    149.83 |             18.35 |
+|  95658 | OLYMPIC DAM AERODROME                      | -30.4829 |   136.877 |             18.25 |
+|  94449 | LAVERTON AERO                              | -28.6133 |   122.424 |              18.2 |
+|  94767 | SYDNEY AIRPORT AMO                         | -33.9465 |   151.173 |              18.2 |
+|  94774 | NEWCASTLE NOBBYS SIGNAL STATION AWS        | -32.9184 |   151.798 |              18.2 |
+|  95784 | TAREE AIRPORT AWS                          | -31.8895 |   152.512 |             18.15 |
+|  94404 | PAYNES FIND                                | -29.2708 |   117.684 |              18.1 |
+|  94573 | CASINO AIRPORT AWS                         | -28.8824 |   153.062 |              18.1 |
+|  94786 | PORT MACQUARIE AIRPORT AWS                 | -31.4335 |   152.865 |             18.05 |
+|  94657 | KYANCUTTA                                  | -33.1337 |   135.552 |                18 |
+|  94776 | WILLIAMTOWN RAAF                           | -32.7939 |   151.836 |                18 |
+|  95571 | GRAFTON RESEARCH STN                       | -29.6224 |    152.96 |                18 |
+|  95600 | JURIEN BAY                                 | -30.3081 |   115.031 |                18 |
+|  95603 | KELLERBERRIN                               | -31.6183 |   117.722 |                18 |
+|  95631 | GOOMALLING                                 | -31.2994 |   116.827 |                18 |
+|  95770 | NORAH HEAD AWS                             | -33.2814 |   151.577 |                18 |
+|  94721 | PEAK HILL POST OFFICE                      | -32.7235 |    148.19 |              17.9 |
+|  95766 | WEDDING CAKE WEST                          | -33.8405 |   151.264 |              17.9 |
+|  99071 | PORTABLE RFSNSW01                          | -34.3853 |   149.881 |              17.9 |
+|  94996 | NORFOLK ISLAND AERO                        | -29.0389 |   167.941 |             17.85 |
+|  95695 | WILCANNIA AERODROME AWS                    | -31.5194 |   143.385 |             17.85 |
+|  95718 | COONAMBLE AIRPORT AWS                      | -30.9776 |    148.38 |             17.85 |
+|  95765 | SYDNEY OLYMPIC PARK AWS (ARCHERY CENTRE)   | -33.8338 |   151.072 |             17.85 |
+|  94411 | MULLEWA                                    | -28.5367 |   115.514 |              17.8 |
+|  94768 | SYDNEY (OBSERVATORY HILL)                  | -33.8593 |   151.205 |              17.8 |
+|  94572 | LISMORE AIRPORT AWS                        | -28.8305 |    153.26 |             17.75 |
+|  94655 | TARCOOLA AERO                              | -30.7051 |   134.579 |              17.7 |
+|  94782 | GOSFORD AWS                                | -33.4351 |   151.361 |             17.65 |
+|  94555 | WARWICK                                    | -28.2061 |     152.1 |              17.6 |
+|  94775 | TOCAL AWS                                  | -32.6296 |   151.592 |              17.6 |
+|  94674 | LEIGH CREEK AIRPORT                        | -30.5963 |   138.422 |             17.55 |
+|  95570 | GRAFTON AIRPORT AWS                        | -29.7583 |    153.03 |             17.55 |
+|  94659 | WOOMERA AERODROME                          | -31.1558 |   136.805 |              17.5 |
+|  95609 | LANCELIN (DEFENCE)                         | -30.8392 |   115.228 |              17.5 |
+|  95697 | IVANHOE AERODROME AWS                      | -32.8833 |   144.309 |             17.45 |
+|  94686 | FOWLERS GAP AWS                            | -31.0863 |   141.701 |              17.4 |
+|  94728 | COONABARABRAN (SHOWGROUNDS)                | -31.2786 |   149.279 |              17.4 |
+|  94763 | PENRITH LAKES AWS                          | -33.7195 |   150.678 |              17.4 |
+|  94766 | CANTERBURY RACECOURSE AWS                  | -33.9057 |   151.113 |              17.4 |
+|  94941 | BATEMANS BAY (CATALINA COUNTRY CLUB)       | -35.7234 |   150.187 |              17.4 |
+|  95753 | RICHMOND RAAF                              | -33.6004 |   150.776 |              17.4 |
+|  99133 | PORTABLE RFSNSW20                          |  -31.044 |   149.372 |              17.4 |
+|  95745 | PORT KEMBLA NTC AWS                        | -34.4734 |   150.912 |             17.35 |
+|  95767 | LAKE MACQUARIE AWS                         | -33.0887 |   151.464 |             17.35 |
+|  94765 | BANKSTOWN AIRPORT AWS                      | -33.9176 |   150.984 |              17.3 |
+|  95740 | GUNNEDAH AIRPORT AWS                       | -30.9537 |   150.249 |             17.25 |
+|  99124 | RAVENSHOE (QFRK)                           | -17.6096 |   145.487 |             17.25 |
+|  94403 | GERALDTON AIRPORT                          | -28.8047 |   114.699 |              17.2 |
+|  95746 | QUIRINDI POST OFFICE                       | -31.5086 |   150.679 |              17.2 |
+|  95771 | CESSNOCK AIRPORT AWS                       | -32.7886 |   151.338 |              17.2 |
+|  99738 | SINGLETON DEFENCE AWS                      | -32.6976 |   151.156 |             17.15 |
+|  94749 | BELLAMBI AWS                               | -34.3691 |   150.929 |              17.1 |
+|  95605 | HILLARYS BOAT HARBOUR NTC AWS              | -31.8256 |   115.739 |              17.1 |
+|  95761 | HOLSWORTHY AERODROME AWS                   | -33.9925 |   150.949 |             17.05 |
+|  94645 | EYRE                                       | -32.2464 |   126.301 |                17 |
+|  94650 | MAITLAND AIRPORT AWS                       | -32.7023 |   151.488 |                17 |
+|  94937 | MORUYA HEADS PILOT STATION                 | -35.9093 |   150.153 |                17 |
+|  95627 | HYDEN                                      | -32.4419 |   118.898 |                17 |
+|  95935 | NAROOMA (MARINE RESCUE)                    | -36.2144 |   150.136 |                17 |
+|  95710 | TRANGIE RESEARCH STATION AWS               | -31.9861 |   147.949 |             16.95 |
+|  95748 | SHELLHARBOUR AIRPORT                       | -34.5638 |    150.79 |             16.95 |
+|  94760 | HORSLEY PARK EQUESTRIAN CENTRE AWS         |  -33.851 |   150.857 |              16.9 |
+|  94785 | KEMPSEY AIRPORT AWS                        | -31.0711 |   152.772 |              16.9 |
+|  95551 | TOOWOOMBA AIRPORT                          | -27.5425 |   151.913 |              16.9 |
+|  95749 | KIAMA (BOMBO HEADLAND)                     | -34.6532 |   150.861 |             16.85 |
+|  95762 | TAMWORTH AIRPORT AWS                       | -31.0742 |   150.836 |              16.8 |
+|  94752 | BADGERYS CREEK AWS                         | -33.8969 |   150.728 |             16.75 |
+|  99752 | PORTABLE RFSNSW10                          | -33.3704 |   150.752 |             16.65 |
+|  94418 | CANUNGRA (DEFENCE)                         | -28.0437 |   153.187 |              16.6 |
+|  94759 | TERREY HILLS AWS                           | -33.6908 |   151.225 |              16.6 |
+|  95624 | MERREDIN                                   | -31.4756 |   118.279 |              16.6 |
+|  94797 | MULURULU AWS                               | -33.3392 |     143.4 |             16.55 |
+|  95607 | GARDEN ISLAND HSF                          | -32.2433 |   115.684 |             16.55 |
+|  94622 | WONGAN HILLS                               | -30.8917 |   116.719 |              16.5 |
+|  94730 | BATHURST AGRICULTURAL STATION              | -33.4288 |   149.556 |              16.5 |
+|  99048 | VICTORIAN PORTABLE F                       |  -36.811 |   147.473 |              16.5 |
+|  99050 | VICTORIAN PORTABLE H                       |  -36.462 |    147.24 |              16.5 |
+|  94761 | BARRABA (CLIFTON LANE)                     | -30.3833 |   150.608 |             16.45 |
+|  95666 | PORT AUGUSTA AERO                          | -32.5073 |   137.717 |             16.45 |
+|  95940 | POINT PERPENDICULAR AWS                    | -35.0936 |   150.805 |             16.45 |
+|  94725 | GRENFELL (MANGANESE RD)                    | -33.8934 |   148.152 |              16.4 |
+|  94755 | CAMDEN AIRPORT AWS                         |  -34.039 |   150.689 |             16.35 |
+|  94750 | NOWRA RAN AIR STATION AWS                  | -34.9469 |   150.535 |              16.3 |
+|  94938 | ULLADULLA AWS                              | -35.3635 |   150.483 |              16.3 |
+|  99123 | NORTH TAMBORINE (QFRJ)                     | -27.9396 |   153.191 |              16.3 |
+|  94541 | INVERELL RESEARCH CENTRE                   | -29.7752 |   151.082 |             16.25 |
+|  94602 | ROTTNEST ISLAND                            | -32.0069 |   115.502 |             16.25 |
+|  94605 | MANDURAH                                   | -32.5219 |   115.712 |             16.25 |
+|  94751 | JERVIS BAY AIRFIELD AWS                    |  -35.144 |   150.697 |             16.25 |
+|  95682 | MOUNT HOPE AWS                             | -32.8261 |    145.88 |             16.25 |
+|  94614 | SWANBOURNE                                 | -31.9558 |   115.762 |              16.2 |
+|  94691 | BROKEN HILL AIRPORT AWS                    | -32.0012 |   141.469 |              16.2 |
+|  95757 | LUCAS HEIGHTS (ANSTO)                      | -34.0519 |   150.982 |              16.2 |
+|  99749 | PORT PIRIE AERODROME AWS                   | -33.2371 |   137.997 |              16.2 |
+|  94587 | TABULAM (MUIRNE)                           | -28.7551 |   152.451 |              16.1 |
+|  95684 | HOLSWORTHY DEFENCE AWS                     |  -34.081 |   150.901 |              16.1 |
+|  95727 | DUNEDOO POST OFFICE                        | -32.0165 |   149.396 |              16.1 |
+|  94637 | KALGOORLIE-BOULDER AIRPORT                 | -30.7847 |   121.453 |             16.05 |
+|  94757 | CAMPBELLTOWN (MOUNT ANNAN)                 | -34.0615 |   150.773 |             16.05 |
+|  94632 | BENCUBBIN                                  | -30.8081 |    117.86 |                16 |
+|  94694 | MENINDEE POST OFFICE                       | -32.3937 |   142.417 |                16 |
+|  94831 | OUYEN (POST OFFICE)                        | -35.0682 |   142.312 |                16 |
+|  94923 | COOMA VISITORS CENTRE                      | -36.2318 |   149.124 |                16 |
+|  95683 | CULTANA (DEFENCE)                          | -32.6845 |   137.369 |                16 |
+|  95728 | COONABARABRAN AIRPORT AWS                  |  -31.333 |    149.27 |                16 |
+|  95744 | SPRINGWOOD (VALLEY HEIGHTS)                | -33.7065 |   150.585 |                16 |
+|  94610 | PERTH AIRPORT                              | -31.9275 |   115.976 |              15.9 |
+|  94702 | HAY AIRPORT AWS                            | -34.5412 |   144.835 |              15.9 |
+|  94939 | MONTAGUE ISLAND LIGHTHOUSE                 | -36.2519 |   150.227 |              15.9 |
+|  95774 | MANGROVE MOUNTAIN AWS                      | -33.2894 |   151.211 |              15.9 |
+|  94693 | MILDURA AIRPORT                            | -34.2358 |   142.087 |             15.85 |
+|  95707 | LAKE CARGELLIGO AIRPORT                    | -33.2832 |   146.371 |              15.8 |
+|  95758 | SCONE AIRPORT AWS                          | -32.0335 |   150.826 |              15.8 |
+|  95692 | POONCARIE MAIL AGENCY                      | -33.3856 |    142.57 |              15.7 |
+|  99997 | PORTABLE RFSNSW55                          |  -33.673 |   150.564 |              15.7 |
+|  95646 | FORREST                                    | -30.8453 |   128.109 |             15.65 |
+|  95704 | GRIFFITH AIRPORT AWS                       | -34.2487 |    146.07 |             15.65 |
+|  94417 | MORAWA AIRPORT                             | -29.2039 |   116.025 |              15.6 |
+|  94608 | PERTH METRO                                | -31.9192 |   115.873 |              15.6 |
+|  95604 | GOSNELLS CITY                              | -32.0481 |   115.984 |              15.6 |
+|  95614 | KARNET                                     | -32.4389 |   116.079 |              15.6 |
+|  95626 | NAREMBEEN                                  | -32.0656 |   118.396 |              15.6 |
+|  95705 | YANCO AGRICULTURAL INSTITUTE               | -34.6222 |   146.433 |              15.6 |
+|  95708 | CONDOBOLIN AIRPORT AWS                     | -33.0682 |   147.213 |              15.6 |
+|  94723 | WELLINGTON (D&J RURAL)                     | -32.5635 |    148.95 |              15.5 |
+|  95668 | GLUEPOT                                    | -33.7622 |   140.125 |              15.5 |
+|  94653 | CEDUNA AMO                                 | -32.1297 |   133.698 |             15.45 |
+|  94656 | ELLISTON                                   | -33.6501 |   134.888 |              15.4 |
+|  95664 | WHYALLA AERO                               | -33.0539 |   137.521 |              15.4 |
+|  95772 | LOSTOCK DAM                                | -32.3322 |    151.46 |              15.4 |
+|  95937 | MORUYA AIRPORT AWS                         | -35.9004 |   150.144 |              15.4 |
+|  95642 | NORSEMAN AERO                              | -32.2147 |   121.755 |             15.25 |
+|  95687 | RENMARK AERO                               | -34.1983 |   140.677 |             15.25 |
+|  94601 | CAPE LEEUWIN                               | -34.3728 |   115.136 |              15.2 |
+|  94609 | JANDAKOT AERO                              | -32.1011 |   115.879 |              15.2 |
+|  94654 | STREAKY BAY                                | -32.8084 |   134.198 |              15.2 |
+|  94715 | FORBES AIRPORT AWS                         | -33.3627 |   147.921 |              15.2 |
+|  95717 | PARKES AIRPORT AWS                         | -33.1281 |   148.243 |              15.2 |
+|  95719 | DUBBO AIRPORT AWS                          | -32.2206 |   148.575 |              15.2 |
+|  94612 | PEARCE RAAF                                | -31.6669 |   116.019 |             15.15 |
+|  94672 | ADELAIDE AIRPORT                           | -34.9524 |    138.52 |             15.15 |
+|  94910 | WAGGA WAGGA AMO                            | -35.1583 |   147.458 |             15.15 |
+|  95629 | DALWALLINU                                 | -30.2761 |   116.671 |             15.15 |
+|  94556 | TENTERFIELD (FEDERATION PARK)              | -29.0479 |   152.017 |              15.1 |
+|  94640 | WINDY HARBOUR                              | -34.8373 |   116.026 |              15.1 |
+|  94682 | LOXTON RESEARCH CENTRE                     |  -34.439 |   140.598 |              15.1 |
+|  94758 | MURRURUNDI (HAYDON STREET)                 | -31.7678 |   150.842 |              15.1 |
+|  95654 | WUDINNA AERO                               |  -33.043 |   135.452 |              15.1 |
+|  99756 | PORTABLE RFSNSW14                          | -37.0341 |   149.633 |              15.1 |
+|  95634 | SOUTHERN CROSS AIRFIELD                    | -31.2353 |   119.356 |             15.05 |
+|  94621 | NORTHAM                                    | -31.6508 |   116.659 |                15 |
+|  94623 | YORK                                       | -31.8997 |   116.765 |                15 |
+|  94636 | RAVENSTHORPE                               | -33.5803 |   120.046 |                15 |
+|  94648 | ADELAIDE (WEST TERRACE / NGAYIRDAPIRA)     | -34.9257 |   138.583 |                15 |
+|  94661 | CLEVE                                      | -33.7011 |   136.494 |                15 |
+|  94673 | HAWKER                                     | -31.9043 |   138.439 |                15 |
+|  94696 | BALRANALD (RSL)                            | -34.6398 |   143.561 |                15 |
+|  94732 | GULGONG POST OFFICE                        | -32.3634 |   149.533 |                15 |
+|  94789 | DORRIGO (OLD CORAMBA RD)                   | -30.3444 |   152.719 |                15 |
+|  94801 | ALBANY                                     | -35.0289 |   117.881 |                15 |
+|  95622 | DONNYBROOK                                 | -33.5719 |   115.825 |                15 |
+|  95662 | MINNIPA PIRSA                              | -32.8427 |   135.152 |                15 |
+|  95706 | NARRANDERA AIRPORT AWS                     |  -34.705 |   146.514 |                15 |
+|  99792 | PORTABLE RFSNSW53                          | -34.4387 |   146.896 |                15 |
+|  94795 | MILLENDON (SWAN VALLEY)                    | -31.8112 |   116.023 |              14.9 |
+|  94944 | KAPOOKA (DEFENCE)                          | -35.1327 |   147.251 |              14.9 |
+|  95625 | CUNDERDIN AIRFIELD                         | -31.6219 |   117.222 |              14.9 |
+|  95628 | ONGERUP                                    | -33.9634 |   118.479 |              14.9 |
+|  95709 | WEST WYALONG AIRPORT AWS                   | -33.9382 |   147.196 |              14.9 |
+|  94604 | BUNBURY                                    | -33.3567 |   115.645 |             14.85 |
+|  94684 | YUNTA AIRSTRIP                             | -32.5707 |   139.564 |             14.85 |
+|  94553 | APPLETHORPE                                | -28.6217 |   151.953 |              14.8 |
+|  94642 | BALLADONIA                                 | -32.4569 |   123.865 |              14.8 |
+|  94812 | ROBE                                       | -37.1628 |   139.756 |              14.8 |
+|  94934 | GREEN CAPE AWS                             | -37.2622 |    150.05 |              14.8 |
+|  95615 | BEVERLEY                                   | -32.1083 |   116.925 |              14.8 |
+|  95812 | MURRAY BRIDGE                              | -35.1234 |   139.259 |              14.8 |
+|  94651 | NULLARBOR                                  | -31.4492 |   130.898 |             14.75 |
+|  94625 | BROOKTON                                   | -32.3728 |   117.009 |              14.7 |
+|  94627 | NARROGIN                                   | -32.9342 |    117.18 |              14.7 |
+|  95747 | MURRURUNDI GAP AWS                         | -31.7416 |   150.794 |              14.7 |
+|  94647 | EUCLA                                      | -31.6797 |   128.896 |             14.65 |
+|  95721 | COWRA AIRPORT AWS                          | -33.8382 |   148.654 |             14.65 |
+|  95754 | MERRIWA (ROSCOMMON)                        | -32.1852 |   150.174 |             14.65 |
+|  95931 | BEGA AWS                                   | -36.6722 |   149.819 |             14.65 |
+|  95676 | EDINBURGH RAAF                             | -34.7111 |   138.622 |             14.55 |
+|  94633 | CORRIGIN                                   | -32.3292 |   117.873 |              14.5 |
+|  94700 | HILLSTON AIRPORT                           | -33.4915 |   145.525 |              14.5 |
+|  94792 | WOOLBROOK (WOOLBROOK ROAD)                 | -30.9651 |    151.35 |              14.5 |
+|  94890 | GUNDAGAI (NANGUS RD)                       |  -35.064 |   148.099 |              14.5 |
+|  95618 | WAGIN                                      | -33.3075 |    117.34 |              14.5 |
+|  95648 | ESPERANCE NTC AWS                          | -33.8707 |   121.897 |              14.5 |
+|  94933 | GABO ISLAND LIGHTHOUSE                     | -37.5679 |   149.916 |             14.45 |
+|  95929 | MERIMBULA AIRPORT AWS                      | -36.9077 |   149.899 |             14.45 |
+|  99791 | PORTABLE RFSNSW52                          |  -35.444 |   146.439 |             14.45 |
+|  94600 | CAPE NATURALISTE                           | -33.5372 |   115.019 |              14.4 |
+|  95612 | GINGIN AERO                                | -31.4628 |   115.864 |              14.4 |
+|  95813 | KAROONDA                                   |   -35.09 |   139.897 |              14.4 |
+|  95895 | COROWA AIRPORT                             | -35.9887 |   146.357 |              14.4 |
+|  94603 | BADGINGARRA RESEARCH STN                   | -30.3381 |   115.539 |             14.35 |
+|  94615 | GOOSEBERRY HILL                            | -31.9414 |   116.051 |             14.35 |
+|  94663 | WAROOKA                                    | -34.9906 |     137.4 |              14.3 |
+|  94773 | ARMIDALE (TREE GROUP NURSERY)              | -30.5243 |   151.672 |              14.3 |
+|  95904 | LAKES ENTRANCE (EASTERN BEACH ROAD)        | -37.8717 |   148.006 |              14.3 |
+|  94935 | MALLACOOTA                                 | -37.5976 |   149.729 |             14.25 |
+|  94662 | CLEVE AERODROME                            | -33.7081 |   136.503 |              14.2 |
+|  94727 | MUDGEE AIRPORT AWS                         | -32.5628 |   149.615 |              14.2 |
+|  94808 | NOARLUNGA                                  | -35.1586 |   138.506 |              14.2 |
+|  95677 | PARAFIELD AIRPORT                          | -34.7977 |   138.628 |              14.2 |
+|  94685 | KADINA AWS                                 | -33.9703 |   137.663 |             14.15 |
+|  94804 | NEPTUNE ISLAND                             | -35.3365 |   136.117 |             14.15 |
+|  94843 | SWAN HILL AERODROME                        | -35.3766 |   143.542 |             14.15 |
+|  95611 | BUSSELTON AERO                             | -33.6818 |   115.403 |              14.1 |
+|  95649 | POINT AVOID                                |  -34.675 |   135.336 |             14.05 |
+|  94660 | MOUNT IVE                                  | -32.4398 |   136.067 |                14 |
+|  94668 | KIMBA                                      | -33.1416 |   136.413 |                14 |
+|  94692 | LAKE VICTORIA STORAGE                      | -34.0438 |   141.268 |                14 |
+|  94809 | EDITHBURGH                                 | -35.1121 |    137.74 |                14 |
+|  95722 | TEMORA AIRPORT                             | -34.4277 |   147.512 |                14 |
+|  95811 | ENCOUNTER BAY                              | -35.5544 |     138.6 |                14 |
+|  99118 | PORTABLE RFSNSW09                          | -31.8064 |   151.585 |                14 |
+|  99998 | PORTABLE RFSNSW51                          | -35.4939 |   146.975 |                14 |
+|  95896 | ALBURY AIRPORT AWS                         |  -36.069 |   146.951 |             13.95 |
+|  95635 | HOPETOUN NORTH                             | -33.9306 |   120.128 |              13.9 |
+|  95869 | DENILIQUIN AIRPORT AWS                     | -35.5575 |   144.946 |              13.9 |
+|  94714 | COOTAMUNDRA AIRPORT                        | -34.6299 |   148.036 |              13.8 |
+|  95918 | ORBOST                                     | -37.6922 |   148.467 |              13.8 |
+|  99072 | PORTABLE RFSNSW02                          |   -35.27 |   148.241 |             13.75 |
+|  94638 | ESPERANCE                                  |   -33.83 |   121.893 |              13.7 |
+|  95670 | RAYVILLE PARK                              | -33.7676 |   138.218 |              13.7 |
+|  95671 | ROSEWORTHY AWS                             | -34.5106 |   138.676 |              13.7 |
+|  95806 | STENHOUSE BAY                              | -35.2795 |   136.939 |              13.7 |
+|  95661 | PORT LINCOLN AWS                           | -34.5993 |   135.878 |             13.65 |
+|  94862 | YARRAWONGA                                 | -36.0294 |   146.031 |              13.6 |
+|  95936 | MELBOURNE (OLYMPIC PARK)                   | -37.8255 |   144.982 |              13.6 |
+|  95831 | WALPEUP RESEARCH                           | -35.1201 |   142.004 |             13.55 |
+|  94665 | MAITLAND                                   | -34.3745 |   137.673 |              13.5 |
+|  94772 | GUYRA HOSPITAL                             | -30.2122 |   151.679 |              13.5 |
+|  94875 | SHEPPARTON AIRPORT                         | -36.4288 |   145.395 |              13.5 |
+|  94877 | TOCUMWAL AIRPORT                           |  -35.817 |     145.6 |              13.5 |
+|  94918 | TUMBARUMBA POST OFFICE                     |  -35.778 |   148.012 |              13.5 |
+|  95659 | MINLATON AERO                              |  -34.748 |   137.528 |              13.5 |
+|  95814 | MENINGIE                                   | -35.6902 |   139.337 |              13.5 |
+|  95837 | RUTHERGLEN RESEARCH                        | -36.1048 |   146.509 |              13.5 |
+|  55039 | KINGFISH B (PLATFORM)                      | -38.5997 |   148.189 |             13.45 |
+|  95637 | LAKE GRACE                                 | -33.1006 |   118.465 |             13.45 |
+|  99146 | ACT PCS2                                   | -35.3261 |   149.049 |             13.45 |
+|  94677 | HINDMARSH ISLAND AWS                       | -35.5194 |   138.818 |              13.4 |
+|  94816 | KEITH                                      |  -36.098 |   140.356 |              13.4 |
+|  95807 | KINGSCOTE AERO                             | -35.7114 |   137.523 |              13.4 |
+|  94889 | WANGARATTA AERO                            | -36.4205 |   146.306 |             13.35 |
+|  94822 | CAPE WILLOUGHBY                            | -35.8426 |   138.133 |              13.3 |
+|  94870 | MOORABBIN AIRPORT                          |   -37.98 |   145.096 |             13.25 |
+|  95641 | WITCHCLIFFE                                | -34.0281 |   115.104 |             13.25 |
+|  95907 | EAST SALE AIRPORT                          | -38.1017 |    147.14 |             13.25 |
+|  95639 | SALMON GUMS RES.STN.                       | -32.9869 |   121.624 |              13.2 |
+|  94712 | YOUNG AIRPORT                              | -34.2493 |   148.247 |             13.15 |
+|  95663 | CUMMINS AERO                               | -34.2524 |   135.714 |             13.15 |
+|  95874 | VIEWBANK                                   | -37.7408 |   145.097 |             13.15 |
+|  94716 | GOULBURN TAFE                              | -34.7495 |   149.703 |              13.1 |
+|  94892 | RHYLL                                      | -38.4612 |    145.31 |              13.1 |
+|  95818 | PALLAMANA AERODROME                        |  -35.065 |   139.227 |             13.05 |
+|  94628 | NEWDEGATE RESEARCH STATION                 | -33.1129 |    118.84 |                13 |
+|  94630 | MOUNT BARKER                               |  -34.625 |   117.636 |                13 |
+|  94861 | ECHUCA AERODROME                           | -36.1647 |   144.764 |                13 |
+|  94865 | LAVERTON RAAF                              | -37.8565 |   144.757 |                13 |
+|  94901 | HUME RESERVOIR                             | -36.1039 |   147.033 |                13 |
+|  94925 | TUGGERANONG (ISABELLA PLAINS) AWS          | -35.4184 |   149.094 |                13 |
+|  95613 | PEMBERTON                                  | -34.4478 |   116.043 |                13 |
+|  94838 | HOPETOUN AIRPORT                           | -35.7151 |   142.357 |             12.95 |
+|  94814 | STRATHALBYN RACECOURSE                     | -35.2836 |   138.893 |              12.9 |
+|  94839 | CHARLTON                                   | -36.2846 |   143.334 |              12.9 |
+|  94857 | GEELONG RACECOURSE                         | -38.1737 |   144.376 |              12.9 |
+|  95836 | TATURA INST SUSTAINABLE AG                 | -36.4378 |   145.267 |              12.9 |
+|  95867 | SCORESBY RESEARCH INSTITUTE                |  -37.871 |   145.256 |              12.9 |
+|  94876 | FRANKSTON (BALLAM PARK)                    | -38.1516 |   145.161 |             12.85 |
+|  94898 | CERBERUS                                   | -38.3646 |   145.178 |             12.85 |
+|  94620 | DWELLINGUP                                 | -32.7103 |   116.059 |              12.8 |
+|  94681 | NURIOOTPA PIRSA                            | -34.4761 |   139.006 |              12.8 |
+|  94806 | MOUNT BARKER                               | -35.0732 |   138.847 |              12.8 |
+|  94854 | AVALON AIRPORT                             | -38.0288 |   144.478 |              12.8 |
+|  94912 | BAIRNSDALE AIRPORT                         | -37.8818 |   147.567 |              12.8 |
+|  94926 | CANBERRA AIRPORT                           | -35.3088 |     149.2 |              12.8 |
+|  95735 | OBERON (ALBION ST)                         | -33.6993 |   149.867 |              12.8 |
+|  95805 | CAPE BORDA                                 | -35.7549 |   136.596 |              12.8 |
+|  95866 | ESSENDON AIRPORT                           | -37.7276 |   144.907 |              12.8 |
+|  95989 | BICHENO (COUNCIL DEPOT)                    | -41.8739 |   148.304 |              12.8 |
+|  95610 | BICKLEY                                    | -32.0072 |   116.137 |             12.75 |
+|  94690 | AUSTIN PLAINS                              | -35.3778 |   140.538 |              12.7 |
+|  94741 | LITHGOW (COOERWULL)                        | -33.4769 |    150.13 |              12.7 |
+|  94930 | MOUNT NOWA NOWA                            | -37.6924 |   148.091 |              12.7 |
+|  95833 | KYABRAM                                    |  -36.335 |   145.064 |              12.7 |
+|  94919 | KHANCOBAN AWS                              | -36.2304 |   148.141 |              12.6 |
+|  94980 | FLINDERS ISLAND AIRPORT                    | -40.0911 |   148.002 |              12.6 |
+|  95616 | PINGELLY                                   | -32.5336 |   117.083 |              12.6 |
+|  95647 | NORTH WALPOLE                              | -34.9469 |   116.722 |              12.6 |
+|  95984 | ORFORD (AUBIN COURT)                       | -42.5519 |   147.875 |              12.6 |
+|  94588 | GLEN INNES AIRPORT AWS                     |  -29.678 |   151.694 |             12.55 |
+|  94729 | BATHURST AIRPORT AWS                       | -33.4119 |   149.654 |             12.55 |
+|  95621 | COLLIE EAST                                | -33.3608 |   116.172 |             12.55 |
+|  95638 | ESPERANCE AERO                             | -33.6825 |   121.827 |             12.55 |
+|  94864 | COLDSTREAM                                 | -37.7239 |   145.409 |             12.45 |
+|  94983 | LARAPUNA (EDDYSTONE POINT)                 | -40.9928 |   148.347 |             12.45 |
+|  95640 | WANDERING                                  | -32.6722 |   116.671 |             12.45 |
+|  95773 | ARMIDALE AIRPORT AWS                       | -30.5273 |   151.616 |             12.45 |
+|  99999 | PORTABLE NPWS NSW02                        |  -33.098 |    150.07 |             12.45 |
+|  94866 | MELBOURNE AIRPORT                          | -37.6654 |   144.832 |              12.4 |
+|  94886 | POUND CREEK                                | -38.6297 |   145.811 |              12.4 |
+|  94943 | NERRIGA AWS                                | -35.1103 |   150.083 |              12.4 |
+|  95890 | YARRAM AIRPORT                             | -38.5647 |   146.748 |              12.4 |
+|  94884 | BENALLA AIRPORT                            | -36.5523 |   145.998 |             12.35 |
+|  95985 | SWAN ISLAND                                | -40.7292 |   148.125 |             12.35 |
+|  94813 | THE LIMESTONE                              | -36.9655 |   139.716 |              12.3 |
+|  94830 | PORT FAIRY AWS                             | -38.3906 |   142.235 |              12.3 |
+|  94855 | BENDIGO AIRPORT                            | -36.7411 |   144.327 |              12.3 |
+|  95644 | MUNGLINUP WEST                             | -33.5547 |     120.7 |              12.3 |
+|  94802 | ALBANY AIRPORT                             | -34.9411 |   117.816 |             12.25 |
+|  94842 | CAPE OTWAY LIGHTHOUSE                      | -38.8556 |   143.513 |             12.25 |
+|  94874 | MANGALORE AIRPORT                          | -36.8886 |   145.186 |             12.25 |
+|  95816 | ROBE AIRFIELD                              | -37.1776 |   139.805 |             12.25 |
+|  95826 | PORTLAND NTC AWS                           | -38.3439 |   141.614 |             12.25 |
+|  95964 | LOW HEAD                                   | -41.0547 |   146.787 |             12.25 |
+|  94746 | MOSS VALE AWS                              | -34.5253 |   150.422 |              12.2 |
+|  94891 | LATROBE VALLEY AIRPORT                     | -38.2094 |   146.475 |              12.2 |
+|  94911 | YANAKIE                                    | -38.8051 |   146.194 |              12.2 |
+|  99764 | KOWEN FOREST (PCS)                         | -35.3111 |   149.316 |             12.15 |
+|  94679 | YONGALA                                    | -33.0276 |   138.756 |              12.1 |
+|  94680 | EUDUNDA                                    | -34.1754 |   139.085 |              12.1 |
+|  94928 | BOMBALA (THERRY STREET)                    | -36.9113 |   149.238 |              12.1 |
+|  94987 | FRIENDLY BEACHES                           | -41.9953 |   148.279 |              12.1 |
+|  99742 | HIGH RANGE AWS (WANGANDERRY)               | -34.3335 |   150.267 |              12.1 |
+|  95716 | GOULBURN AIRPORT AWS                       | -34.8085 |   149.731 |             12.05 |
+|  94735 | TARALGA POST OFFICE                        | -34.4048 |    149.82 |                12 |
+|  94849 | MARYBOROUGH                                |  -37.056 |   143.732 |                12 |
+|  95632 | BRIDGETOWN                                 | -33.9486 |   116.131 |                12 |
+|  95636 | JACUP                                      | -33.8878 |   119.109 |                12 |
+|  99763 | MULLION (PCS)                              | -35.1066 |   148.848 |                12 |
+|  94858 | PUCKAPUNYAL LYON HILL (DEFENCE)            | -36.9381 |   145.054 |             11.95 |
+|  94927 | BRAIDWOOD RACECOURSE AWS                   | -35.4253 |   149.783 |             11.95 |
+|  95686 | MARRANGAROO (DEFENCE)                      | -33.4346 |   150.135 |             11.95 |
+|  95823 | PADTHAWAY SOUTH                            | -36.6539 |   140.521 |             11.95 |
+|  95987 | SPRING BAY NTC AWS                         | -42.5464 |   147.931 |             11.95 |
+|  94826 | CAPE NELSON LIGHTHOUSE                     | -38.4306 |   141.544 |              11.9 |
+|  94834 | ARARAT PRISON                              | -37.2769 |   142.979 |              11.9 |
+|  94846 | AIREYS INLET                               | -38.4583 |   144.088 |              11.9 |
+|  94920 | WARRACKNABEAL AIRPORT                      | -36.3204 |   142.416 |              11.9 |
+|  95667 | CLARE HIGH SCHOOL                          | -33.8226 |   138.593 |              11.9 |
+|  94893 | WILSONS PROMONTORY LIGHTHOUSE              | -39.1297 |   146.425 |             11.85 |
+|  94967 | CAPE BRUNY LIGHTHOUSE                      | -43.4892 |   147.145 |             11.85 |
+|  99806 | NILMA NORTH (WARRAGUL)                     | -38.1321 |   145.986 |             11.85 |
+|  94807 | PARNDANA CFS AWS                           | -35.7916 |    137.25 |              11.8 |
+|  94914 | COMBIENBAR AWS                             | -37.3416 |   149.023 |              11.8 |
+|  95960 | DEVONPORT AIRPORT                          | -41.1701 |   146.429 |              11.8 |
+|  95963 | BURNIE NTC AWS                             |   -41.05 |   145.915 |              11.8 |
+|  94641 | KATANNING                                  | -33.6856 |   117.606 |             11.75 |
+|  99762 | TIDBINBILLA (PCS)                          |  -35.457 |   148.935 |             11.75 |
+|  94850 | KING ISLAND AIRPORT                        | -39.8804 |   143.886 |              11.7 |
+|  94951 | DUNALLEY (STROUD POINT)                    | -42.9017 |   147.789 |              11.7 |
+|  94981 | SWANSEA (FRANCIS STREET)                   | -42.1381 |   148.074 |              11.7 |
+|  95981 | ST HELENS AERODROME                        | -41.3381 |   148.279 |              11.7 |
+|  94827 | NHILL AERODROME                            | -36.3092 |   141.649 |              11.6 |
+|  95881 | WONTHAGGI                                  | -38.6078 |   145.596 |              11.6 |
+|  94817 | COONAWARRA                                 | -37.2906 |   140.825 |             11.55 |
+|  94949 | HOGAN ISLAND                               | -39.2225 |   146.984 |             11.55 |
+|  94969 | LAUNCESTON (TI TREE BEND)                  | -41.4194 |   147.122 |             11.55 |
+|  94975 | HOBART AIRPORT                             | -42.8339 |   147.503 |             11.55 |
+|  94988 | DENNES POINT                               | -43.0639 |   147.357 |             11.55 |
+|  95988 | MARIA ISLAND (POINT LESUEUR)               | -42.6621 |   148.018 |             11.55 |
+|  94744 | KATOOMBA (FARNELLS RD)                     | -33.7139 |   150.295 |              11.5 |
+|  94754 | NULLO MOUNTAIN AWS                         | -32.7244 |   150.229 |              11.5 |
+|  95815 | MUNKORA                                    | -36.1058 |   140.327 |              11.5 |
+|  95913 | MOUNT MOORNAPA                             | -37.7481 |   147.143 |              11.5 |
+|  94820 | NARACOORTE AERODROME                       | -36.9813 |   140.727 |             11.45 |
+|  94836 | STAWELL AERODROME                          |  -37.072 |    142.74 |             11.45 |
+|  94840 | MORTLAKE RACECOURSE                        | -38.0737 |   142.774 |             11.45 |
+|  94837 | WARRNAMBOOL AIRPORT NDB                    | -38.2867 |   142.452 |              11.4 |
+|  94970 | HOBART (ELLERSLIE ROAD)                    | -42.8897 |   147.328 |              11.4 |
+|  95957 | WYNYARD AIRPORT                            | -40.9964 |   145.731 |              11.4 |
+|  94683 | KUITPO FOREST RESERVE                      | -35.1712 |   138.678 |             11.35 |
+|  94828 | CASHMORE AIRPORT                           | -38.3148 |   141.471 |             11.35 |
+|  94882 | LAKE EILDON                                | -37.2313 |   145.912 |             11.35 |
+|  95972 | CAMPANIA (KINCORA)                         | -42.6867 |   147.426 |              11.3 |
+|  94859 | REDESDALE                                  | -37.0194 |    144.52 |             11.25 |
+|  94863 | SHEOAKS                                    | -37.9075 |    144.13 |             11.25 |
+|  94743 | MOUNT BOYCE AWS                            | -33.6185 |   150.274 |              11.2 |
+|  94953 | SMITHTON AERODROME                         | -40.8347 |   145.085 |              11.2 |
+|  95726 | ORANGE AIRPORT AWS                         | -33.3768 |   149.126 |             11.15 |
+|  94856 | PUCKAPUNYAL WEST (DEFENCE)                 | -37.0177 |   144.855 |              11.1 |
+|  94909 | BURRINJUCK DAM                             | -34.9997 |   148.598 |              11.1 |
+|  95835 | LONGERENONG                                | -36.6722 |   142.299 |              11.1 |
+|  94678 | MOUNT CRAWFORD AWS                         | -34.7253 |   138.928 |                11 |
+|  94821 | MOUNT GAMBIER AERO                         | -37.7473 |   140.774 |                11 |
+|  94974 | CAPE SORELL                                | -42.1986 |    145.17 |                11 |
+|  95822 | DARTMOOR                                   | -37.9222 |   141.261 |                11 |
+|  95839 | HORSHAM AERODROME                          | -36.6697 |   142.173 |                11 |
+|  95908 | THREDBO VILLAGE                            | -36.5031 |   148.304 |                11 |
+|  95967 | CAPE BRUNY (CAPE BRUNY)                    | -43.4886 |   147.144 |             10.95 |
+|  94631 | ROCKY GULLY                                | -34.5714 |   117.011 |              10.9 |
+|  95832 | EDENHOPE AIRPORT                           | -37.0222 |   141.266 |              10.9 |
+|  95954 | CAPE GRIM                                  | -40.6764 |   144.692 |              10.9 |
+|  99140 | TAS PARKS WILDLIFE PORTABLE A              |  -41.896 |   145.286 |              10.9 |
+|  94811 | SECOND VALLEY FOREST AWS                   | -35.5695 |   138.286 |             10.75 |
+|  95827 | KANAGULK                                   | -37.1169 |   141.803 |             10.75 |
+|  94878 | HUNTERS HILL                               | -36.2136 |   147.539 |              10.7 |
+|  94950 | MARRAWAH                                   | -40.9089 |   144.709 |              10.7 |
+|  95825 | CASTERTON                                  | -37.5831 |   141.334 |              10.7 |
+|  99765 | GUDGENBY (PCS)                             | -35.7345 |   148.976 |             10.65 |
+|  94956 | STRAHAN AERODROME                          |  -42.155 |   145.291 |              10.6 |
+|  95725 | ORANGE AGRICULTURAL INSTITUTE              | -33.3211 |   149.083 |              10.6 |
+|  95843 | STRATHBOGIE                                | -36.8472 |   145.731 |              10.6 |
+|  94913 | GELANTIPY                                  |   -37.22 |   148.263 |             10.55 |
+|  95977 | GROVE (RESEARCH STATION)                   | -42.9858 |   147.074 |             10.55 |
+|  94972 | SCOTTSDALE (WEST MINSTONE ROAD)            | -41.1708 |   147.488 |              10.5 |
+|  95840 | WESTMERE                                   | -37.7067 |   142.938 |             10.45 |
+|  95845 | MOUNT GELLIBRAND                           | -38.2333 |   143.792 |             10.45 |
+|  95961 | LOW ROCKY POINT                            | -42.9831 |   145.503 |             10.45 |
+|  95974 | FINGAL (LEGGE STREET)                      | -41.6428 |   147.966 |             10.45 |
+|  94888 | DARTMOUTH RESERVOIR                        | -36.5353 |   147.498 |              10.4 |
+|  94617 | MANJIMUP                                   | -34.2508 |   116.145 |              10.3 |
+|  94964 | BUSHY PARK (BUSHY PARK ESTATES)            | -42.7097 |   146.898 |              10.3 |
+|  94829 | HAMILTON AIRPORT                           | -37.6486 |   142.064 |             10.25 |
+|  94881 | EILDON FIRE TOWER                          | -37.2091 |   145.842 |             10.25 |
+|  94908 | OMEO                                       | -37.1017 |   147.601 |              10.2 |
+|  94921 | COOMA AIRPORT AWS                          | -36.2939 |   148.973 |              10.2 |
+|  94957 | OUSE FIRE STATION                          | -42.4842 |   146.711 |              10.2 |
+|  95966 | LAUNCESTON AIRPORT                         | -41.5476 |   147.216 |              10.2 |
+|  95969 | CRESSY RESEARCH STATION                    | -41.7256 |   147.079 |             10.15 |
+|  94929 | BOMBALA AWS                                | -37.0016 |   149.234 |              10.1 |
+|  99142 | TAS PARKS WILDLIFE PORTABLE C              | -43.4167 |   146.151 |              10.1 |
+|  94872 | FERNY CREEK                                | -37.8748 |    145.35 |                10 |
+|  95853 | CASTLEMAINE PRISON                         | -37.0809 |   144.239 |                10 |
+|  95678 | MOUNT LOFTY                                | -34.9784 |   138.709 |               9.9 |
+|  99148 | TAS PARKS WILDLIFE PORTABLE D              |      -45 |       148 |               9.9 |
+|  94852 | BALLARAT AERODROME                         | -37.5127 |   143.791 |              9.75 |
+|  94962 | MAATSUYKER ISLAND LIGHTHOUSE               | -43.6578 |   146.271 |              9.55 |
+|  94955 | SHEFFIELD SCHOOL FARM                      | -41.3886 |   146.322 |              9.45 |
+|  95986 | TASMAN ISLAND                              | -43.2397 |   148.003 |              9.35 |
+|  94985 | ROSS (THE BOULEVARDS)                      |  -42.025 |   147.495 |               9.3 |
+|  94860 | KILMORE GAP                                | -37.3807 |   144.965 |               9.2 |
+|  94963 | MAYDENA POST OFFICE                        | -42.7567 |   146.624 |               9.1 |
+|  94971 | MELTON MOWBRAY (NORTH STOCKMAN)            | -42.4928 |   147.198 |               8.8 |
+|  95956 | LUNCHEON HILL (FORESTRY)                   | -41.1492 |   145.152 |              8.65 |
+|  99145 | ACT PCS1                                   | -35.4087 |   148.902 |              8.55 |
+|  94960 | TUNNACK FIRE STATION                       | -42.4543 |   147.461 |               8.2 |
+|  94961 | DOVER                                      |  -43.333 |   146.998 |                 8 |
+|  95953 | STRATHGORDON VILLAGE                       | -42.7681 |   146.046 |                 8 |
+|  95916 | CABRAMURRA SMHEA AWS                       | -35.9371 |   148.378 |               7.8 |
+|  94835 | BEN NEVIS                                  | -37.2281 |   143.201 |              7.75 |
+|  94979 | LAKE LEAKE (ELIZABETH RIVER)               | -42.0067 |   147.798 |               7.7 |
+|  95962 | WARRA                                      | -43.0609 |   146.704 |               7.4 |
+|  95958 | SCOTTS PEAK DAM                            | -43.0425 |   146.272 |              7.25 |
+|  94905 | MOUNT HOTHAM AIRPORT                       | -37.0491 |   147.335 |              7.05 |
+|  95925 | MOUNT GININI AWS                           | -35.5293 |   148.772 |              6.65 |
+|  94959 | BUTLERS GORGE                              | -42.2753 |   146.276 |               6.1 |
+|  94915 | PERISHER VALLEY AWS                        | -36.4069 |   148.406 |              6.05 |
+|  94903 | FALLS CREEK                                | -36.8708 |   147.275 |               5.9 |
+|  94833 | MOUNT WILLIAM                              |  -37.295 |   142.604 |              5.45 |
+|  94894 | MOUNT BULLER                               |  -37.145 |   146.439 |              5.15 |
+|  94906 | MOUNT HOTHAM                               | -36.9772 |   147.134 |              4.95 |
+|  94977 | HARTZ MOUNTAIN (KEOGHS PIMPLE)             | -43.2006 |   146.768 |               4.9 |
+|  95909 | THREDBO AWS                                | -36.4917 |   148.286 |               4.8 |
+|  95959 | LIAWENEE                                   | -41.8997 |   146.669 |               4.7 |
+|  99141 | TAS PARKS WILDLIFE PORTABLE B              |  -43.508 |   146.856 |               4.6 |
+|  95901 | MOUNT BAW BAW                              | -37.8384 |   146.275 |              3.95 |
+|  99151 | TAS PARKS WILDLIFE PORTABLE F              |      -40 |       148 |               3.9 |
+|  94998 | MACQUARIE ISLAND                           | -54.4994 |   158.937 |              3.75 |
+|  95952 | MOUNT READ                                 | -41.8444 |   145.542 |               3.3 |
+|  95979 | KUNANYI (MOUNT WELLINGTON PINNACLE)        |  -42.895 |   147.236 |               2.1 |
+|  89571 | DAVIS                                      | -68.5744 |   77.9672 |            -10.65 |
+|  89592 | MIRNYJ                                     |   -66.55 |   93.0167 |             -11.3 |
+|  89611 | CASEY                                      | -66.2825 |   110.523 |               -12 |
+|  89564 | MAWSON                                     | -67.6017 |   62.8753 |            -12.75 |
+|  89642 | DUMONT D URVILLE                           | -66.6631 |   140.008 |             -14.5 |
+|  89512 | NOVOLAZAREVSKAJA                           | -70.7667 |   11.8333 |            -14.65 |
+|  89615 | WILKINS RUNWAY EAST                        | -66.6831 |   111.532 |             -17.3 |
+|  89532 | SYOWA                                      |      -69 |   39.5833 |             -18.2 |
+|  89664 | MCMURDO                                    |   -77.85 |   166.667 |             -18.3 |
+|  89610 | CAPE POINSETT                              | -65.8449 |   113.067 |             -19.3 |
+|  89767 | G3                                         | -70.8919 |   69.8725 |             -21.7 |
++--------+--------------------------------------------+----------+-----------+-------------------+
++------------------------------------------------------------------------------------+
+| --------------------------- SELECT A: Temperature END ---------------------------- |
++------------------------------------------------------------------------------------+
+|                                                                                    |
++------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------+
+| --------------------------- SELECT A: Rainfall START ---------------------------- |
++-----------------------------------------------------------------------------------+
+|                                                                                   |
++-----------------------------------------------------------------------------------+
++--------+--------------------------------------------+----------+-----------+--------------+
+| WMO_ID | StationName                                | Latitude | Longitude | RainfallMean |
++--------+--------------------------------------------+----------+-----------+--------------+
+|  95953 | STRATHGORDON VILLAGE                       | -42.7681 |   146.046 |      9.33621 |
+|  95952 | MOUNT READ                                 | -41.8444 |   145.542 |      6.64655 |
+|  99141 | TAS PARKS WILDLIFE PORTABLE B              |  -43.508 |   146.856 |      6.03276 |
+|  94979 | LAKE LEAKE (ELIZABETH RIVER)               | -42.0067 |   147.798 |      5.84914 |
+|  95613 | PEMBERTON                                  | -34.4478 |   116.043 |      5.74107 |
+|  95989 | BICHENO (COUNCIL DEPOT)                    | -41.8739 |   148.304 |      5.52069 |
+|  94909 | BURRINJUCK DAM                             | -34.9997 |   148.598 |      4.89821 |
+|  94903 | FALLS CREEK                                | -36.8708 |   147.275 |       4.7931 |
+|  95908 | THREDBO VILLAGE                            | -36.5031 |   148.304 |       4.7807 |
+|  94242 | BRUNETTE DOWNS                             |  -18.637 |   135.945 |          4.7 |
+|  95111 | PORT KEATS AIRPORT                         | -14.2494 |   129.528 |      4.58966 |
+|  95881 | WONTHAGGI                                  | -38.6078 |   145.596 |      4.56395 |
+|  94882 | LAKE EILDON                                | -37.2313 |   145.912 |      4.51111 |
+|  94665 | MAITLAND                                   | -34.3745 |   137.673 |      4.42222 |
+|  99151 | TAS PARKS WILDLIFE PORTABLE F              |      -40 |       148 |      4.38103 |
+|  95984 | ORFORD (AUBIN COURT)                       | -42.5519 |   147.875 |      4.35172 |
+|  95843 | STRATHBOGIE                                | -36.8472 |   145.731 |      4.25135 |
+|  94918 | TUMBARUMBA POST OFFICE                     |  -35.778 |   148.012 |      4.22586 |
+|  94806 | MOUNT BARKER                               | -35.0732 |   138.847 |      4.21058 |
+|  94906 | MOUNT HOTHAM                               | -36.9772 |   147.134 |       4.0431 |
+|  94950 | MARRAWAH                                   | -40.9089 |   144.709 |            4 |
+|  94915 | PERISHER VALLEY AWS                        | -36.4069 |   148.406 |      3.96724 |
+|  94888 | DARTMOUTH RESERVOIR                        | -36.5353 |   147.498 |      3.92308 |
+|  99142 | TAS PARKS WILDLIFE PORTABLE C              | -43.4167 |   146.151 |      3.89138 |
+|  95811 | ENCOUNTER BAY                              | -35.5544 |     138.6 |      3.81724 |
+|  94679 | YONGALA                                    | -33.0276 |   138.756 |      3.76983 |
+|  94673 | HAWKER                                     | -31.9043 |   138.439 |      3.76786 |
+|  94894 | MOUNT BULLER                               |  -37.145 |   146.439 |      3.76522 |
+|  94120 | DARWIN AIRPORT                             | -12.4239 |   130.893 |      3.74828 |
+|  95958 | SCOTTS PEAK DAM                            | -43.0425 |   146.272 |      3.71552 |
+|  94661 | CLEVE                                      | -33.7011 |   136.494 |       3.7125 |
+|  94833 | MOUNT WILLIAM                              |  -37.295 |   142.604 |      3.70517 |
+|  94668 | KIMBA                                      | -33.1416 |   136.413 |      3.67857 |
+|  94971 | MELTON MOWBRAY (NORTH STOCKMAN)            | -42.4928 |   147.198 |      3.66638 |
+|  94959 | BUTLERS GORGE                              | -42.2753 |   146.276 |       3.6569 |
+|  95916 | CABRAMURRA SMHEA AWS                       | -35.9371 |   148.378 |      3.62241 |
+|  94663 | WAROOKA                                    | -34.9906 |     137.4 |      3.52414 |
+|  94963 | MAYDENA POST OFFICE                        | -42.7567 |   146.624 |      3.50737 |
+|  95678 | MOUNT LOFTY                                | -34.9784 |   138.709 |      3.46897 |
+|  94972 | SCOTTSDALE (WEST MINSTONE ROAD)            | -41.1708 |   147.488 |      3.37538 |
+|  99148 | TAS PARKS WILDLIFE PORTABLE D              |      -45 |       148 |      3.36552 |
+|  95122 | DARWIN NTC AWS                             | -12.4719 |   130.846 |      3.31111 |
+|  95901 | MOUNT BAW BAW                              | -37.8384 |   146.275 |      3.28462 |
+|  95853 | CASTLEMAINE PRISON                         | -37.0809 |   144.239 |      3.21839 |
+|  99140 | TAS PARKS WILDLIFE PORTABLE A              |  -41.896 |   145.286 |      3.17414 |
+|  94834 | ARARAT PRISON                              | -37.2769 |   142.979 |       3.1519 |
+|  94985 | ROSS (THE BOULEVARDS)                      |  -42.025 |   147.495 |       3.1069 |
+|  94961 | DOVER                                      |  -43.333 |   146.998 |      3.09483 |
+|  95725 | ORANGE AGRICULTURAL INSTITUTE              | -33.3211 |   149.083 |      3.08966 |
+|  94692 | LAKE VICTORIA STORAGE                      | -34.0438 |   141.268 |      3.01034 |
+|  94660 | MOUNT IVE                                  | -32.4398 |   136.067 |      2.94737 |
+|  95979 | KUNANYI (MOUNT WELLINGTON PINNACLE)        |  -42.895 |   147.236 |      2.91897 |
+|  94680 | EUDUNDA                                    | -34.1754 |   139.085 |      2.91875 |
+|  94811 | SECOND VALLEY FOREST AWS                   | -35.5695 |   138.286 |      2.88966 |
+|  95661 | PORT LINCOLN AWS                           | -34.5993 |   135.878 |      2.87586 |
+|  95812 | MURRAY BRIDGE                              | -35.1234 |   139.259 |      2.84375 |
+|  94955 | SHEFFIELD SCHOOL FARM                      | -41.3886 |   146.322 |      2.82759 |
+|  94890 | GUNDAGAI (NANGUS RD)                       |  -35.064 |   148.099 |       2.7982 |
+|  95962 | WARRA                                      | -43.0609 |   146.704 |      2.78448 |
+|  94878 | HUNTERS HILL                               | -36.2136 |   147.539 |      2.78276 |
+|  94216 | KUNUNURRA AERO                             | -15.7814 |    128.71 |      2.76897 |
+|  94956 | STRAHAN AERODROME                          |  -42.155 |   145.291 |      2.76897 |
+|  95735 | OBERON (ALBION ST)                         | -33.6993 |   149.867 |       2.7687 |
+|  95925 | MOUNT GININI AWS                           | -35.5293 |   148.772 |      2.76379 |
+|  94816 | KEITH                                      |  -36.098 |   140.356 |         2.75 |
+|  95659 | MINLATON AERO                              |  -34.748 |   137.528 |      2.74375 |
+|  94735 | TARALGA POST OFFICE                        | -34.4048 |    149.82 |      2.72793 |
+|  94630 | MOUNT BARKER                               |  -34.625 |   117.636 |      2.72727 |
+|  94116 | DUM IN MIRRIE AIRSTRIP                     |  -12.635 |   130.372 |      2.72586 |
+|  95770 | NORAH HEAD AWS                             | -33.2814 |   151.577 |      2.71228 |
+|  95909 | THREDBO AWS                                | -36.4917 |   148.286 |          2.7 |
+|  94801 | ALBANY                                     | -35.0289 |   117.881 |      2.66379 |
+|  94981 | SWANSEA (FRANCIS STREET)                   | -42.1381 |   148.074 |      2.63707 |
+|  95668 | GLUEPOT                                    | -33.7622 |   140.125 |      2.60357 |
+|  94683 | KUITPO FOREST RESERVE                      | -35.1712 |   138.678 |      2.58276 |
+|  94662 | CLEVE AERODROME                            | -33.7081 |   136.503 |      2.56724 |
+|  94960 | TUNNACK FIRE STATION                       | -42.4543 |   147.461 |      2.54828 |
+|  99145 | ACT PCS1                                   | -35.4087 |   148.902 |       2.5431 |
+|  94941 | BATEMANS BAY (CATALINA COUNTRY CLUB)       | -35.7234 |   150.187 |      2.53293 |
+|  94828 | CASHMORE AIRPORT                           | -38.3148 |   141.471 |      2.51552 |
+|  94544 | PINDARI DAM                                | -29.3899 |   151.245 |      2.51368 |
+|  94842 | CAPE OTWAY LIGHTHOUSE                      | -38.8556 |   143.513 |      2.50172 |
+|  95362 | SPRINGSURE COMET ST                        |  -24.123 |   148.086 |       2.4931 |
+|  95956 | LUNCHEON HILL (FORESTRY)                   | -41.1492 |   145.152 |      2.49138 |
+|  94837 | WARRNAMBOOL AIRPORT NDB                    | -38.2867 |   142.452 |      2.48103 |
+|  95604 | GOSNELLS CITY                              | -32.0481 |   115.984 |      2.46914 |
+|  94645 | EYRE                                       | -32.2464 |   126.301 |      2.46724 |
+|  99762 | TIDBINBILLA (PCS)                          |  -35.457 |   148.935 |      2.46379 |
+|  95663 | CUMMINS AERO                               | -34.2524 |   135.714 |      2.45517 |
+|  94345 | ISISFORD POST OFFICE                       | -24.2591 |   144.441 |      2.38621 |
+|  95981 | ST HELENS AERODROME                        | -41.3381 |   148.279 |      2.38276 |
+|  95707 | LAKE CARGELLIGO AIRPORT                    | -33.2832 |   146.371 |      2.33929 |
+|  94977 | HARTZ MOUNTAIN (KEOGHS PIMPLE)             | -43.2006 |   146.768 |      2.32069 |
+|  95814 | MENINGIE                                   | -35.6902 |   139.337 |      2.29828 |
+|  95667 | CLARE HIGH SCHOOL                          | -33.8226 |   138.593 |      2.27759 |
+|  94809 | EDITHBURGH                                 | -35.1121 |    137.74 |      2.23276 |
+|  94678 | MOUNT CRAWFORD AWS                         | -34.7253 |   138.928 |      2.20517 |
+|  94919 | KHANCOBAN AWS                              | -36.2304 |   148.141 |      2.18621 |
+|  94821 | MOUNT GAMBIER AERO                         | -37.7473 |   140.774 |      2.13276 |
+|  94974 | CAPE SORELL                                | -42.1986 |    145.17 |      2.13276 |
+|  94105 | NOONAMAH AIRSTRIP                          | -12.6099 |   131.047 |      2.11724 |
+|  94814 | STRATHALBYN RACECOURSE                     | -35.2836 |   138.893 |      2.11552 |
+|  94826 | CAPE NELSON LIGHTHOUSE                     | -38.4306 |   141.544 |      2.11304 |
+|  94840 | MORTLAKE RACECOURSE                        | -38.0737 |   142.774 |      2.06034 |
+|  95807 | KINGSCOTE AERO                             | -35.7114 |   137.523 |       2.0569 |
+|  94808 | NOARLUNGA                                  | -35.1586 |   138.506 |      2.04821 |
+|  94715 | FORBES AIRPORT AWS                         | -33.3627 |   147.921 |      2.02069 |
+|  94953 | SMITHTON AERODROME                         | -40.8347 |   145.085 |      2.01897 |
+|  95954 | CAPE GRIM                                  | -40.6764 |   144.692 |      2.01897 |
+|  94654 | STREAKY BAY                                | -32.8084 |   134.198 |      2.01071 |
+|  94987 | FRIENDLY BEACHES                           | -41.9953 |   148.279 |      2.01034 |
+|  94716 | GOULBURN TAFE                              | -34.7495 |   149.703 |      1.99643 |
+|  94700 | HILLSTON AIRPORT                           | -33.4915 |   145.525 |      1.99107 |
+|  94846 | AIREYS INLET                               | -38.4583 |   144.088 |      1.98793 |
+|  94804 | NEPTUNE ISLAND                             | -35.3365 |   136.117 |      1.97241 |
+|  94830 | PORT FAIRY AWS                             | -38.3906 |   142.235 |      1.96207 |
+|  95977 | GROVE (RESEARCH STATION)                   | -42.9858 |   147.074 |      1.95172 |
+|  94969 | LAUNCESTON (TI TREE BEND)                  | -41.4194 |   147.122 |      1.92931 |
+|  95628 | ONGERUP                                    | -33.9634 |   118.479 |      1.91293 |
+|  94884 | BENALLA AIRPORT                            | -36.5523 |   145.998 |      1.90732 |
+|  95813 | KAROONDA                                   |   -35.09 |   139.897 |      1.90536 |
+|  95988 | MARIA ISLAND (POINT LESUEUR)               | -42.6621 |   148.018 |      1.88276 |
+|  94119 | PIRLANGIMPI AIRPORT                        | -11.4021 |   130.422 |      1.88103 |
+|  94656 | ELLISTON                                   | -33.6501 |   134.888 |      1.87778 |
+|  94970 | HOBART (ELLERSLIE ROAD)                    | -42.8897 |   147.328 |      1.87759 |
+|  94901 | HUME RESERVOIR                             | -36.1039 |   147.033 |      1.86724 |
+|  95805 | CAPE BORDA                                 | -35.7549 |   136.596 |      1.86606 |
+|  95959 | LIAWENEE                                   | -41.8997 |   146.669 |      1.86207 |
+|  94714 | COOTAMUNDRA AIRPORT                        | -34.6299 |   148.036 |      1.85664 |
+|  95662 | MINNIPA PIRSA                              | -32.8427 |   135.152 |      1.85517 |
+|  95835 | LONGERENONG                                | -36.6722 |   142.299 |      1.85172 |
+|  94807 | PARNDANA CFS AWS                           | -35.7916 |    137.25 |      1.84828 |
+|  95806 | STENHOUSE BAY                              | -35.2795 |   136.939 |       1.8431 |
+|  95822 | DARTMOOR                                   | -37.9222 |   141.261 |      1.83621 |
+|  94685 | KADINA AWS                                 | -33.9703 |   137.663 |      1.81897 |
+|  95649 | POINT AVOID                                |  -34.675 |   135.336 |      1.81379 |
+|  95825 | CASTERTON                                  | -37.5831 |   141.334 |      1.81034 |
+|  94640 | WINDY HARBOUR                              | -34.8373 |   116.026 |      1.80862 |
+|  95960 | DEVONPORT AIRPORT                          | -41.1701 |   146.429 |      1.79138 |
+|  94850 | KING ISLAND AIRPORT                        | -39.8804 |   143.886 |      1.78793 |
+|  94835 | BEN NEVIS                                  | -37.2281 |   143.201 |      1.77931 |
+|  95600 | JURIEN BAY                                 | -30.3081 |   115.031 |      1.77288 |
+|  94659 | WOOMERA AERODROME                          | -31.1558 |   136.805 |         1.75 |
+|  95671 | ROSEWORTHY AWS                             | -34.5106 |   138.676 |      1.74138 |
+|  94829 | HAMILTON AIRPORT                           | -37.6486 |   142.064 |      1.73966 |
+|  95683 | CULTANA (DEFENCE)                          | -32.6845 |   137.369 |      1.73621 |
+|  95816 | ROBE AIRFIELD                              | -37.1776 |   139.805 |      1.72931 |
+|  95957 | WYNYARD AIRPORT                            | -40.9964 |   145.731 |      1.72931 |
+|  95666 | PORT AUGUSTA AERO                          | -32.5073 |   137.717 |      1.72759 |
+|  95647 | NORTH WALPOLE                              | -34.9469 |   116.722 |      1.72069 |
+|  95818 | PALLAMANA AERODROME                        |  -35.065 |   139.227 |       1.6931 |
+|  95986 | TASMAN ISLAND                              | -43.2397 |   148.003 |      1.68966 |
+|  95692 | POONCARIE MAIL AGENCY                      | -33.3856 |    142.57 |      1.68707 |
+|  94648 | ADELAIDE (WEST TERRACE / NGAYIRDAPIRA)     | -34.9257 |   138.583 |      1.68103 |
+|  94872 | FERNY CREEK                                | -37.8748 |    145.35 |      1.68103 |
+|  95606 | LANCELIN                                   |  -31.016 |   115.332 |      1.67586 |
+|  95664 | WHYALLA AERO                               | -33.0539 |   137.521 |      1.66667 |
+|  94914 | COMBIENBAR AWS                             | -37.3416 |   149.023 |      1.66552 |
+|  94732 | GULGONG POST OFFICE                        | -32.3634 |   149.533 |      1.66355 |
+|  94928 | BOMBALA (THERRY STREET)                    | -36.9113 |   149.238 |      1.65536 |
+|  94951 | DUNALLEY (STROUD POINT)                    | -42.9017 |   147.789 |      1.65517 |
+|  95670 | RAYVILLE PARK                              | -33.7676 |   138.218 |      1.62931 |
+|  95823 | PADTHAWAY SOUTH                            | -36.6539 |   140.521 |      1.62931 |
+|  99146 | ACT PCS2                                   | -35.3261 |   149.049 |      1.62586 |
+|  94817 | COONAWARRA                                 | -37.2906 |   140.825 |      1.62414 |
+|  94694 | MENINDEE POST OFFICE                       | -32.3937 |   142.417 |      1.62069 |
+|  99806 | NILMA NORTH (WARRAGUL)                     | -38.1321 |   145.986 |       1.6069 |
+|  94128 | DOUGLAS RIVER RESEARCH FARM                | -13.8345 |   131.187 |      1.59483 |
+|  94681 | NURIOOTPA PIRSA                            | -34.4761 |   139.006 |       1.5931 |
+|  95677 | PARAFIELD AIRPORT                          | -34.7977 |   138.628 |      1.58966 |
+|  94355 | TAMBO POST OFFICE                          | -24.8819 |   146.256 |      1.58621 |
+|  95351 | BLACKALL AIRPORT                           | -24.4303 |   145.431 |      1.58621 |
+|  94696 | BALRANALD (RSL)                            | -34.6398 |   143.561 |      1.58214 |
+|  95676 | EDINBURGH RAAF                             | -34.7111 |   138.622 |      1.57931 |
+|  94813 | THE LIMESTONE                              | -36.9655 |   139.716 |      1.57759 |
+|  94677 | HINDMARSH ISLAND AWS                       | -35.5194 |   138.818 |      1.57241 |
+|  94725 | GRENFELL (MANGANESE RD)                    | -33.8934 |   148.152 |      1.57241 |
+|  95964 | LOW HEAD                                   | -41.0547 |   146.787 |      1.56552 |
+|  94620 | DWELLINGUP                                 | -32.7103 |   116.059 |      1.55862 |
+|  95660 | ANDAMOOKA                                  |  -30.449 |   137.169 |      1.55862 |
+|  94730 | BATHURST AGRICULTURAL STATION              | -33.4288 |   149.556 |       1.5513 |
+|  99072 | PORTABLE RFSNSW02                          |   -35.27 |   148.241 |      1.54828 |
+|  99764 | KOWEN FOREST (PCS)                         | -35.3111 |   149.316 |      1.54483 |
+|  94812 | ROBE                                       | -37.1628 |   139.756 |      1.53621 |
+|  95929 | MERIMBULA AIRPORT AWS                      | -36.9077 |   149.899 |      1.53621 |
+|  95520 | COLLARENEBRI (ALBERT ST)                   | -29.5406 |   148.582 |      1.52212 |
+|  95895 | COROWA AIRPORT                             | -35.9887 |   146.357 |       1.5113 |
+|  95974 | FINGAL (LEGGE STREET)                      | -41.6428 |   147.966 |      1.51034 |
+|  94849 | MARYBOROUGH                                |  -37.056 |   143.732 |      1.50862 |
+|  95966 | LAUNCESTON AIRPORT                         | -41.5476 |   147.216 |      1.50862 |
+|  95935 | NAROOMA (MARINE RESCUE)                    | -36.2144 |   150.136 |      1.49397 |
+|  94655 | TARCOOLA AERO                              | -30.7051 |   134.579 |      1.48103 |
+|  95815 | MUNKORA                                    | -36.1058 |   140.327 |      1.47414 |
+|  94691 | BROKEN HILL AIRPORT AWS                    | -32.0012 |   141.469 |      1.47069 |
+|  95641 | WITCHCLIFFE                                | -34.0281 |   115.104 |      1.47069 |
+|  94881 | EILDON FIRE TOWER                          | -37.2091 |   145.842 |      1.46897 |
+|  94962 | MAATSUYKER ISLAND LIGHTHOUSE               | -43.6578 |   146.271 |      1.46261 |
+|  94684 | YUNTA AIRSTRIP                             | -32.5707 |   139.564 |         1.45 |
+|  95291 | INGHAM COMPOSITE                           | -18.6494 |   146.177 |         1.45 |
+|  95969 | CRESSY RESEARCH STATION                    | -41.7256 |   147.079 |         1.45 |
+|  94925 | TUGGERANONG (ISABELLA PLAINS) AWS          | -35.4184 |   149.094 |       1.4431 |
+|  94292 | CARDWELL MARINE PDE                        | -18.2544 |   146.019 |      1.43793 |
+|  94127 | POINT STUART                               | -12.2403 |   131.878 |      1.42931 |
+|  94796 | SMITHVILLE AWS                             | -30.0692 |   141.007 |      1.41897 |
+|  94728 | COONABARABRAN (SHOWGROUNDS)                | -31.2786 |   149.279 |      1.41724 |
+|  95654 | WUDINNA AERO                               |  -33.043 |   135.452 |      1.41386 |
+|  94905 | MOUNT HOTHAM AIRPORT                       | -37.0491 |   147.335 |      1.41034 |
+|  94690 | AUSTIN PLAINS                              | -35.3778 |   140.538 |      1.40862 |
+|  94886 | POUND CREEK                                | -38.6297 |   145.811 |       1.4069 |
+|  94926 | CANBERRA AIRPORT                           | -35.3088 |     149.2 |      1.39655 |
+|  94864 | COLDSTREAM                                 | -37.7239 |   145.409 |       1.3931 |
+|  99763 | MULLION (PCS)                              | -35.1066 |   148.848 |      1.39138 |
+|  99765 | GUDGENBY (PCS)                             | -35.7345 |   148.976 |      1.39138 |
+|  94631 | ROCKY GULLY                                | -34.5714 |   117.011 |      1.38276 |
+|  94964 | BUSHY PARK (BUSHY PARK ESTATES)            | -42.7097 |   146.898 |      1.37759 |
+|  94672 | ADELAIDE AIRPORT                           | -34.9524 |    138.52 |      1.37241 |
+|  99749 | PORT PIRIE AERODROME AWS                   | -33.2371 |   137.997 |      1.37069 |
+|  94988 | DENNES POINT                               | -43.0639 |   147.357 |      1.36897 |
+|  94758 | MURRURUNDI (HAYDON STREET)                 | -31.7678 |   150.842 |      1.36585 |
+|  95658 | OLYMPIC DAM AERODROME                      | -30.4829 |   136.877 |      1.36552 |
+|  94877 | TOCUMWAL AIRPORT                           |  -35.817 |     145.6 |      1.36429 |
+|  95727 | DUNEDOO POST OFFICE                        | -32.0165 |   149.396 |      1.36429 |
+|  94723 | WELLINGTON (D&J RURAL)                     | -32.5635 |    148.95 |      1.35714 |
+|  95695 | WILCANNIA AERODROME AWS                    | -31.5194 |   143.385 |      1.35345 |
+|  94910 | WAGGA WAGGA AMO                            | -35.1583 |   147.458 |      1.34828 |
+|  94211 | MOUNT ELIZABETH                            | -16.4181 |   126.103 |      1.34579 |
+|  94820 | NARACOORTE AERODROME                       | -36.9813 |   140.727 |      1.34483 |
+|  94891 | LATROBE VALLEY AIRPORT                     | -38.2094 |   146.475 |      1.34138 |
+|  94975 | HOBART AIRPORT                             | -42.8339 |   147.503 |      1.33103 |
+|  94333 | BOULIA AIRPORT                             | -22.9117 |   139.904 |      1.32759 |
+|  95832 | EDENHOPE AIRPORT                           | -37.0222 |   141.266 |      1.32414 |
+|  95480 | MARREE AERO                                | -29.6587 |   138.068 |      1.32241 |
+|  95726 | ORANGE AIRPORT AWS                         | -33.3768 |   149.126 |      1.31724 |
+|  95632 | BRIDGETOWN                                 | -33.9486 |   116.131 |      1.30862 |
+|  94350 | BARCALDINE POST OFFICE                     | -23.5544 |   145.288 |      1.30841 |
+|  99791 | PORTABLE RFSNSW52                          |  -35.444 |   146.439 |      1.29655 |
+|  95972 | CAMPANIA (KINCORA)                         | -42.6867 |   147.426 |       1.2931 |
+|  95845 | MOUNT GELLIBRAND                           | -38.2333 |   143.792 |      1.29138 |
+|  94520 | MUNGINDI POST OFFICE                       | -28.9786 |    148.99 |      1.28929 |
+|  94744 | KATOOMBA (FARNELLS RD)                     | -33.7139 |   150.295 |      1.28598 |
+|  94935 | MALLACOOTA                                 | -37.5976 |   149.729 |      1.28103 |
+|  94944 | KAPOOKA (DEFENCE)                          | -35.1327 |   147.251 |      1.27931 |
+|  95121 | MIDDLE POINT                               |  -12.605 |   131.299 |      1.26552 |
+|  94898 | CERBERUS                                   | -38.3646 |   145.178 |      1.25862 |
+|  95610 | BICKLEY                                    | -32.0072 |   116.137 |         1.25 |
+|  94892 | RHYLL                                      | -38.4612 |    145.31 |       1.2431 |
+|  94822 | CAPE WILLOUGHBY                            | -35.8426 |   138.133 |      1.23621 |
+|  94957 | OUSE FIRE STATION                          | -42.4842 |   146.711 |      1.23103 |
+|  95458 | COOBER PEDY AIRPORT                        | -29.0347 |   134.722 |      1.22759 |
+|  95614 | KARNET                                     | -32.4389 |   116.079 |        1.225 |
+|  94772 | GUYRA HOSPITAL                             | -30.2122 |   151.679 |      1.21429 |
+|  95904 | LAKES ENTRANCE (EASTERN BEACH ROAD)        | -37.8717 |   148.006 |       1.2125 |
+|  94617 | MANJIMUP                                   | -34.2508 |   116.145 |      1.21205 |
+|  94657 | KYANCUTTA                                  | -33.1337 |   135.552 |      1.20796 |
+|  94514 | MITCHELL POST OFFICE                       | -26.4888 |   147.978 |       1.2069 |
+|  94893 | WILSONS PROMONTORY LIGHTHOUSE              | -39.1297 |   146.425 |          1.2 |
+|  94686 | FOWLERS GAP AWS                            | -31.0863 |   141.701 |      1.19483 |
+|  95827 | KANAGULK                                   | -37.1169 |   141.803 |      1.19483 |
+|  95512 | BREWARRINA HOSPITAL                        | -29.9614 |   146.865 |      1.17931 |
+|  94121 | CHANNEL POINT                              | -13.1672 |   130.123 |      1.17857 |
+|  99510 | CHARLES POINT                              | -12.3895 |   130.631 |      1.16724 |
+|  94998 | MACQUARIE ISLAND                           | -54.4994 |   158.937 |      1.16207 |
+|  94857 | GEELONG RACECOURSE                         | -38.1737 |   144.376 |       1.1431 |
+|  94859 | REDESDALE                                  | -37.0194 |    144.52 |      1.14261 |
+|  95840 | WESTMERE                                   | -37.7067 |   142.938 |      1.14138 |
+|  94876 | FRANKSTON (BALLAM PARK)                    | -38.1516 |   145.161 |      1.13448 |
+|  94855 | BENDIGO AIRPORT                            | -36.7411 |   144.327 |      1.12759 |
+|  94983 | LARAPUNA (EDDYSTONE POINT)                 | -40.9928 |   148.347 |      1.12241 |
+|  95687 | RENMARK AERO                               | -34.1983 |   140.677 |       1.1069 |
+|  94498 | LIGHTNING RIDGE VISITOR INFORMATION CENTRE |  -29.431 |   147.972 |      1.10476 |
+|  94682 | LOXTON RESEARCH CENTRE                     |  -34.439 |   140.598 |      1.10172 |
+|  94860 | KILMORE GAP                                | -37.3807 |   144.965 |          1.1 |
+|  95967 | CAPE BRUNY (CAPE BRUNY)                    | -43.4886 |   147.144 |          1.1 |
+|  94741 | LITHGOW (COOERWULL)                        | -33.4769 |    150.13 |       1.0931 |
+|  94980 | FLINDERS ISLAND AIRPORT                    | -40.0911 |   148.002 |      1.09138 |
+|  94911 | YANAKIE                                    | -38.8051 |   146.194 |      1.08793 |
+|  94323 | WATARRKA                                   | -24.2918 |   131.549 |      1.08276 |
+|  94827 | NHILL AERODROME                            | -36.3092 |   141.649 |      1.08103 |
+|  94729 | BATHURST AIRPORT AWS                       | -33.4119 |   149.654 |      1.07414 |
+|  94852 | BALLARAT AERODROME                         | -37.5127 |   143.791 |      1.07241 |
+|  94836 | STAWELL AERODROME                          |  -37.072 |    142.74 |      1.06724 |
+|  94861 | ECHUCA AERODROME                           | -36.1647 |   144.764 |      1.06724 |
+|  95839 | HORSHAM AERODROME                          | -36.6697 |   142.173 |      1.06552 |
+|  95867 | SCORESBY RESEARCH INSTITUTE                |  -37.871 |   145.256 |         1.05 |
+|  95890 | YARRAM AIRPORT                             | -38.5647 |   146.748 |         1.05 |
+|  94933 | GABO ISLAND LIGHTHOUSE                     | -37.5679 |   149.916 |      1.04655 |
+|  94513 | BOLLON MARY ST                             | -28.0331 |    147.48 |      1.03448 |
+|  94112 | MOUNT BUNDEY SOUTH (DEFENCE)               | -13.0889 |   131.848 |      1.02931 |
+|  95487 | BALLERA GAS FIELD                          | -27.4008 |   141.811 |      1.02931 |
+|  94856 | PUCKAPUNYAL WEST (DEFENCE)                 | -37.0177 |   144.855 |      1.02759 |
+|  94721 | PEAK HILL POST OFFICE                      | -32.7235 |    148.19 |      1.02435 |
+|  94137 | JABIRU AIRPORT                             | -12.6592 |   132.894 |      1.02069 |
+|  95715 | WALGETT AIRPORT AWS                        | -30.0372 |   148.122 |      1.01207 |
+|  95611 | BUSSELTON AERO                             | -33.6818 |   115.403 |      1.00345 |
+|  99998 | PORTABLE RFSNSW51                          | -35.4939 |   146.975 |     0.998214 |
+|  94604 | BUNBURY                                    | -33.3567 |   115.645 |     0.996552 |
+|  95708 | CONDOBOLIN AIRPORT AWS                     | -33.0682 |   147.213 |     0.986207 |
+|  94623 | YORK                                       | -31.8997 |   116.765 |      0.97931 |
+|  94153 | GROOTE EYLANDT AIRPORT                     | -13.9746 |   136.463 |      0.97069 |
+|  94161 | KANGAROO FLATS (DEFENCE)                   | -12.7934 |   130.854 |     0.962069 |
+|  94863 | SHEOAKS                                    | -37.9075 |    144.13 |     0.958621 |
+|  95746 | QUIRINDI POST OFFICE                       | -31.5086 |   150.679 |     0.948276 |
+|  95697 | IVANHOE AERODROME AWS                      | -32.8833 |   144.309 |     0.944348 |
+|  94525 | TAROOM POST OFFICE                         | -25.6408 |   149.796 |     0.937931 |
+|  94967 | CAPE BRUNY LIGHTHOUSE                      | -43.4892 |   147.145 |     0.937069 |
+|  94638 | ESPERANCE                                  |   -33.83 |   121.893 |     0.936207 |
+|  94798 | NOONA AWS                                  | -31.7267 |   144.931 |     0.936207 |
+|  94327 | JERVOIS                                    | -22.9494 |   136.144 |     0.932759 |
+|  94653 | CEDUNA AMO                                 | -32.1297 |   133.698 |     0.931035 |
+|  95913 | MOUNT MOORNAPA                             | -37.7481 |   147.143 |     0.931035 |
+|  94122 | POINT FAWCETT                              | -11.7628 |    130.03 |      0.92931 |
+|  95682 | MOUNT HOPE AWS                             | -32.8261 |    145.88 |     0.913043 |
+|  94874 | MANGALORE AIRPORT                          | -36.8886 |   145.186 |     0.906897 |
+|  94927 | BRAIDWOOD RACECOURSE AWS                   | -35.4253 |   149.783 |     0.906897 |
+|  94996 | NORFOLK ISLAND AERO                        | -29.0389 |   167.941 |     0.906897 |
+|  94162 | MOUNT BUNDEY NORTH (DEFENCE)               | -12.9141 |   131.866 |     0.906195 |
+|  94500 | CUNNAMULLA POST OFFICE                     | -28.0689 |   145.682 |     0.903448 |
+|  94511 | INJUNE POST OFFICE                         | -25.8428 |   148.567 |     0.903448 |
+|  95323 | ARLTUNGA                                   | -23.4564 |   134.685 |     0.896552 |
+|  94802 | ALBANY AIRPORT                             | -34.9411 |   117.816 |     0.894828 |
+|  95481 | MOOMBA AIRPORT                             | -28.0997 |   140.196 |     0.894828 |
+|  94710 | COBAR AIRPORT AWS                          | -31.5388 |   145.796 |     0.891379 |
+|  94600 | CAPE NATURALISTE                           | -33.5372 |   115.019 |     0.886207 |
+|  94676 | ARKAROOLA                                  |  -30.311 |   139.336 |     0.884762 |
+|  94636 | RAVENSTHORPE                               | -33.5803 |   120.046 |      0.87069 |
+|  94792 | WOOLBROOK (WOOLBROOK ROAD)                 | -30.9651 |    151.35 |     0.864286 |
+|  94949 | HOGAN ISLAND                               | -39.2225 |   146.984 |     0.858621 |
+|  94920 | WARRACKNABEAL AIRPORT                      | -36.3204 |   142.416 |         0.85 |
+|  94141 | CENTRAL ARNHEM PLATEAU                     | -13.3275 |   133.086 |     0.846552 |
+|  94476 | OODNADATTA AIRPORT                         | -27.5553 |   135.446 |     0.843103 |
+|  95831 | WALPEUP RESEARCH                           | -35.1201 |   142.004 |     0.832759 |
+|  95721 | COWRA AIRPORT AWS                          | -33.8382 |   148.654 |     0.831034 |
+|  94797 | MULURULU AWS                               | -33.3392 |     143.4 |     0.825862 |
+|  94934 | GREEN CAPE AWS                             | -37.2622 |    150.05 |     0.824138 |
+|  94923 | COOMA VISITORS CENTRE                      | -36.2318 |   149.124 |     0.821622 |
+|  94674 | LEIGH CREEK AIRPORT                        | -30.5963 |   138.422 |     0.817241 |
+|  94605 | MANDURAH                                   | -32.5219 |   115.712 |     0.806897 |
+|  95918 | ORBOST                                     | -37.6922 |   148.467 |          0.8 |
+|  94380 | GLADSTONE RADAR                            | -23.8553 |   151.263 |     0.798276 |
+|  94651 | NULLARBOR                                  | -31.4492 |   130.898 |     0.796552 |
+|  95492 | THARGOMINDAH AIRPORT                       | -27.9867 |   143.815 |     0.796552 |
+|  95622 | DONNYBROOK                                 | -33.5719 |   115.825 |     0.792593 |
+|  94363 | EMERALD AIRPORT                            | -23.5694 |   148.176 |     0.784483 |
+|  94870 | MOORABBIN AIRPORT                          |   -37.98 |   145.096 |     0.782759 |
+|  94229 | WAVE HILL                                  | -17.3869 |   131.117 |      0.77931 |
+|  94497 | WANAARING POST OFFICE                      | -29.7029 |   144.148 |     0.778571 |
+|  95874 | VIEWBANK                                   | -37.7408 |   145.097 |     0.777586 |
+|  94930 | MOUNT NOWA NOWA                            | -37.6924 |   148.091 |     0.775862 |
+|  94399 | LOCHINGTON                                 | -23.9424 |   147.525 |     0.774138 |
+|  94858 | PUCKAPUNYAL LYON HILL (DEFENCE)            | -36.9381 |   145.054 |     0.772414 |
+|  94517 | ST GEORGE AIRPORT                          | -28.0489 |   148.594 |      0.77069 |
+|  99501 | GUNN POINT                                 |  -12.249 |   131.045 |      0.77069 |
+|  94908 | OMEO                                       | -37.1017 |   147.601 |     0.762069 |
+|  94727 | MUDGEE AIRPORT AWS                         | -32.5628 |   149.615 |     0.760345 |
+|  95621 | COLLIE EAST                                | -33.3608 |   116.172 |     0.753448 |
+|  94839 | CHARLTON                                   | -36.2846 |   143.334 |     0.743103 |
+|  95722 | TEMORA AIRPORT                             | -34.4277 |   147.512 |     0.734483 |
+|  94225 | DELAMERE WEAPONS RANGE                     | -15.7441 |   131.918 |     0.731034 |
+|  94614 | SWANBOURNE                                 | -31.9558 |   115.762 |     0.731034 |
+|  94609 | JANDAKOT AERO                              | -32.1011 |   115.879 |     0.724138 |
+|  95716 | GOULBURN AIRPORT AWS                       | -34.8085 |   149.731 |     0.724138 |
+|  95709 | WEST WYALONG AIRPORT AWS                   | -33.9382 |   147.196 |      0.72069 |
+|  94288 | CAIRNS RACECOURSE                          | -16.9463 |   145.747 |     0.715517 |
+|  94489 | WINDORAH AIRPORT                           | -25.4117 |   142.665 |     0.715517 |
+|  94693 | MILDURA AIRPORT                            | -34.2358 |   142.087 |     0.715517 |
+|  94625 | BROOKTON                                   | -32.3728 |   117.009 |     0.713793 |
+|  95772 | LOSTOCK DAM                                | -32.3322 |    151.46 |     0.713043 |
+|  94831 | OUYEN (POST OFFICE)                        | -35.0682 |   142.312 |     0.709565 |
+|  94521 | SURAT                                      | -27.1591 |    149.07 |     0.706897 |
+|  95616 | PINGELLY                                   | -32.5336 |   117.083 |     0.703614 |
+|  95706 | NARRANDERA AIRPORT AWS                     |  -34.705 |   146.514 |     0.701724 |
+|  94377 | MONTO TOWNSHIP                             | -24.8642 |   151.125 |     0.696552 |
+|  94995 | LORD HOWE ISLAND AERO                      | -31.5421 |   159.079 |     0.696552 |
+|  95836 | TATURA INST SUSTAINABLE AG                 | -36.4378 |   145.267 |     0.692174 |
+|  94838 | HOPETOUN AIRPORT                           | -35.7151 |   142.357 |     0.686207 |
+|  95638 | ESPERANCE AERO                             | -33.6825 |   121.827 |     0.682759 |
+|  95612 | GINGIN AERO                                | -31.4628 |   115.864 |     0.675862 |
+|  95896 | ALBURY AIRPORT AWS                         |  -36.069 |   146.951 |      0.67069 |
+|  95292 | SOUTH JOHNSTONE EXP STN                    | -17.6053 |   145.997 |     0.668966 |
+|  94789 | DORRIGO (OLD CORAMBA RD)                   | -30.3444 |   152.719 |      0.66789 |
+|  95907 | EAST SALE AIRPORT                          | -38.1017 |    147.14 |     0.667826 |
+|  94610 | PERTH AIRPORT                              | -31.9275 |   115.976 |     0.667241 |
+|  94556 | TENTERFIELD (FEDERATION PARK)              | -29.0479 |   152.017 |     0.666667 |
+|  95728 | COONABARABRAN AIRPORT AWS                  |  -31.333 |    149.27 |     0.663793 |
+|  94854 | AVALON AIRPORT                             | -38.0288 |   144.478 |     0.662069 |
+|  94570 | TEWANTIN RSL PARK                          | -26.3911 |    153.04 |     0.656897 |
+|  95370 | WILLIAMSON                                 | -22.4703 |   150.179 |     0.655172 |
+|  94939 | MONTAGUE ISLAND LIGHTHOUSE                 | -36.2519 |   150.227 |         0.65 |
+|  95744 | SPRINGWOOD (VALLEY HEIGHTS)                | -33.7065 |   150.585 |         0.65 |
+|  95837 | RUTHERGLEN RESEARCH                        | -36.1048 |   146.509 |         0.65 |
+|  94231 | LAJAMANU AIRPORT                           | -18.3324 |   130.636 |     0.646552 |
+|  94794 | GIRILAMBONE (OKEH) AWS                     | -31.0824 |    146.93 |     0.644828 |
+|  94712 | YOUNG AIRPORT                              | -34.2493 |   148.247 |     0.637931 |
+|  99133 | PORTABLE RFSNSW20                          |  -31.044 |   149.372 |     0.636207 |
+|  95681 | DELTA AWS                                  | -30.1006 |   145.334 |      0.62931 |
+|  95699 | WHITE CLIFFS AWS                           | -30.8522 |   143.074 |      0.62931 |
+|  95710 | TRANGIE RESEARCH STATION AWS               | -31.9861 |   147.949 |     0.627586 |
+|  94921 | COOMA AIRPORT AWS                          | -36.2939 |   148.973 |     0.622414 |
+|  94754 | NULLO MOUNTAIN AWS                         | -32.7244 |   150.229 |      0.62069 |
+|  95937 | MORUYA AIRPORT AWS                         | -35.9004 |   150.144 |      0.62069 |
+|  95704 | GRIFFITH AIRPORT AWS                       | -34.2487 |    146.07 |     0.617699 |
+|  94608 | PERTH METRO                                | -31.9192 |   115.873 |     0.615517 |
+|  95718 | COONAMBLE AIRPORT AWS                      | -30.9776 |    148.38 |     0.608621 |
+|  94222 | BRADSHAW - KOOLENDONG VALLEY (DEFENCE)     | -15.1853 |   130.117 |     0.606897 |
+|  94346 | LONGREACH AERO                             | -23.4397 |   144.283 |     0.606897 |
+|  94746 | MOSS VALE AWS                              | -34.5253 |   150.422 |     0.606897 |
+|  94889 | WANGARATTA AERO                            | -36.4205 |   146.306 |     0.605172 |
+|  95757 | LUCAS HEIGHTS (ANSTO)                      | -34.0519 |   150.982 |      0.60431 |
+|  94702 | HAY AIRPORT AWS                            | -34.5412 |   144.835 |     0.603448 |
+|  94100 | KALUMBURU                                  | -14.2964 |   126.645 |     0.601724 |
+|  94474 | PUKATJA                                    | -26.2635 |   132.177 |     0.598276 |
+|  94913 | GELANTIPY                                  |   -37.22 |   148.263 |     0.598276 |
+|  95636 | JACUP                                      | -33.8878 |   119.109 |     0.587931 |
+|  94337 | JULIA CREEK AIRPORT                        | -20.6672 |   141.721 |     0.581034 |
+|  94711 | COBAR MO                                   |  -31.484 |   145.829 |     0.581034 |
+|  94647 | EUCLA                                      | -31.6797 |   128.896 |      0.57931 |
+|  99742 | HIGH RANGE AWS (WANGANDERRY)               | -34.3335 |   150.267 |     0.577586 |
+|  95322 | RABBIT FLAT                                | -20.1823 |   130.015 |     0.563793 |
+|  94395 | CLERMONT AIRPORT                           | -22.7756 |   147.622 |     0.562069 |
+|  94236 | ELLIOTT                                    | -17.5552 |   133.544 |     0.558621 |
+|  94703 | BOURKE AIRPORT AWS                         | -30.0362 |   145.952 |     0.556522 |
+|  94342 | WINTON AIRPORT                             | -22.3617 |   143.084 |     0.555172 |
+|  94773 | ARMIDALE (TREE GROUP NURSERY)              | -30.5243 |   151.672 |     0.553448 |
+|  94334 | BEDOURIE                                   | -24.3597 |   139.471 |     0.551724 |
+|  94280 | INNISFAIL AERODROME                        | -17.5581 |   146.012 |         0.55 |
+|  95527 | MOREE AERO                                 | -29.4898 |   149.847 |         0.55 |
+|  95719 | DUBBO AIRPORT AWS                          | -32.2206 |   148.575 |     0.548276 |
+|  94937 | MORUYA HEADS PILOT STATION                 | -35.9093 |   150.153 |     0.546957 |
+|  95627 | HYDEN                                      | -32.4419 |   118.898 |     0.546552 |
+|  94602 | ROTTNEST ISLAND                            | -32.0069 |   115.502 |     0.544828 |
+|  95485 | TIBOOBURRA AIRPORT                         | -29.4448 |   142.057 |     0.543103 |
+|  95618 | WAGIN                                      | -33.3075 |    117.34 |     0.539655 |
+|  94795 | MILLENDON (SWAN VALLEY)                    | -31.8112 |   116.023 |     0.537931 |
+|  94929 | BOMBALA AWS                                | -37.0016 |   149.234 |     0.537931 |
+|  99999 | PORTABLE NPWS NSW02                        |  -33.098 |    150.07 |     0.534483 |
+|  95748 | SHELLHARBOUR AIRPORT                       | -34.5638 |    150.79 |     0.531034 |
+|  94761 | BARRABA (CLIFTON LANE)                     | -30.3833 |   150.608 |     0.528571 |
+|  95631 | GOOMALLING                                 | -31.2994 |   116.827 |     0.528571 |
+|  94390 | SANDY CAPE LIGHTHOUSE                      | -24.7297 |   153.208 |        0.528 |
+|  94344 | URANDANGI AERODROME                        | -21.5979 |   138.367 |     0.527586 |
+|  94130 | BRADSHAW                                   | -14.9408 |   130.809 |     0.525862 |
+|  94232 | VICTORIA RIVER DOWNS                       |  -16.403 |   131.014 |     0.525862 |
+|  94125 | BATCHELOR AIRPORT                          | -13.0544 |   131.025 |     0.524138 |
+|  94376 | THANGOOL AIRPORT                           | -24.4935 |   150.571 |     0.518966 |
+|  95940 | POINT PERPENDICULAR AWS                    | -35.0936 |   150.805 |     0.518966 |
+|  95686 | MARRANGAROO (DEFENCE)                      | -33.4346 |   150.135 |     0.517241 |
+|  94759 | TERREY HILLS AWS                           | -33.6908 |   151.225 |     0.514783 |
+|  95635 | HOPETOUN NORTH                             | -33.9306 |   120.128 |     0.510345 |
+|  99107 | PORTABLE RFSNSW04                          | -34.7975 |   150.178 |     0.507692 |
+|  95626 | NAREMBEEN                                  | -32.0656 |   118.396 |      0.50625 |
+|  95754 | MERRIWA (ROSCOMMON)                        | -32.1852 |   150.174 |     0.501724 |
+|  94764 | PARRAMATTA NORTH (MASONS DRIVE)            | -33.7917 |   151.018 |          0.5 |
+|  95936 | MELBOURNE (OLYMPIC PARK)                   | -37.8255 |   144.982 |          0.5 |
+|  95931 | BEGA AWS                                   | -36.6722 |   149.819 |     0.498276 |
+|  94781 | NEWCASTLE UNIVERSITY                       | -32.8906 |   151.707 |     0.496552 |
+|  95866 | ESSENDON AIRPORT                           | -37.7276 |   144.907 |     0.491379 |
+|  99125 | MOUNT FOX (QFRL)                           | -18.8322 |   145.801 |     0.489655 |
+|  95369 | ST LAWRENCE                                | -22.3472 |   149.524 |     0.487931 |
+|  95581 | LOGAN CITY WATER TREATMENT PLANT           | -27.6839 |   153.195 |     0.485345 |
+|  94650 | MAITLAND AIRPORT AWS                       | -32.7023 |   151.488 |     0.484483 |
+|  94943 | NERRIGA AWS                                | -35.1103 |   150.083 |     0.484483 |
+|  95607 | GARDEN ISLAND HSF                          | -32.2433 |   115.684 |     0.483077 |
+|  95684 | HOLSWORTHY DEFENCE AWS                     |  -34.081 |   150.901 |      0.47931 |
+|  95749 | KIAMA (BOMBO HEADLAND)                     | -34.6532 |   150.861 |     0.477586 |
+|  94755 | CAMDEN AIRPORT AWS                         |  -34.039 |   150.689 |     0.475862 |
+|  94751 | JERVIS BAY AIRFIELD AWS                    |  -35.144 |   150.697 |     0.472414 |
+|  94749 | BELLAMBI AWS                               | -34.3691 |   150.929 |      0.47069 |
+|  94766 | CANTERBURY RACECOURSE AWS                  | -33.9057 |   151.113 |     0.468966 |
+|  95644 | MUNGLINUP WEST                             | -33.5547 |     120.7 |     0.467241 |
+|  94642 | BALLADONIA                                 | -32.4569 |   123.865 |     0.462069 |
+|  94768 | SYDNEY (OBSERVATORY HILL)                  | -33.8593 |   151.205 |     0.462069 |
+|  95833 | KYABRAM                                    |  -36.335 |   145.064 |     0.460345 |
+|  94866 | MELBOURNE AIRPORT                          | -37.6654 |   144.832 |     0.456897 |
+|  95705 | YANCO AGRICULTURAL INSTITUTE               | -34.6222 |   146.433 |     0.455172 |
+|  94612 | PEARCE RAAF                                | -31.6669 |   116.019 |         0.45 |
+|  94601 | CAPE LEEUWIN                               | -34.3728 |   115.136 |     0.448276 |
+|  94875 | SHEPPARTON AIRPORT                         | -36.4288 |   145.395 |     0.448148 |
+|  94760 | HORSLEY PARK EQUESTRIAN CENTRE AWS         |  -33.851 |   150.857 |     0.446552 |
+|  95761 | HOLSWORTHY AERODROME AWS                   | -33.9925 |   150.949 |     0.446552 |
+|  95774 | MANGROVE MOUNTAIN AWS                      | -33.2894 |   151.211 |     0.443478 |
+|  94862 | YARRAWONGA                                 | -36.0294 |   146.031 |     0.443103 |
+|  94767 | SYDNEY AIRPORT AMO                         | -33.9465 |   151.173 |     0.441379 |
+|  94757 | CAMPBELLTOWN (MOUNT ANNAN)                 | -34.0615 |   150.773 |     0.437931 |
+|  94793 | BREWON AWS                                 | -30.2411 |   147.533 |     0.437931 |
+|  95717 | PARKES AIRPORT AWS                         | -33.1281 |   148.243 |      0.42931 |
+|  99123 | NORTH TAMBORINE (QFRJ)                     | -27.9396 |   153.191 |      0.42931 |
+|  94326 | ALICE SPRINGS AIRPORT                      | -23.7951 |   133.889 |     0.425862 |
+|  94775 | TOCAL AWS                                  | -32.6296 |   151.592 |     0.425862 |
+|  94348 | LAKE JULIUS AWS                            | -20.1167 |   139.726 |     0.422222 |
+|  94627 | NARROGIN                                   | -32.9342 |    117.18 |     0.419828 |
+|  95541 | INVERELL (RAGLAN ST)                       | -29.7796 |   151.112 |     0.417391 |
+|  94332 | MOUNT ISA AERO                             | -20.6778 |   139.488 |     0.417241 |
+|  94750 | NOWRA RAN AIR STATION AWS                  | -34.9469 |   150.535 |     0.417241 |
+|  94865 | LAVERTON RAAF                              | -37.8565 |   144.757 |     0.415517 |
+|  94622 | WONGAN HILLS                               | -30.8917 |   116.719 |     0.413793 |
+|  94131 | TINDAL RAAF                                | -14.5229 |   132.383 |     0.410345 |
+|  94765 | BANKSTOWN AIRPORT AWS                      | -33.9176 |   150.984 |     0.408621 |
+|  94843 | SWAN HILL AERODROME                        | -35.3766 |   143.542 |     0.403448 |
+|  94336 | THE MONUMENT AIRPORT                       | -21.8125 |   139.927 |     0.401724 |
+|  95533 | TEXAS POST OFFICE                          | -28.8544 |   151.168 |          0.4 |
+|  94397 | MORANBAH AIRPORT                           | -22.0644 |   148.076 |     0.398276 |
+|  94912 | BAIRNSDALE AIRPORT                         | -37.8818 |   147.567 |     0.398276 |
+|  94338 | TREPELL AIRPORT                            |   -21.84 |   140.893 |     0.394828 |
+|  94633 | CORRIGIN                                   | -32.3292 |   117.873 |     0.392857 |
+|  95640 | WANDERING                                  | -32.6722 |   116.671 |     0.387931 |
+|  96996 | COCOS ISLAND AIRPORT                       | -12.1892 |   96.8344 |     0.387931 |
+|  94341 | RICHMOND AIRPORT                           | -20.7017 |   143.117 |     0.386207 |
+|  94782 | GOSFORD AWS                                | -33.4351 |   151.361 |     0.382759 |
+|  94461 | GILES METEOROLOGICAL OFFICE                | -25.0341 |   128.301 |      0.37931 |
+|  95765 | SYDNEY OLYMPIC PARK AWS (ARCHERY CENTRE)   | -33.8338 |   151.072 |     0.377586 |
+|  95869 | DENILIQUIN AIRPORT AWS                     | -35.5575 |   144.946 |     0.377586 |
+|  94580 | GOLD COAST SEAWAY                          |  -27.939 |   153.428 |     0.375862 |
+|  94384 | SEVENTEEN SEVENTY                          | -24.1568 |   151.889 |     0.374074 |
+|  95734 | NARRABRI AIRPORT AWS                       | -30.3154 |    149.83 |     0.372414 |
+|  94541 | INVERELL RESEARCH CENTRE                   | -29.7752 |   151.082 |      0.37069 |
+|  96995 | CHRISTMAS ISLAND AERO                      | -10.4528 |   105.688 |      0.37069 |
+|  95615 | BEVERLEY                                   | -32.1083 |   116.925 |     0.368966 |
+|  94593 | POINT LOOKOUT                              | -27.4361 |   153.546 |     0.362069 |
+|  94621 | NORTHAM                                    | -31.6508 |   116.659 |     0.358621 |
+|  95482 | BIRDSVILLE AIRPORT                         | -25.8975 |   139.347 |     0.358621 |
+|  94102 | TROUGHTON ISLAND                           | -13.7542 |   126.148 |     0.353448 |
+|  94743 | MOUNT BOYCE AWS                            | -33.6185 |   150.274 |     0.351724 |
+|  95771 | CESSNOCK AIRPORT AWS                       | -32.7886 |   151.338 |     0.351724 |
+|  94588 | GLEN INNES AIRPORT AWS                     |  -29.678 |   151.694 |         0.35 |
+|  94938 | ULLADULLA AWS                              | -35.3635 |   150.483 |         0.35 |
+|  94255 | CAMOOWEAL TOWNSHIP                         | -19.9225 |   138.121 |     0.344828 |
+|  94347 | CARTERS BORE                               | -20.9358 |   139.296 |     0.344828 |
+|  99738 | SINGLETON DEFENCE AWS                      | -32.6976 |   151.156 |     0.341379 |
+|  99218 | COWLEY BEACH (DEFENCE)                     | -17.6905 |   146.113 |     0.337931 |
+|  95747 | MURRURUNDI GAP AWS                         | -31.7416 |   150.794 |     0.335652 |
+|  99122 | INGLEWOOD (QFRI)                           | -28.4169 |   151.097 |     0.332759 |
+|  94510 | CHARLEVILLE AERO                           | -26.4139 |   146.256 |     0.331034 |
+|  94515 | ROMA AIRPORT                               | -26.5477 |   148.771 |     0.331034 |
+|  94463 | CURTIN SPRINGS                             | -25.3139 |   131.757 |     0.328182 |
+|  95572 | NAMBOUR DAFF - HILLSIDE                    | -26.6442 |   152.938 |     0.322414 |
+|  94776 | WILLIAMTOWN RAAF                           | -32.7939 |   151.836 |      0.32069 |
+|  99752 | PORTABLE RFSNSW10                          | -33.3704 |   150.752 |     0.317241 |
+|  94641 | KATANNING                                  | -33.6856 |   117.606 |     0.308621 |
+|  94569 | SUNSHINE COAST AIRPORT                     |  -26.599 |   153.091 |     0.298276 |
+|  94582 | MURWILLUMBAH (BRAY PARK)                   | -28.3395 |   153.381 |     0.296296 |
+|  94182 | COCONUT ISLAND                             | -10.0511 |   143.069 |     0.292857 |
+|  95762 | TAMWORTH AIRPORT AWS                       | -31.0742 |   150.836 |     0.289655 |
+|  94451 | CARNEGIE                                   | -25.7964 |   122.975 |     0.286607 |
+|  94594 | CAPE MORETON LIGHTHOUSE                    | -27.0314 |   153.466 |     0.282759 |
+|  94752 | BADGERYS CREEK AWS                         | -33.8969 |   150.728 |     0.282759 |
+|  94561 | REDLAND (ALEXANDRA HILLS)                  | -27.5433 |   153.239 |     0.281034 |
+|  95208 | YAMPI SOUND (DEFENCE)                      | -16.7671 |   123.981 |     0.277586 |
+|  94388 | LADY ELLIOT ISLAND                         | -24.1116 |   152.716 |     0.275862 |
+|  95773 | ARMIDALE AIRPORT AWS                       | -30.5273 |   151.616 |     0.274138 |
+|  95639 | SALMON GUMS RES.STN.                       | -32.9869 |   121.624 |     0.272414 |
+|  94419 | GREENBANK (DEFENCE)                        | -27.6932 |   152.993 |     0.260345 |
+|  94349 | NEW MAY DOWNS                              |   -20.59 |   139.341 |     0.256897 |
+|  94365 | PROSERPINE AIRPORT                         | -20.4925 |   148.555 |         0.25 |
+|  95767 | LAKE MACQUARIE AWS                         | -33.0887 |   151.464 |     0.248276 |
+|  95214 | WYNDHAM AERO                               |   -15.51 |    128.15 |     0.247368 |
+|  94287 | CAIRNS AERO                                | -16.8736 |   145.746 |     0.239655 |
+|  94576 | BRISBANE                                   | -27.4808 |   153.039 |     0.239655 |
+|  94598 | EVANS HEAD RAAF BOMBING RANGE AWS          |  -29.183 |   153.396 |     0.237931 |
+|  94405 | NORTH ISLAND                               | -28.3009 |   113.594 |     0.234483 |
+|  94549 | KINGAROY AIRPORT                           | -26.5737 |    151.84 |     0.234483 |
+|  95296 | ALVA BEACH                                 | -19.4569 |   147.483 |     0.234483 |
+|  95740 | GUNNEDAH AIRPORT AWS                       | -30.9537 |   150.249 |     0.234483 |
+|  95566 | BEERBURRUM FOREST STATION                  | -26.9586 |   152.962 |     0.231034 |
+|  94381 | GLADSTONE AIRPORT                          | -23.8697 |   151.221 |      0.22931 |
+|  95784 | TAREE AIRPORT AWS                          | -31.8895 |   152.512 |     0.227586 |
+|  94564 | RAINBOW BEACH                              | -25.9007 |   153.089 |     0.226786 |
+|  94844 | KERANG                                     | -35.7236 |    143.92 |     0.226087 |
+|  99997 | PORTABLE RFSNSW55                          |  -33.673 |   150.564 |     0.222414 |
+|  94285 | LOW ISLES LIGHTHOUSE                       | -16.3842 |   145.559 |     0.217241 |
+|  94352 | OORALEA RACECOURSE (MACKAY TURF CLUB)      |   -21.17 |   149.152 |     0.217241 |
+|  95570 | GRAFTON AIRPORT AWS                        | -29.7583 |    153.03 |     0.217241 |
+|  95729 | COFFS HARBOUR AIRPORT                      | -30.3189 |   153.116 |     0.217241 |
+|  95985 | SWAN ISLAND                                | -40.7292 |   148.125 |     0.212069 |
+|  94418 | CANUNGRA (DEFENCE)                         | -28.0437 |   153.187 |     0.206897 |
+|  95529 | MILES CONSTANCE STREET                     | -26.6569 |   150.182 |     0.206897 |
+|  95609 | LANCELIN (DEFENCE)                         | -30.8392 |   115.228 |     0.205172 |
+|  95101 | TRUSCOTT                                   |   -14.09 |   126.387 |     0.203448 |
+|  94396 | ROLLESTON AIRPORT                          | -24.4617 |   148.626 |          0.2 |
+|  94449 | LAVERTON AERO                              | -28.6133 |   122.424 |          0.2 |
+|  94552 | OAKEY AERO                                 | -27.4034 |   151.741 |          0.2 |
+|  94457 | WARBURTON AIRFIELD                         | -26.1317 |   126.584 |     0.198276 |
+|  94575 | ARCHERFIELD AIRPORT                        | -27.5716 |   153.007 |     0.196552 |
+|  94774 | NEWCASTLE NOBBYS SIGNAL STATION AWS        | -32.9184 |   151.798 |     0.196552 |
+|  94343 | HUGHENDEN AIRPORT                          | -20.8192 |   144.233 |     0.189655 |
+|  94152 | BORROLOOLA AIRPORT                         | -16.0755 |   136.304 |     0.186207 |
+|  94110 | OENPELLI AIRPORT                           | -12.3272 |   133.007 |     0.182759 |
+|  94763 | PENRITH LAKES AWS                          | -33.7195 |   150.678 |     0.182759 |
+|  94186 | LOCKHART RIVER AIRPORT                     |  -12.785 |   143.305 |     0.174138 |
+|  95624 | MERREDIN                                   | -31.4756 |   118.279 |     0.168103 |
+|  95779 | NELSON BAY (NELSON HEAD)                   | -32.7103 |   152.161 |     0.168103 |
+|  94317 | NEWMAN AERO                                | -23.4213 |   119.802 |     0.166957 |
+|  94212 | HALLS CREEK AIRPORT                        | -18.2337 |   127.667 |     0.163793 |
+|  95753 | RICHMOND RAAF                              | -33.6004 |   150.776 |     0.163478 |
+|  94401 | KALBARRI                                   | -27.7119 |   114.165 |     0.158621 |
+|  95625 | CUNDERDIN AIRFIELD                         | -31.6219 |   117.222 |     0.156897 |
+|  94370 | SAMUEL HILL AERO                           | -22.7433 |   150.658 |     0.153448 |
+|  94553 | APPLETHORPE                                | -28.6217 |   151.953 |     0.153448 |
+|  94542 | DALBY AIRPORT                              | -27.1605 |   151.263 |     0.151724 |
+|  95367 | MACKAY AERO                                | -21.1706 |   149.179 |         0.15 |
+|  95646 | FORREST                                    | -30.8453 |   128.109 |     0.148276 |
+|  94234 | DALY WATERS AIRSTRIP                       | -16.2637 |   133.378 |     0.146552 |
+|  94596 | BALLINA AIRPORT AWS                        | -28.8353 |   153.559 |     0.144828 |
+|  94273 | TOWNSVILLE- FANNING RIVER (DEFENCE)        |  -19.783 |     146.5 |     0.139655 |
+|  94783 | YARRAS (MOUNT SEAVIEW)                     | -31.3865 |   152.248 |     0.136842 |
+|  94566 | GYMPIE                                     | -26.1831 |   152.641 |     0.136207 |
+|  95637 | LAKE GRACE                                 | -33.1006 |   118.465 |     0.136207 |
+|  94462 | YULARA AIRPORT                             | -25.1896 |   130.974 |     0.134483 |
+|  94568 | AMBERLEY AMO                               | -27.6297 |   152.711 |     0.134483 |
+|  95543 | GAYNDAH AIRPORT                            | -25.6167 |   151.616 |     0.134483 |
+|  94294 | TOWNSVILLE AERO                            | -19.2483 |   146.766 |     0.131034 |
+|  95571 | GRAFTON RESEARCH STN                       | -29.6224 |    152.96 |     0.124138 |
+|  94572 | LISMORE AIRPORT AWS                        | -28.8305 |    153.26 |      0.12069 |
+|  94335 | CLONCURRY AIRPORT                          | -20.6664 |   140.505 |     0.117241 |
+|  94372 | MIDDLE PERCY ISLAND                        | -21.6628 |   150.271 |     0.117241 |
+|  94217 | ARGYLE AERODROME                           |  -16.638 |   128.452 |     0.115517 |
+|  94356 | CHARTERS TOWERS AIRPORT                    | -20.0464 |   146.271 |     0.112069 |
+|  94368 | HAMILTON ISLAND AIRPORT                    | -20.3658 |   148.954 |     0.112069 |
+|  94587 | TABULAM (MUIRNE)                           | -28.7551 |   152.451 |     0.110345 |
+|  94589 | YAMBA PILOT STATION                        | -29.4325 |   153.363 |     0.110345 |
+|  94238 | TENNANT CREEK AIRPORT                      | -19.6423 |   134.183 |     0.106796 |
+|  94248 | CENTRE ISLAND                              | -15.7426 |   136.819 |     0.103448 |
+|  94299 | WILLIS ISLAND                              | -16.2878 |   149.965 |     0.101724 |
+|  95758 | SCONE AIRPORT AWS                          | -32.0335 |   150.826 |     0.101724 |
+|  94360 | COLLINSVILLE POST OFFICE                   | -20.5533 |   147.846 |          0.1 |
+|  94578 | BRISBANE AERO                              | -27.3917 |   153.129 |    0.0965517 |
+|  95293 | WOOLSHED                                   | -19.4168 |   146.536 |    0.0965517 |
+|  94632 | BENCUBBIN                                  | -30.8081 |    117.86 |    0.0941176 |
+|  94271 | TOWNSVILLE- AIR WEAPONS RANGE (DEFENCE)    | -19.3048 |   146.244 |    0.0931034 |
+|  94374 | ROCKHAMPTON AERO                           | -23.3753 |   150.477 |    0.0931034 |
+|  94450 | LEONORA AERO                               | -28.8789 |   121.319 |    0.0931034 |
+|  94367 | MACKAY M.O                                 | -21.1172 |   149.217 |    0.0896552 |
+|  94628 | NEWDEGATE RESEARCH STATION                 | -33.1129 |    118.84 |     0.087931 |
+|  94147 | CAPE WESSEL                                | -11.0047 |   136.759 |    0.0844828 |
+|  94790 | SMOKY CAPE LIGHTHOUSE                      | -30.9225 |   153.087 |    0.0827586 |
+|  99115 | PORTABLE QFRG                              | -19.1958 |   146.524 |    0.0827586 |
+|  94221 | BRADSHAW - ANGALLARI VALLEY (DEFENCE)      | -15.4397 |   130.573 |    0.0810345 |
+|  94109 | MURGANELLA AIRSTRIP                        | -11.5485 |   132.927 |    0.0793103 |
+|  99113 | PORTABLE QFRE                              | -25.5134 |   152.715 |    0.0744186 |
+|  94550 | STANTHORPE LESLIE PARADE                   | -28.6617 |   151.934 |    0.0732759 |
+|  94202 | BIDYADANGA                                 | -18.6844 |    121.78 |    0.0706897 |
+|  94321 | WALUNGURRU AIRPORT                         | -23.2656 |   129.384 |    0.0706897 |
+|  99756 | PORTABLE RFSNSW14                          | -37.0341 |   149.633 |    0.0706897 |
+|  94373 | YEPPOON THE ESPLANADE                      | -23.1364 |   150.751 |    0.0672414 |
+|  94402 | DENHAM                                     | -25.9265 |   113.533 |     0.062069 |
+|  95283 | COOKTOWN AIRPORT                           | -15.4461 |   145.186 |    0.0603448 |
+|  99124 | RAVENSHOE (QFRK)                           | -17.6096 |   145.487 |    0.0603448 |
+|  94150 | GOVE AIRPORT                               | -12.2741 |    136.82 |    0.0586207 |
+|  94584 | DOUBLE ISLAND POINT LIGHTHOUSE             | -25.9319 |   153.191 |    0.0586207 |
+|  94592 | COOLANGATTA                                | -28.1681 |   153.505 |    0.0586207 |
+|  95551 | TOOWOOMBA AIRPORT                          | -27.5425 |   151.913 |    0.0568966 |
+|  94174 | HORN ISLAND                                | -10.5844 |    142.29 |    0.0551724 |
+|  95642 | NORSEMAN AERO                              | -32.2147 |   121.755 |    0.0551724 |
+|  99217 | SOLOMON AIRPORT                            | -22.2547 |   117.847 |    0.0551724 |
+|  94603 | BADGINGARRA RESEARCH STN                   | -30.3381 |   115.539 |    0.0534483 |
+|  94786 | PORT MACQUARIE AIRPORT AWS                 | -31.4335 |   152.865 |    0.0527273 |
+|  94555 | WARWICK                                    | -28.2061 |     152.1 |         0.05 |
+|  95146 | NGAYAWILI                                  | -11.9971 |   135.573 |    0.0482759 |
+|  99435 | WELLCAMP AIRPORT                           | -27.5517 |   151.785 |    0.0482759 |
+|  94387 | BUNDABERG AERO                             | -24.9069 |   152.323 |    0.0448276 |
+|  94420 | TIN CAN BAY (DEFENCE)                      | -25.9351 |   152.965 |    0.0448276 |
+|  95591 | REDCLIFFE                                  | -27.2169 |   153.092 |    0.0448276 |
+|  94567 | MARYBOROUGH                                | -25.5132 |   152.715 |     0.037931 |
+|  94637 | KALGOORLIE-BOULDER AIRPORT                 | -30.7847 |   121.453 |     0.037931 |
+|  94407 | BORRONA DOWNS AWS                          | -29.7614 |   143.113 |    0.0328767 |
+|  95402 | SHARK BAY AIRPORT                          | -25.8925 |   113.577 |    0.0327586 |
+|  95629 | DALWALLINU                                 | -30.2761 |   116.671 |    0.0327586 |
+|  94272 | MOUNT STUART (DEFENCE)                     | -19.4082 |   146.762 |    0.0310345 |
+|  94411 | MULLEWA                                    | -28.5367 |   115.514 |    0.0310345 |
+|  95448 | LEINSTER AERO                              | -27.8386 |   120.703 |    0.0310345 |
+|  94573 | CASINO AIRPORT AWS                         | -28.8824 |   153.062 |    0.0275862 |
+|  95205 | DERBY AERO                                 | -17.3706 |   123.661 |    0.0275862 |
+|  94266 | NORMANTON AIRPORT                          | -17.6872 |   141.073 |    0.0241379 |
+|  94300 | CARNARVON AIRPORT                          | -24.8878 |    113.67 |    0.0241379 |
+|  95565 | HERVEY BAY AIRPORT                         |  -25.322 |   152.882 |    0.0241379 |
+|  94171 | SCHERGER RAAF                              | -12.6167 |   142.087 |    0.0224138 |
+|  94383 | BOWEN AIRPORT AWS                          | -20.0153 |   148.214 |    0.0224138 |
+|  94403 | GERALDTON AIRPORT                          | -28.8047 |   114.699 |    0.0206897 |
+|  99114 | PORTABLE QFRF                              | -23.8237 |   150.817 |    0.0206897 |
+|  94188 | CAPE FLATTERY                              | -14.9672 |   145.311 |    0.0189655 |
+|  94254 | MORNINGTON ISLAND AIRPORT                  |  -16.662 |   139.165 |    0.0189655 |
+|  94599 | CAPE BYRON AWS                             | -28.6399 |   153.636 |    0.0189655 |
+|  94398 | BLACKWATER AIRPORT                         | -23.6015 |   148.807 |    0.0156522 |
+|  94319 | TELFER AERO                                | -21.7125 |   122.228 |     0.015534 |
+|  94170 | WEIPA AERO                                 | -12.6778 |   141.921 |    0.0155172 |
+|  95295 | AYR DPI RESEARCH STN                       | -19.6169 |   147.376 |    0.0155172 |
+|  99312 | COONDEWANNA                                |  -22.965 |   118.809 |    0.0155172 |
+|  94257 | SWEERS ISLAND                              | -17.1142 |   139.598 |    0.0137931 |
+|  94268 | KOWANYAMA AIRPORT                          | -15.4818 |   141.748 |    0.0137931 |
+|  94417 | MORAWA AIRPORT                             | -29.2039 |   116.025 |    0.0137931 |
+|  99071 | PORTABLE RFSNSW01                          | -34.3853 |   149.881 |    0.0137931 |
+|  99434 | MOUNT KEITH                                | -27.2856 |   120.555 |    0.0137931 |
+|  94139 | WARRUWI AIRPORT                            |   -11.65 |    133.38 |     0.012069 |
+|  99792 | PORTABLE RFSNSW53                          | -34.4387 |   146.896 |    0.0103448 |
+|  99206 | LOMBADINA AIRSTRIP                         | -16.5158 |   122.921 |   0.00695652 |
+|  94328 | TERRITORY GRAPE FARM                       | -22.4518 |   133.638 |   0.00689655 |
+|  94562 | UNIVERSITY OF QUEENSLAND GATTON            | -27.5436 |   152.337 |   0.00689655 |
+|  95439 | WILUNA AERO                                | -26.6274 |   120.219 |   0.00689655 |
+|  99736 | FORTESCUE DAVE FORREST                     |   -22.29 |   119.434 |   0.00689655 |
+|  94203 | BROOME AIRPORT                             | -17.9475 |   122.235 |   0.00517241 |
+|  99737 | CHRISTMAS CREEK                            | -22.3562 |    119.65 |   0.00517241 |
+|  94260 | BURKETOWN AIRPORT                          | -17.7483 |   139.536 |   0.00344828 |
+|  94303 | THEVENARD ISLAND                           | -21.4609 |   115.019 |   0.00172414 |
+|  94785 | KEMPSEY AIRPORT AWS                        | -31.0711 |   152.772 |   0.00172414 |
+|  95204 | WEST ROEBUCK                               | -17.8964 |   122.312 |   0.00172414 |
+|  95634 | SOUTHERN CROSS AIRFIELD                    | -31.2353 |   119.356 |   0.00172414 |
++--------+--------------------------------------------+----------+-----------+--------------+
++---------------------------------------------------------------------------------+
+| --------------------------- SELECT A: Rainfall END ---------------------------- |
++---------------------------------------------------------------------------------+
+|                                                                                 |
++---------------------------------------------------------------------------------+
+make[1]: Opouští se adresář „/home/radek/projekty/UPA/projekt/UPA-project/src/MySQL“

@@ -149,31 +149,34 @@ def main():
 	Structure of station dictiory is array of dictionaries 
 	where value of every dictionary is dictionary with wanted data. Via example:
 
-	stations = [
-		{wmo-id : {"tz" : timezone, 
+	stations = {
+		wmo-id : {"tz" : timezone, 
 				   "lat" : latitude, 
 				   "lon" : longitude
 				   "temp_median" : temperature median,
 				   "humidity_median" : humidity median,
 				   "rainfall_median" : rainfall median
-				  }
+				  },
 		 ...
-		},
-	]
+		,
+	}
 
 	Structure of weather_reports is array of dictionaries. Via example:
 
 	weather_reports = 
-	[
-		{wmo-id : {"Rainfall" : value, 
+	{
+		wmo-id : [{
+				   "Rainfall" : value, 
 				   "Pressure" : value, 
 				   "Humidity" : value, 
 				   "Maximum_temp" : value, 
 				   "Minimum_temp" : value}
-				  }
+				  },
+				  ...
+				 ]
 		 ...	
-		},
-	]
+		,
+	}
 	""" 
 
 

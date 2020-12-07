@@ -37,8 +37,8 @@ def calculate_median(weather_reports):
 	humidity = []
 	rainfall = []
 	for weather_report  in weather_reports:
-		if "Maximum_temp" in weather_report and "Minimum_temp" in weather_report:
-			temp.append(weather_report["Maximum_temp"] - weather_report["Minimum_temp"])
+		if "Air_temperature" in weather_report:
+			temp.append(weather_report["Air_temperature"])
 		if "Humidity" in weather_report:
 			humidity.append(weather_report["Humidity"])
 		if "Rainfall" in weather_report:
@@ -122,14 +122,23 @@ def main():
 			data["FK"] = station["wmo-id"]
 			if "rainfall_24hr" in elements:
 				data["Rainfall"] = float(elements["rainfall_24hr"]["value"])
+			else:
+				data["Rainfall"] = NULL
+			
 			if "pres" in elements:
 				data["Pressure"] = float(elements["pres"]["value"])
+			else:
+				data["Pressure"] = NULL
+			
 			if "rel-humidity" in elements:
 				data["Humidity"] = float(elements["rel-humidity"]["value"])
-			if "maximum_air_temperature" in elements:
-				data["Maximum_temp"] = float(elements["maximum_air_temperature"]["value"])
-			if "minimum_air_temperature" in elements:
-				data["Minimum_temp"] = float(elements["minimum_air_temperature"]["value"])
+			else:
+				data["Humidity"] = NULL
+			
+			if "air_temperature" in elements:
+				data["Air_temperature"] = float(elements["air_temperature"]["value"])
+			else:
+				data["Air_temperature"] = NULL
 			# store data 
 			station_data.append(data)
 

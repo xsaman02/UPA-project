@@ -99,8 +99,9 @@ def calculate_median(weather_reports):
 
 def main():
 
-	os.system("cd MySQL/ && make drop << pwd")
-	os.system("cd MySQL/ && make run << pwd")
+	# Drop and setup new MySQL database
+	os.system("cd MySQL/ && make drop")
+	os.system("cd MySQL/ && make run")
 
 	sql_db, sql_db_cursor  = connect_mySQL()
 	mongo_db = connect_mongo()
@@ -157,19 +158,16 @@ def main():
 			# store data 
 			station_data.append(data)
 
-	print("Data fetched")
+	print("Data fetched from MongoDb")
 
 	#calculate medians and store them to station dictionary
 	for station_key in stations.keys():
 		medians = calculate_median(weather_reports[station_key])
 		stations[station_key] = {**stations[station_key], **medians}
 
-	print("Medians done")
+	print("Median calculations done")
 
-	# TODO
-	# store every element in stations as Station in SQL
-	# store every weather report in weather_reports as Weather-report in SQL
-	# more info below
+
 	"""
 	Structure of station dictiory is array of dictionaries 
 	where value of every dictionary is dictionary with wanted data. Via example:
@@ -213,20 +211,17 @@ def main():
 			VALUES ('%d', '%f', '%f', %s, %s, %s, %s, %s, '%s');"""
 			% (int(ID), stations[ID]['lat'], stations[ID]['lon'], stations[ID]['temp_median'], stations[ID]["night_temp_median"], stations[ID]["day_temp_median"], stations[ID]['humidity_median'], stations[ID]['rainfall_mean'], stations[ID]['stn-name']))
 		sql_db.commit()
+	print("Stations successfully inserted into MySQL database")
 
-	for i, ID in enumerate(weather_reports):
-		print(i+1)
+	for ID in weather_reports:
 		for report in weather_reports[ID]:
 			sql_db_cursor.execute("""INSERT INTO SelectedWeatherReport(Station_ID, Pressure, Humidity, Rainfall)
 				VALUES ('%d', %s, %s, %s);"""
 				% (int(ID), report['Pressure'], report['Humidity'], report['Rainfall']))
 		sql_db.commit()	
 		
-	print("Weather insert done")
+	print("Weather reports successfully inserted into MySQL database")
 
-	# sql_db_cursor.execute("SELECT * FROM Station;")	
-	# for row in sql_db_cursor.fetchall():
-	# 	print(row)
 
 
 if __name__ == "__main__":

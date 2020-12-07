@@ -70,9 +70,10 @@ DIR = "data/"
 if args.f and os.path.isdir(args.f):
     DIR = args.f
 
-print(client.list_database_names())
+print("Mongo database list: ", client.list_database_names())
 
 weatherDb = client["weather"]
+print("Using database: weather")
 
 stationsDb = weatherDb["stations"]
 
@@ -81,6 +82,7 @@ if args.f and not os.path.isdir(args.f):
 else:
     files = [os.path.join(dp, f) for dp, dn, filenames in os.walk(DIR) for f in filenames if os.path.splitext(f)[1] == '.xml']
 
+print("Processing input files")
 for file in files:
    try:
       tree = ET.parse(file)
@@ -94,8 +96,5 @@ for file in files:
       station(elem, stationsDb)
 
 
-   print(stationsDb.count())
-
-
-#    for elem in stationsDb.find():
-    #   print(elem)
+print("Weather station count: ", stationsDb.count())
+print("Input files loaded")

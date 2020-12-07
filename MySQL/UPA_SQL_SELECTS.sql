@@ -25,12 +25,14 @@ WHERE TemperatureMedian != "NULL"
 ORDER BY TemperatureMedian DESC
 LIMIT 20;
 SELECT "" AS "--------------------------- SELECT A: Top 20 Temperature END ----------------------------";
+SELECT "" AS " ";
 SELECT "" AS "--------------------------- SELECT A: Top 20 Rainfall START ----------------------------";
 SELECT Station.WMO_ID, Station.StationName, Station.Latitude, Station.Longitude, Station.RainfallMean FROM Station
 WHERE RainfallMean != "NULL"
 ORDER BY RainfallMean DESC
 LIMIT 20;
 SELECT "" AS "--------------------------- SELECT A: Top 20 Rainfall END ----------------------------";
+SELECT "" AS " ";
 
 -- ----------------- SELECT A: LAST 20 ---------------------
 SELECT "" AS "--------------------------- SELECT A: Last 20 Temperature START ----------------------------";
@@ -39,22 +41,26 @@ WHERE TemperatureMedian != "NULL"
 ORDER BY TemperatureMedian ASC
 LIMIT 20;
 SELECT "" AS "--------------------------- SELECT A: Last 20 Temperature END ----------------------------";
+SELECT "" AS " ";
 SELECT "" AS "--------------------------- SELECT A: Last 20 Rainfall START ----------------------------";
 SELECT Station.WMO_ID, Station.StationName, Station.Latitude, Station.Longitude, Station.RainfallMean FROM Station
 WHERE RainfallMean != "NULL"
 ORDER BY RainfallMean ASC
 LIMIT 20;
 SELECT "" AS "--------------------------- SELECT A: Last 20 Rainfall END ----------------------------";
+SELECT "" AS " ";
 
 
------------------ SELECT B: ---------------------
+-- ----------------- SELECT B: ---------------------
 
+SELECT "" AS "--------------------------- SELECT B: START ----------------------------";
 SELECT Station.Latitude, Station.TemperatureDayMedian, Station.TemperatureNightMedian FROM Station
 WHERE Station.TemperatureDayMedian != "NULL" AND Station.TemperatureNightMedian != "NULL"
 ORDER BY Station.Latitude;
+SELECT "" AS "--------------------------- SELECT B: END ----------------------------";
+SELECT "" AS " ";
 
-
------------------ SELECT C: ---------------------
+-- ----------------- SELECT C: ---------------------
 
 SELECT "" AS "--------------------------- SELECT C: START ----------------------------";
 SELECT Station.WMO_ID, SelectedWeatherReport.Pressure, SelectedWeatherReport.Humidity, SelectedWeatherReport.Rainfall FROM Station

@@ -36,20 +36,20 @@ def plot(x, y, xlabel, ylabel):
 	plt.show()
 
 if __name__ == "__main__":
-	pressure = []
-	humidity = []
-	rainfall = []
+	lattitude = []
+	day_temp = []
+	night_temp = []
 	with open("dataset.csv", "r") as fd:
 		reader = csv.reader(fd)
 
-		for pres, hum, rain in reader:
-			pressure.append(float(pres))
-			humidity.append(float(hum))
-			rainfall.append(float(rain))
+		for lat, d_t, n_t in reader:
+			lattitude.append(float(lat))
+			day_temp.append(float(d_t))
+			night_temp.append(float(n_t))
 
 
-	plot(pressure, humidity, "Pressure [hPa]", "Humidity [%]")
-	plot(pressure, rainfall, "Pressure [hPa]", "Rainfall [mm]")
+	plot(lattitude, day_temp, "Latitude", "Day Temperature [°C]")
+	plot(lattitude, night_temp, "Latitude", "Night Temperature [°C]")
 
 
 

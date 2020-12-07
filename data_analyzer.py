@@ -220,15 +220,8 @@ def main():
 	for ID in stations:
 		sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
 			VALUES ('%d', '%s', '%f', '%f', %s, %s, %s, %s, %s);"""
-<<<<<<< HEAD
 			% (int(ID), stations[ID]['tz'], stations[ID]['lat'], stations[ID]['lon'], stations[ID]['temp_median'], stations[ID]["temp_night_median"], stations[ID]["temp_day_median"], stations[ID]['humidity_median'], stations[ID]['rainfall_mean']))
 		sql_db.commit()
-=======
-			% (int(ID), stations[ID]['tz'], stations[ID]['lat'], stations[ID]['lon'], stations[ID]['temp_median'], NULL, NULL, stations[ID]['humidity_median'], stations[ID]['rainfall_median']))
-	sql_db.commit()	
-
-	print("Station insert done")
->>>>>>> b10876e0b98ef6e8d42c3be75a7d60d8ec955344
 
 	for i, ID in enumerate(weather_reports):
 		print(i+1)

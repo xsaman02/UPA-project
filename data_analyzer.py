@@ -37,11 +37,11 @@ def calculate_median(weather_reports):
 	humidity = []
 	rainfall = []
 	for weather_report  in weather_reports:
-		if "Air_temperature" in weather_report:
+		if "Air_temperature" in weather_report and type(weather_report["Air_temperature"]) != str:
 			temp.append(weather_report["Air_temperature"])
-		if "Humidity" in weather_report:
+		if "Humidity" in weather_report and type(weather_report["Humidity"]) != str:
 			humidity.append(weather_report["Humidity"])
-		if "Rainfall" in weather_report:
+		if "Rainfall" in weather_report and type(weather_report["Rainfall"]) != str:
 			rainfall.append(weather_report["Rainfall"])
 
 	temp = sorted(temp)

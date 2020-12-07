@@ -39,6 +39,7 @@ CREATE TABLE SelectedWeatherReport (AUTO_ID INTEGER AUTO_INCREMENT PRIMARY KEY N
                                         ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
+
 -- ----------------- TESTING DATA SETS ---------------------
 
 -- INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
@@ -62,11 +63,3 @@ CREATE TABLE SelectedWeatherReport (AUTO_ID INTEGER AUTO_INCREMENT PRIMARY KEY N
 --              VALUES (2, 1034.87, 22.55, 0.0);
 -- INSERT INTO SelectedWeatherReport(Station_ID, Pressure, Humidity, Rainfall)
 --              VALUES (3, 998.12, 15.67, 0.5);
-
--- ----------------- SELECTS ---------------------
-
-SELECT Station.* FROM Station;
-SELECT "" as " ";
-
-SELECT SelectedWeatherReport.* FROM SelectedWeatherReport;
-SELECT "" as " ";

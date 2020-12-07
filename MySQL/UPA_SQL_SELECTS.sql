@@ -17,9 +17,9 @@ use UPA_SQL_Db;
 -- ORDER BY TemperatureMedian DESC;
 -- SELECT "" AS "--------------------------- SELECT A: Temperature END ----------------------------";
 -- SELECT "" AS "--------------------------- SELECT A: Rainfall START ----------------------------";
--- SELECT Station.WMO_ID, Station.Timezone, Station.Latitude, Station.Longitude, Station.RainfallMedian FROM Station
--- WHERE RainfallMedian != "NULL"
--- ORDER BY RainfallMedian;
+-- SELECT Station.WMO_ID, Station.Timezone, Station.Latitude, Station.Longitude, Station.RainfallMean FROM Station
+-- WHERE RainfallMean != "NULL"
+-- ORDER BY RainfallMean;
 -- SELECT "" AS "--------------------------- SELECT A: Rainfall END ----------------------------";
 
 

@@ -26,7 +26,7 @@ CREATE TABLE Station (WMO_ID INTEGER PRIMARY KEY NOT NULL,
                         TemperatureNightMedian FLOAT,
                         TemperatureDayMedian FLOAT,
                         HumidityMedian DECIMAL(5,2),
-                        RainfallMedian FLOAT
+                        RainfallMean FLOAT
 ) ENGINE=InnoDB;
 
 CREATE TABLE SelectedWeatherReport (AUTO_ID INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -42,13 +42,13 @@ CREATE TABLE SelectedWeatherReport (AUTO_ID INTEGER AUTO_INCREMENT PRIMARY KEY N
 
 -- ----------------- TESTING DATA SETS ---------------------
 
--- INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
+-- INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMean)
 --            VALUES (0, "Australia", 100.12, -56.378, 28.7, 22.5, 27.9, 37.6, 2);
--- INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
+-- INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMean)
 --              VALUES (1, "Finland", 56098.1789, -523326.371318, 30.0, 23.8, 29.4, 25.6, 0.0);
--- INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
+-- INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMean)
 --              VALUES (2, "Russia", -1265, -16131.3578, 25.3, 19.8, 24.2, 57, 12.7);
--- INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
+-- INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMean)
 --              VALUES (3, "France", -0.1312, 12156.378, 34.5, 27.1, 33.9, 15.6, 0.2);
 
 -- INSERT INTO SelectedWeatherReport(Station_ID, Pressure, Humidity, Rainfall)

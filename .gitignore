@@ -3,3 +3,7 @@ test.py
 test.txt
 data/*
 log.json
+reg.py
+dataset_humidity
+dataset_rainfall
+dataset_pressure

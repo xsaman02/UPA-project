@@ -47,8 +47,8 @@ def calculate_median(weather_reports):
 			humidity.append(weather_report["Humidity"])
 		if "Rainfall" in weather_report and type(weather_report["Rainfall"]) != str:
 			rainfall.append(weather_report["Rainfall"])
-		if "time-local" in weather_report:
-			if day_start < weather_report["time_local"].time() < day_end:
+		if "time-local" in weather_report and type(weather_report["Air_temperature"]) != str:
+			if day_start < weather_report["time-local"].time() < day_end:
 				day_temp.append(weather_report["Air_temperature"])
 			else:
 				night_temp.append(weather_report["Air_temperature"])
@@ -107,15 +107,6 @@ def main():
 
 	# Select colletion: stations
 	stations_mongo = mongo_db["stations"]
-
-	#SQL INSERT TEST
-	# sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
-	#  VALUES (4, "Spain", 6876.32, -6876.32, NULL, 100.0, NULL, 0.0, 0.0);""")
-	# sql_db.commit()
-
-	#SQL SELECT TEST
-	# sql_db_cursor.execute("SELECT * FROM Station;")
-	# print(sql_db_cursor.fetchall())
 
 
 	stations = {}
@@ -218,9 +209,9 @@ def main():
 
 	""" Insert selected station data from MongoDb to MySQL database """
 	for ID in stations:
-		sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
+		sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMean)
 			VALUES ('%d', '%s', '%f', '%f', %s, %s, %s, %s, %s);"""
-			% (int(ID), stations[ID]['tz'], stations[ID]['lat'], stations[ID]['lon'], stations[ID]['temp_median'], stations[ID]["temp_night_median"], stations[ID]["temp_day_median"], stations[ID]['humidity_median'], stations[ID]['rainfall_mean']))
+			% (int(ID), stations[ID]['tz'], stations[ID]['lat'], stations[ID]['lon'], stations[ID]['temp_median'], stations[ID]["night_temp_median"], stations[ID]["day_temp_median"], stations[ID]['humidity_median'], stations[ID]['rainfall_mean']))
 		sql_db.commit()
 
 	for i, ID in enumerate(weather_reports):

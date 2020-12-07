@@ -117,7 +117,7 @@ def main():
 		# store id of new station to the dictionary along with it's:
 		# timezone, latitude, longitude
 		if station["wmo-id"] not in stations:
-			stations[station["wmo-id"]] = {"tz" : station["tz"], "lat" : float(station["lat"]), "lon" : float(station["lon"])}
+			stations[station["wmo-id"]] = {"tz" : station["tz"], "lat" : float(station["lat"]), "lon" : float(station["lon"]), "stn-name" : station["stn-name"]}
 		
 		for elements in station["observations"]:
 
@@ -209,9 +209,9 @@ def main():
 
 	""" Insert selected station data from MongoDb to MySQL database """
 	for ID in stations:
-		sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMean)
-			VALUES ('%d', '%s', '%f', '%f', %s, %s, %s, %s, %s);"""
-			% (int(ID), stations[ID]['tz'], stations[ID]['lat'], stations[ID]['lon'], stations[ID]['temp_median'], stations[ID]["night_temp_median"], stations[ID]["day_temp_median"], stations[ID]['humidity_median'], stations[ID]['rainfall_mean']))
+		sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMean, StationName)
+			VALUES ('%d', '%f', '%f', %s, %s, %s, %s, %s, %s);"""
+			% (int(ID), stations[ID]['lat'], stations[ID]['lon'], stations[ID]['temp_median'], stations[ID]["night_temp_median"], stations[ID]["day_temp_median"], stations[ID]['humidity_median'], stations[ID]['rainfall_mean'], stations[ID]['stn-name']))
 		sql_db.commit()
 
 	for i, ID in enumerate(weather_reports):

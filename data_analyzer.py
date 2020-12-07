@@ -30,12 +30,16 @@ def calculate_median(weather_reports):
 
 	Returns:
 	--------
-		[float, float, float]: median values of [temperature, humidity, rainfall]
+		[float, float, float, float, float]: median values of [temperature, humidity, rainfall, day_temp_median, night_temp_median]
 	"""
+	day_start = datetime.time(10, 0, 0, 0)
+	day_end = datetime.time(22, 0, 0, 0)
 	
 	temp = []
 	humidity = []
 	rainfall = []
+	day_temp = []
+	night_temp = []
 	for weather_report  in weather_reports:
 		if "Air_temperature" in weather_report and type(weather_report["Air_temperature"]) != str:
 			temp.append(weather_report["Air_temperature"])
@@ -43,6 +47,11 @@ def calculate_median(weather_reports):
 			humidity.append(weather_report["Humidity"])
 		if "Rainfall" in weather_report and type(weather_report["Rainfall"]) != str:
 			rainfall.append(weather_report["Rainfall"])
+		if "time-local" in weather_report:
+			if day_start < weather_report["time_local"].time() < day_end:
+				day_temp.append(weather_report["Air_temperature"])
+			else:
+				night_temp.append(weather_report["Air_temperature"])
 
 	temp = sorted(temp)
 	humidity = sorted(humidity)
@@ -64,15 +73,28 @@ def calculate_median(weather_reports):
 		else:
 			humidity = humidity[len(humidity)//2 - 1]
 
+	if(len(day_temp) == 0):
+		day_temp = NULL
+	else:
+		if len(day_temp) % 2 == 0:
+			day_temp = (day_temp[len(day_temp)//2] + day_temp[len(day_temp)//2 - 1]) / 2
+		else:
+			day_temp = day_temp[len(day_temp)//2 - 1]
+
+	if(len(night_temp) == 0):
+		night_temp = NULL
+	else:
+		if len(night_temp) % 2 == 0:
+			night_temp = (night_temp[len(night_temp)//2] + night_temp[len(night_temp)//2 - 1]) / 2
+		else:
+			night_temp = night_temp[len(night_temp)//2 - 1]
+
 	if(len(rainfall) == 0):
 		rainfall=NULL
 	else:
-		if len(rainfall) % 2 == 0:
-			rainfall = (rainfall[len(rainfall)//2] + rainfall[len(rainfall)//2 - 1]) / 2
-		else:
-			rainfall = rainfall[len(rainfall)//2 - 1]
+		rainfall = sum(rainfall) / len(rainfall)
 
-	return {"temp_median" : temp, "humidity_median" : humidity, "rainfall_median" : rainfall}
+	return {"temp_median" : temp, "humidity_median" : humidity, "rainfall_mean" : rainfall, "day_temp_median" : day_temp, "night_temp_median" : night_temp}
 
 
 def main():
@@ -139,6 +161,9 @@ def main():
 				data["Air_temperature"] = float(elements["air_temperature"]["value"])
 			else:
 				data["Air_temperature"] = NULL
+
+			if "time-local" in elements:
+				data["time-local"] = datetime.datetime.strptime(elements["time-local"].split('+')[0], '%Y-%m-%dT%H:%M:%S')
 			# store data 
 			station_data.append(data)
 
@@ -159,12 +184,14 @@ def main():
 	where value of every dictionary is dictionary with wanted data. Via example:
 
 	stations = {
-		wmo-id : {"tz" : timezone, 
-				   "lat" : latitude, 
-				   "lon" : longitude
-				   "temp_median" : temperature median,
-				   "humidity_median" : humidity median,
-				   "rainfall_median" : rainfall median
+		wmo-id : {"tz" : value, 
+				   "lat" : value, 
+				   "lon" : value,
+				   "temp_median" : value,
+				   "humidity_median" : value,
+				   "rainfall_median" : value,
+				   "day_temp_median" : value,
+				   "night_temp_median" : value
 				  },
 		 ...
 		,
@@ -193,7 +220,7 @@ def main():
 	for ID in stations:
 		sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
 			VALUES ('%d', '%s', '%f', '%f', %s, %s, %s, %s, %s);"""
-			% (int(ID), stations[ID]['tz'], stations[ID]['lat'], stations[ID]['lon'], stations[ID]['temp_median'], NULL, NULL, stations[ID]['humidity_median'], stations[ID]['rainfall_median']))
+			% (int(ID), stations[ID]['tz'], stations[ID]['lat'], stations[ID]['lon'], stations[ID]['temp_median'], stations[ID]["temp_night_median"], stations[ID]["temp_day_median"], stations[ID]['humidity_median'], stations[ID]['rainfall_mean']))
 		sql_db.commit()
 
 	for ID in weather_reports:

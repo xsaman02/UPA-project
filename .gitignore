@@ -7,6 +7,10 @@ reg.py
 dataset_humidity
 dataset_rainfall
 dataset_pressure
+MySQL/dataset_night
+MySQL/dataset_day
+MySQL/dataset_lat
+MySQL/dataset.csv
 dokumentace/~$kumentace.docx
 .vscode/settings.json
 dokumentace/~WRL0005.tmp

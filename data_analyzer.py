@@ -210,7 +210,7 @@ def main():
 	""" Insert selected station data from MongoDb to MySQL database """
 	for ID in stations:
 		sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMean, StationName)
-			VALUES ('%d', '%f', '%f', %s, %s, %s, %s, %s, %s);"""
+			VALUES ('%d', '%f', '%f', %s, %s, %s, %s, %s, '%s');"""
 			% (int(ID), stations[ID]['lat'], stations[ID]['lon'], stations[ID]['temp_median'], stations[ID]["night_temp_median"], stations[ID]["day_temp_median"], stations[ID]['humidity_median'], stations[ID]['rainfall_mean'], stations[ID]['stn-name']))
 		sql_db.commit()
 

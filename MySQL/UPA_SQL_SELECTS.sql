@@ -23,11 +23,18 @@ use UPA_SQL_Db;
 -- SELECT "" AS "--------------------------- SELECT A: Rainfall END ----------------------------";
 
 
+-- ----------------- SELECT B: ---------------------
+
+SELECT Station.Latitude, Station.TemperatureDayMedian, Station.TemperatureNightMedian FROM Station
+WHERE Station.TemperatureDayMedian != "NULL" AND Station.TemperatureNightMedian != "NULL"
+ORDER BY Station.Latitude;
+
+
 -- ----------------- SELECT C: ---------------------
 
-SELECT "" AS "--------------------------- SELECT C: START ----------------------------";
-SELECT Station.WMO_ID, SelectedWeatherReport.Pressure, SelectedWeatherReport.Humidity, SelectedWeatherReport.Rainfall FROM Station
-INNER JOIN SelectedWeatherReport ON Station.WMO_ID = SelectedWeatherReport.Station_ID
-WHERE Rainfall != "NULL" AND Humidity != "NULL" AND Pressure != "NULL"
-ORDER BY Pressure;
-SELECT "" AS "--------------------------- SELECT C: END ----------------------------";
+-- SELECT "" AS "--------------------------- SELECT C: START ----------------------------";
+-- SELECT Station.WMO_ID, SelectedWeatherReport.Pressure, SelectedWeatherReport.Humidity, SelectedWeatherReport.Rainfall FROM Station
+-- INNER JOIN SelectedWeatherReport ON Station.WMO_ID = SelectedWeatherReport.Station_ID
+-- WHERE Rainfall != "NULL" AND Humidity != "NULL" AND Pressure != "NULL"
+-- ORDER BY Pressure;
+-- SELECT "" AS "--------------------------- SELECT C: END ----------------------------";

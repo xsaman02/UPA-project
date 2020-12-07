@@ -184,12 +184,20 @@ def main():
 	for ID in stations:
 		sql_db_cursor.execute("""INSERT INTO Station(WMO_ID, Timezone, Latitude, Longitude, TemperatureMedian, TemperatureNightMedian, TemperatureDayMedian, HumidityMedian, RainfallMedian)
 			VALUES ('%d', '%s', '%f', '%f', %s, %s, %s, %s, %s);"""
-			% (int(ID), stations[ID]['tz'], stations[ID]['lat'], stations[ID]['lon'], stations[ID]['temp_median'], stations[ID]['humidity_median'], stations[ID]['rainfall_median'], NULL, NULL))
+			% (int(ID), stations[ID]['tz'], stations[ID]['lat'], stations[ID]['lon'], stations[ID]['temp_median'], NULL, NULL, stations[ID]['humidity_median'], stations[ID]['rainfall_median']))
 		sql_db.commit()
 
-	sql_db_cursor.execute("SELECT * FROM Station;")	
-	for row in sql_db_cursor.fetchall():
-		print(row)
+	for ID in weather_reports:
+		for report in weather_reports[ID]:
+			print(report)
+			# sql_db_cursor.execute("""INSERT INTO SelectedWeatherReport(Station_ID, Pressure, Humidity, Rainfall)
+			# 	VALUES ('%d', %s, %s, %s);"""
+			# 	% (int(ID), report['Pressure'], report['Humidity'], report['Rainfall']))
+			# sql_db.commit()
+
+	# sql_db_cursor.execute("SELECT * FROM Station;")	
+	# for row in sql_db_cursor.fetchall():
+	# 	print(row)
 
 
 if __name__ == "__main__":

@@ -66,7 +66,7 @@ args = parser.parse_args()
 client = MongoClient(port=27017)
 if args.d:
     client.drop_database("weather")
-DIR = "data/"
+DIR = "../data/"
 if args.f and os.path.isdir(args.f):
     DIR = args.f
 

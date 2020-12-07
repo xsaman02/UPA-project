@@ -2,6 +2,7 @@ from pymongo import MongoClient
 import mysql.connector as cnt
 import datetime
 import os
+import argparse
 
 
 #GLOBAL COMPATIBILITY VARIABLE:
@@ -98,6 +99,19 @@ def calculate_median(weather_reports):
 
 
 def main():
+
+	""" Parse imput arguments """
+	parser = argparse.ArgumentParser(description="UPA - weather stations data analyzer")
+
+	parser.add_argument('-r', action='store_true')
+
+	args = parser.parse_args()
+
+	# Run SELECT statements for initialized MySQL database
+	if args.r:
+		os.system("cd MySQL/ && make select")
+		exit(0)
+    	
 
 	# Drop and setup new MySQL database
 	os.system("cd MySQL/ && make drop")

@@ -12,7 +12,7 @@ use UPA_SQL_Db;
 -- SELECT "" AS "--------------------------- SELECT A: Rainfall START ----------------------------";
 -- SELECT Station.WMO_ID, Station.StationName, Station.Latitude, Station.Longitude, Station.RainfallMean FROM Station
 -- WHERE RainfallMean != "NULL"
--- ORDER BY RainfallMean;
+-- ORDER BY RainfallMean DESC;
 -- SELECT "" AS "--------------------------- SELECT A: Rainfall END ----------------------------";
 
 

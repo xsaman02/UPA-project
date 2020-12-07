@@ -16,6 +16,8 @@ Skript ```data_analyzer.py``` slouží ke zpracování dat z Mongo databáze a n
 
 Ke spuštění slouží připravený Makefile ve složce src/, obsluha je následující:
 
+    (Pozn.: Při spuštění make/make build/make run budete několikrát vyzvání k zadání hesla pro účet "root" kvůli provedení operací nad MySQL databází.)
+
     > make
     Provede rozbalení testovacích dat ve složce data/ a následně spustí nový build databází pomocí skriptů mongo_init.py a data_analyzer.py. Po dokončení buildů vypíše výsledky zadaných SELECT dotazů (v souboru src/MySQL/UPA_SQL_DB_SELECTS.sql) na standardní výstup terminálu.
 
